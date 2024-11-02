@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="FoodCalc\FoodCalc.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="FoodCalc\ShowFood.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="LoginSignPopup.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MainWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="HomePage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MyKoi\AddKoi.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MyKoi\KoiPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MyKoi\ShowKoi.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MyPond\AddPond.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MyPond\PondPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MyPond\ShowPond.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="TestDatabase.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="WaterParam\AddWater.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="WaterParam\WaterParam.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="FoodCalc\FoodCalc.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="FoodCalc\ShowFood.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="LoginSignPopup.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="HomePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MyKoi\AddKoi.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MyKoi\KoiPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MyKoi\ShowKoi.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MyPond\AddPond.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MyPond\PondPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MyPond\ShowPond.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="TestDatabase.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="WaterParam\AddWater.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="WaterParam\WaterParam.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

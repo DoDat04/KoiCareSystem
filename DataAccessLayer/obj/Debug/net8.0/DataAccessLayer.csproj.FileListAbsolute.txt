@@ -1,0 +1,15 @@
+D:\PRN212\PRN212_KoiCare\DataAccessLayer\bin\Debug\net8.0\DataAccessLayer.deps.json
+D:\PRN212\PRN212_KoiCare\DataAccessLayer\bin\Debug\net8.0\DataAccessLayer.dll
+D:\PRN212\PRN212_KoiCare\DataAccessLayer\bin\Debug\net8.0\DataAccessLayer.pdb
+D:\PRN212\PRN212_KoiCare\DataAccessLayer\bin\Debug\net8.0\BusinessObject.dll
+D:\PRN212\PRN212_KoiCare\DataAccessLayer\bin\Debug\net8.0\BusinessObject.pdb
+D:\PRN212\PRN212_KoiCare\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.csproj.AssemblyReference.cache
+D:\PRN212\PRN212_KoiCare\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+D:\PRN212\PRN212_KoiCare\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.AssemblyInfoInputs.cache
+D:\PRN212\PRN212_KoiCare\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.AssemblyInfo.cs
+D:\PRN212\PRN212_KoiCare\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.csproj.CoreCompileInputs.cache
+D:\PRN212\PRN212_KoiCare\DataAccessLayer\obj\Debug\net8.0\DataAcce.E67BD773.Up2Date
+D:\PRN212\PRN212_KoiCare\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.dll
+D:\PRN212\PRN212_KoiCare\DataAccessLayer\obj\Debug\net8.0\refint\DataAccessLayer.dll
+D:\PRN212\PRN212_KoiCare\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.pdb
+D:\PRN212\PRN212_KoiCare\DataAccessLayer\obj\Debug\net8.0\ref\DataAccessLayer.dll
