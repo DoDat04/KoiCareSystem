@@ -13,5 +13,14 @@
              FontSize="24"
              FontWeight="Bold" Height="50" Margin="0,10,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" Width="798" TextAlignment="Center"
              />
+        <TextBlock Text="{Binding MemberIdText}"
+              FontSize="24"
+              FontWeight="Bold" 
+              Height="50" 
+              Margin="0,50,100,0" 
+              HorizontalAlignment="Center" 
+              VerticalAlignment="Top" 
+              Width="798" 
+              TextAlignment="Center"/>
     </Grid>
 </Page>

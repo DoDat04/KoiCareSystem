@@ -216,3 +216,5 @@ D:\SEM5\PRN212\Assignment2\WpfApp\obj\Debug\net8.0-windows\WpfApp.genruntimeconf
 D:\SEM5\PRN212\Assignment2\WpfApp\obj\Debug\net8.0-windows\ref\WpfApp.dll
 D:\SEM5\PRN212\Assignment2\WpfApp\obj\Debug\net8.0-windows\AddNewFishPopup.g.cs
 D:\SEM5\PRN212\Assignment2\WpfApp\obj\Debug\net8.0-windows\AddNewFishPopup.baml
+D:\PRN212\PRN212_KoiCare\WpfApp\obj\Debug\net8.0-windows\AddNewFishPopup.baml
+D:\PRN212\PRN212_KoiCare\WpfApp\obj\Debug\net8.0-windows\AddNewFishPopup.g.cs

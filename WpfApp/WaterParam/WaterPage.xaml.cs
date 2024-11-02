@@ -20,9 +20,13 @@ namespace WpfApp.WaterParam
     /// </summary>
     public partial class WaterPage : Page
     {
+        public string MemberIdText { get; set; }
         public WaterPage()
         {
             InitializeComponent();
+            var session = UserSession.GetInstance();
+            MemberIdText = $"Member ID: {session.MemberId}";
+            this.DataContext = this;
         }
     }
 }

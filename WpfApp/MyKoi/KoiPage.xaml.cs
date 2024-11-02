@@ -22,10 +22,15 @@ namespace WpfApp
     public partial class KoiPage : Page
     {
         private readonly IFishService _fishService;
+        public string MemberIdText { get; set; }
+
         public KoiPage()
         {
             InitializeComponent();
             _fishService = new FishService();
+            var session = UserSession.GetInstance();
+            MemberIdText = $"Member ID: {session.MemberId}";
+            this.DataContext = this;
         }
 
         public void ListAllFish()

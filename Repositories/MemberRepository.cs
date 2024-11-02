@@ -36,29 +36,58 @@ namespace Repositories
 
         public void RemoveMember(int id)
         {
-            var _dbContext = new KoiCareContext();
-            var member = _dbContext.Members.FirstOrDefault(m => m.MemberId == id);
-            _dbContext.Members.Remove(member);
+            try
+            {
+                var _dbContext = new KoiCareContext();
+                var member = _dbContext.Members.FirstOrDefault(m => m.MemberId == id);
+                if (member != null)
+                {
+                    _dbContext.Members.Remove(member);
+                    _dbContext.SaveChanges();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Error removing member: {ex.Message}");
+            }
         }
 
         public void SaveMember(Member member)
         {
-            var _dbContext = new KoiCareContext();
-            _dbContext.Members.Add(member);
+            try
+            {
+                var _dbContext = new KoiCareContext();
+                _dbContext.Members.Add(member);
+                _dbContext.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Error saving member: {ex.Message}");
+            }
         }
 
         public void UpdateMember(Member member)
         {
-            var _dbContext = new KoiCareContext();
-            var existingMember = _dbContext.Members.FirstOrDefault(m => m.MemberId == member.MemberId);
-            existingMember.FirstName = member.FirstName;
-            existingMember.LastName = member.LastName;
-            existingMember.PhoneNumber = member.PhoneNumber;
-            existingMember.Email = member.Email;
-            existingMember.Password = member.Password;
-            existingMember.UpdateDate = DateTime.Now;
-            existingMember.UpdateBy = "Member_" + member.MemberId;
-            _dbContext.SaveChanges();
+            try
+            {
+                var _dbContext = new KoiCareContext();
+                var existingMember = _dbContext.Members.FirstOrDefault(m => m.MemberId == member.MemberId);
+                if (existingMember != null)
+                {
+                    existingMember.FirstName = member.FirstName;
+                    existingMember.LastName = member.LastName;
+                    existingMember.PhoneNumber = member.PhoneNumber;
+                    existingMember.Email = member.Email;
+                    existingMember.Password = member.Password;
+                    existingMember.UpdateDate = DateTime.Now;
+                    existingMember.UpdateBy = "Member_" + member.MemberId;
+                    _dbContext.SaveChanges();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Error updating member: {ex.Message}");
+            }
         }
     }
 }

@@ -27,3 +27,4 @@ D:\SEM5\PRN212\Assignment2\BusinessObject\obj\Debug\net8.0\refint\BusinessObject
 D:\SEM5\PRN212\Assignment2\BusinessObject\obj\Debug\net8.0\BusinessObject.pdb
 D:\SEM5\PRN212\Assignment2\BusinessObject\obj\Debug\net8.0\BusinessObject.genruntimeconfig.cache
 D:\SEM5\PRN212\Assignment2\BusinessObject\obj\Debug\net8.0\ref\BusinessObject.dll
+D:\PRN212\PRN212_KoiCare\BusinessObject\obj\Debug\net8.0\BusinessObject.sourcelink.json

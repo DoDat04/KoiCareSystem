@@ -20,9 +20,14 @@ namespace WpfApp
     /// </summary>
     public partial class PondPage : Page
     {
+        public string MemberIdText { get; set; }
+
         public PondPage()
         {
             InitializeComponent();
+            var session = UserSession.GetInstance();
+            MemberIdText = $"Member ID: {session.MemberId}";
+            this.DataContext = this;
         }
     }
 }
