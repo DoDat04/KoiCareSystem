@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,10 +21,12 @@ namespace WpfApp
     public partial class LoginSignPopup : Window
     {
         private bool isLoginMode;
+        private readonly IMemberService _memberService;
 
         public LoginSignPopup(bool isLogin = true)
         {
             InitializeComponent();
+            _memberService = new MemberService();
             isLoginMode = isLogin;
             UpdateUI();
         }
@@ -61,12 +64,43 @@ namespace WpfApp
 
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
-            // Add your login logic here
             string email = LoginEmail.Text;
             string password = LoginPassword.Password;
-            
-            // TODO: Implement login validation
-            MessageBox.Show("Login clicked");
+
+            // Input validation
+            if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password))
+            {
+                MessageBox.Show("Email and password must not be empty.");
+                return;
+            }
+
+            try
+            {
+                var account = _memberService.GetMemberByEmail(email);
+                if (account == null)
+                {
+                    MessageBox.Show("No account found with that email.");
+                }
+                else if (!VerifyPassword(password, account.Password)) // VerifyPassword should hash the password and compare
+                {
+                    MessageBox.Show("Wrong password!");
+                }
+                else
+                {
+                    MessageBox.Show("Login successfully!");
+                    MessageBox.Show($"Member ID: {account.MemberId}");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}");
+            }
+        }
+
+        private bool VerifyPassword(string inputPassword, string storedPassword)
+        {
+            // Implement password verification logic here (e.g., hash comparison)
+            return inputPassword == storedPassword; // Replace with actual hash comparison
         }
 
         private void SignUpButton_Click(object sender, RoutedEventArgs e)
@@ -75,8 +109,21 @@ namespace WpfApp
             string email = SignUpEmail.Text;
             string password = SignUpPassword.Password;
             string confirmPassword = SignUpConfirmPassword.Password;
-            
-            // TODO: Implement signup validation
+
+            // Input validation
+            if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password) || string.IsNullOrWhiteSpace(confirmPassword))
+            {
+                MessageBox.Show("All fields must be filled.");
+                return;
+            }
+
+            if (password != confirmPassword)
+            {
+                MessageBox.Show("Passwords do not match.");
+                return;
+            }
+
+            // TODO: Implement signup logic (e.g., save to database)
             MessageBox.Show("Sign up clicked");
         }
     }

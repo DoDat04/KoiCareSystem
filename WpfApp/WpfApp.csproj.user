@@ -7,6 +7,9 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="AddNewFishPopup.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="FoodCalc\FoodPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -51,6 +54,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="AddNewFishPopup.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="FoodCalc\FoodPage.xaml">
       <SubType>Designer</SubType>
     </Page>
