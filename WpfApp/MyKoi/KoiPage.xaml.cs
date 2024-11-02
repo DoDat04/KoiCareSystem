@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,39 @@ namespace WpfApp
     /// </summary>
     public partial class KoiPage : Page
     {
+        private readonly IFishService _fishService;
         public KoiPage()
         {
             InitializeComponent();
+            _fishService = new FishService();
+        }
+
+        public void ListAllFish()
+        {
+            try
+            {
+                var fishInfo = _fishService.GetAll();
+                dgFishInfo.ItemsSource = fishInfo;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            ListAllFish();
+        }
+
+        private void btnAddNewFish_Click(object sender, RoutedEventArgs e)
+        {
+            AddNewFishPopup addNewFishPopup = new AddNewFishPopup();
+            bool? result = addNewFishPopup.ShowDialog();
+            if (result == true)
+            {
+                ((Home)Application.Current.MainWindow).MainFrame.Navigate(new KoiPage());
+            }
         }
     }
 }

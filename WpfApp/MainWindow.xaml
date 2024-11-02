@@ -48,7 +48,7 @@
                 Background="White" 
                 FontSize="15"
                 FontWeight="Bold"/>
-        <Button Content="Sign In" 
+        <Button Content="Sign Up" 
                 Click="SignUpButton_Click"
                 Padding="20,5" 
                 Foreground="White" 

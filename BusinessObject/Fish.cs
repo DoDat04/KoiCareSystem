@@ -40,4 +40,18 @@ public partial class Fish
     public virtual Member Member { get; set; } = null!;
 
     public virtual Pond Pond { get; set; } = null!;
+
+    public Fish(int pondId, int memberId, string name, decimal length, decimal weight, DateTime birthDate, string gender, string breed, bool isActive, DateTime? createDate)
+    {
+        PondId = pondId;
+        MemberId = memberId;
+        Name = name;
+        Length = length;
+        Weight = weight;
+        BirthDate = birthDate;
+        Gender = gender;
+        Breed = breed;
+        IsActive = isActive;
+        CreateDate = createDate ?? DateTime.Now;
+    }
 }
