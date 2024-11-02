@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WpfApp.FoodCalc;
+using WpfApp.WaterParam;
 
 namespace WpfApp
 {
@@ -39,12 +41,12 @@ namespace WpfApp
 
         private void NavigateToWater(object sender, MouseButtonEventArgs e)
         {
-            MainFrame.Navigate(new WaterParam());
+            MainFrame.Navigate(new WaterPage());
         }
 
         private void NavigateToFood(object sender, MouseButtonEventArgs e)
         {
-            MainFrame.Navigate(new FoodCalc());
+            MainFrame.Navigate(new FoodPage());
         }
 
          private void NavigateToHome(object sender, MouseButtonEventArgs e)

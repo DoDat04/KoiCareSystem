@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WpfApp
+namespace WpfApp.FoodCalc
 {
     /// <summary>
-    /// Interaction logic for FoodCalc.xaml
+    /// Interaction logic for FoodPage.xaml
     /// </summary>
-    public partial class FoodCalc : Page
+    public partial class FoodPage : Page
     {
-        public FoodCalc()
+        public FoodPage()
         {
             InitializeComponent();
         }

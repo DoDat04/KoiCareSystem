@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WpfApp
+namespace WpfApp.WaterParam
 {
     /// <summary>
-    /// Interaction logic for WaterParam.xaml
+    /// Interaction logic for WaterPage.xaml
     /// </summary>
-    public partial class WaterParam : Page
+    public partial class WaterPage : Page
     {
-        public WaterParam()
+        public WaterPage()
         {
             InitializeComponent();
         }

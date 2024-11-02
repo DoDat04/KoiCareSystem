@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 D:\PRN212\PRN212_KoiCare\WpfApp\App.xaml
-14306539393
+14-1632114871
 
-191434622775
+19-1995904944
 248-2061170397
-FoodCalc\FoodCalc.xaml;FoodCalc\ShowFood.xaml;HomePage.xaml;LoginSignPopup.xaml;MainWindow.xaml;MyKoi\AddKoi.xaml;MyKoi\KoiPage.xaml;MyKoi\ShowKoi.xaml;MyPond\AddPond.xaml;MyPond\PondPage.xaml;MyPond\ShowPond.xaml;TestDatabase.xaml;WaterParam\AddWater.xaml;WaterParam\WaterParam.xaml;
+FoodCalc\FoodPage.xaml;FoodCalc\ShowFood.xaml;HomePage.xaml;LoginSignPopup.xaml;MainWindow.xaml;MyKoi\AddKoi.xaml;MyKoi\KoiPage.xaml;MyKoi\ShowKoi.xaml;MyPond\AddPond.xaml;MyPond\PondPage.xaml;MyPond\ShowPond.xaml;TestDatabase.xaml;WaterParam\AddWater.xaml;WaterParam\WaterPage.xaml;
 
-False
+True
 

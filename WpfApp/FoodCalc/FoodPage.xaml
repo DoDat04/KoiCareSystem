@@ -1,4 +1,4 @@
-﻿<Page x:Class="WpfApp.FoodCalc"
+﻿<Page x:Class="WpfApp.FoodCalc.FoodPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -6,12 +6,14 @@
       xmlns:local="clr-namespace:WpfApp"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="FoodCalc">
+      Title="FoodPage">
 
     <Grid Background="White">
         <TextBlock Text="Food Calculator"
-             FontSize="24"
-             FontWeight="Bold" Height="50" Margin="0,10,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" Width="798" TextAlignment="Center"
-             />
+                     FontSize="24"
+                     FontWeight="Bold" Height="50" Margin="0,10,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" Width="798" TextAlignment="Center"
+                     />
+        <!-- Add your Koi management content here -->
+
     </Grid>
 </Page>

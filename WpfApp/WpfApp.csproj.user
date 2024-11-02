@@ -7,7 +7,7 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="FoodCalc\FoodCalc.xaml.cs">
+    <Compile Update="FoodCalc\FoodPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="FoodCalc\ShowFood.xaml.cs">
@@ -46,12 +46,12 @@
     <Compile Update="WaterParam\AddWater.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="WaterParam\WaterParam.xaml.cs">
+    <Compile Update="WaterParam\WaterPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="FoodCalc\FoodCalc.xaml">
+    <Page Update="FoodCalc\FoodPage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="FoodCalc\ShowFood.xaml">
@@ -90,7 +90,7 @@
     <Page Update="WaterParam\AddWater.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="WaterParam\WaterParam.xaml">
+    <Page Update="WaterParam\WaterPage.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
