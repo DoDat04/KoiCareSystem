@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WpfApp"
         mc:Ignorable="d"
         Title="Login/Sign Up" 
-        Height="400" 
+        Height="370" 
         Width="350"
         WindowStartupLocation="CenterScreen"
         WindowStyle="None"
@@ -37,11 +37,11 @@
                         VerticalAlignment="Top" 
                         Click="CloseButton_Click"
                         Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}"
-                        Margin="0,-40,0,0"/>
+                        Margin="0,-50,0,0" FontSize="20"/>
             </StackPanel>
 
             <!-- Content -->
-            <StackPanel Grid.Row="1" x:Name="LoginPanel" Visibility="Collapsed">
+            <StackPanel Grid.Row="1" x:Name="LoginPanel" Visibility="Collapsed" VerticalAlignment="Center">
                 <TextBlock Text="Email" Margin="0,0" FontSize="16"/>
                 <TextBox x:Name="LoginEmail" 
                         Margin="0,5"
@@ -66,7 +66,7 @@
                         FontSize="16"/>
             </StackPanel>
 
-            <StackPanel Grid.Row="1" x:Name="SignUpPanel" Visibility="Collapsed">
+            <StackPanel Grid.Row="1" x:Name="SignUpPanel" Visibility="Collapsed" VerticalAlignment="Center">
                 <TextBlock Text="Email" Margin="0,0" FontSize="16"/>
                 <TextBox x:Name="SignUpEmail" 
                         Margin="0,5"
@@ -97,16 +97,7 @@
                         Foreground="White"
                         FontSize="16"/>
             </StackPanel>
-
-            <!-- Footer -->
-            <TextBlock Grid.Row="2" 
-                       x:Name="SwitchText"
-                       HorizontalAlignment="Center"
-                       Margin="0,10">
-                <Hyperlink x:Name="SwitchLink" Click="SwitchLink_Click">
-                    <Run x:Name="SwitchLinkText"/>
-                </Hyperlink>
-            </TextBlock>
+            
         </Grid>
     </Border>
 </Window>

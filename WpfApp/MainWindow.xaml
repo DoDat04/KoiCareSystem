@@ -11,11 +11,10 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <!-- Header -->
-        <Grid Grid.Row="0" Background="Black">
+        <!-- Header - Now with Panel.ZIndex to keep it on top -->
+        <Grid Grid.Row="0" Background="Black" Panel.ZIndex="100">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="791*"/>
                 <ColumnDefinition Width="791*"/>
@@ -26,94 +25,119 @@
             <!-- Navigation Menu -->
             <StackPanel Grid.Column="0" Orientation="Horizontal" Margin="20,15,20,15" Grid.ColumnSpan="5" VerticalAlignment="Center" HorizontalAlignment="Left">
                 <Image Source="/WpfApp;component/image/logo.png" Height="30" Margin="50,0,20,0"/>
-                <TextBlock Text="Home" Margin="50,0,50,0" FontWeight="Bold" Cursor="Hand" Foreground="White" VerticalAlignment="Center" FontSize="18" MouseLeftButtonDown="NavigateToHome"/>
-                <TextBlock Text="My Koi" Margin="50,0,50,0" FontWeight="Bold" Cursor="Hand" Foreground="White" VerticalAlignment="Center" FontSize="18" MouseLeftButtonDown="NavigateToKoi"/>
-                <TextBlock Text="My Pond" Margin="50,0,50,0" FontWeight="Bold" Cursor="Hand" Foreground="White" VerticalAlignment="Center" FontSize="18" MouseLeftButtonDown="NavigateToPond"/>
-                <TextBlock Text="Water Params" Margin="50,0,50,0" FontWeight="Bold" Cursor="Hand" Foreground="White" VerticalAlignment="Center" FontSize="18" MouseLeftButtonDown="NavigateToWater"/>
-                <TextBlock Text="Food Calculator" Margin="50,0,50,0" FontWeight="Bold" Cursor="Hand" Foreground="White" VerticalAlignment="Center" FontSize="18" MouseLeftButtonDown="NavigateToFood"/>
+                <TextBlock Text="Home" Margin="40,0,40,0" FontWeight="Bold" Cursor="Hand" Foreground="White" VerticalAlignment="Center" FontSize="18" MouseLeftButtonDown="NavigateToHome"/>
+                <TextBlock Text="My Koi" Margin="40,0,40,0" FontWeight="Bold" Cursor="Hand" Foreground="White" VerticalAlignment="Center" FontSize="18" MouseLeftButtonDown="NavigateToKoi"/>
+                <TextBlock Text="My Pond" Margin="40,0,40,0" FontWeight="Bold" Cursor="Hand" Foreground="White" VerticalAlignment="Center" FontSize="18" MouseLeftButtonDown="NavigateToPond"/>
+                <TextBlock Text="Water Params" Margin="40,0,40,0" FontWeight="Bold" Cursor="Hand" Foreground="White" VerticalAlignment="Center" FontSize="18" MouseLeftButtonDown="NavigateToWater"/>
+                <TextBlock Text="Food Calculator" Margin="40,0,40,0" FontWeight="Bold" Cursor="Hand" Foreground="White" VerticalAlignment="Center" FontSize="18" MouseLeftButtonDown="NavigateToFood"/>
             </StackPanel>
 
-           <!-- Login Area -->
-    <StackPanel Grid.Column="1" 
-                Orientation="Horizontal" 
-                HorizontalAlignment="Right"
-                Margin="0,10,0,10"
-                Panel.ZIndex="1">
-        <Button Content="Log In" 
-                Click="LoginButton_Click"
-                Margin="0,5,10,5" 
-                Padding="20,5" 
-                Foreground="Black" 
-                BorderBrush="White" 
-                Background="White" 
-                FontSize="15"
-                FontWeight="Bold"/>
-        <Button Content="Sign Up" 
-                Click="SignUpButton_Click"
-                Padding="20,5" 
-                Foreground="White" 
-                BorderBrush="White" 
-                Background="Black" 
-                FontSize="15"
-                Margin="0,5,0,5" 
-                FontWeight="Bold"/>
-            </StackPanel>
-        </Grid>
-        <!-- After the Header Grid and before the Footer Grid -->
-        <!-- Main Content -->
-        <Frame Grid.Row="1" 
-            x:Name="MainFrame" 
-            NavigationUIVisibility="Hidden"/>
-
-        <!-- Footer -->
-        <Grid Grid.Row="2" Background="Black" Margin="0,10,0,0">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-
-            </Grid.ColumnDefinitions>
-
-            <StackPanel Grid.Column="1" Margin="20">
-                <Image Source="/WpfApp;component/image/logo.png" Height="70"/>
-                <TextBlock Foreground="#FFFF7800" HorizontalAlignment="Center" FontWeight="Bold" FontSize="20" >Koi Control</TextBlock>
-            </StackPanel>
-
-            <!-- Column 1: Introduction -->
-            <StackPanel Grid.Column="2" Margin="20">
-                <TextBlock Text="Introduction" FontWeight="Bold" Margin="0,0,0,10" Foreground="#FFFF7800" FontSize="20"/>
-                <TextBlock Text="About Us" Margin="0,5,0,0" Foreground="White" FontSize="15"/>
-                <TextBlock Text="Our Mission" Margin="0,5,0,0" Foreground="White" FontSize="15"/>
-                <TextBlock Text="Team" Margin="0,5,0,0" Foreground="White" FontSize="15"/>
-            </StackPanel>
-
-            <!-- Column 2: Services -->
-            <StackPanel Grid.Column="3" Margin="20">
-                <TextBlock Text="Services" FontWeight="Bold" Margin="0,0,0,10" Foreground="#FFFF7800" FontSize="20"/>
-                <TextBlock Text="Koi Care" Margin="0,5,0,0" Foreground="White" FontSize="15"/>
-                <TextBlock Text="Water Params" Margin="0,5,0,0" Foreground="White" FontSize="15"/>
-                <TextBlock Text="Food Calculator" Margin="0,5,0,0" Foreground="White" FontSize="15"/>
-            </StackPanel>
-
-            <!-- Column 3: Support -->
-            <StackPanel Grid.Column="4" Margin="20">
-                <TextBlock Text="Support" FontWeight="Bold" Margin="0,0,0,10" Foreground="#FFFF7800" FontSize="20"/>
-                <TextBlock Text="Help Center" Margin="0,5,0,0" Foreground="White" FontSize="15"/>
-                <TextBlock Text="Contact Us" Margin="0,5,0,0" Foreground="White" FontSize="15"/>
-                <TextBlock Text="FAQ" Margin="0,5,0,0" Foreground="White" FontSize="15"/>
-            </StackPanel>
-
-            <!-- Column 4: Media -->
-            <StackPanel Grid.Column="5" Margin="20">
-                <TextBlock Text="Media" FontWeight="Bold" Margin="0,0,0,10" Foreground="#FFFF7800" FontSize="20"/>
-                <TextBlock Text="Blog" Margin="0,5,0,0" Foreground="White" FontSize="15"/>
-                <TextBlock Text="Gallery" Margin="0,5,0,0" Foreground="White" FontSize="15"/>
-                <TextBlock Text="Videos" Margin="0,5,0,0" Foreground="White" FontSize="15"/>
+            <!-- Login Area -->
+            <StackPanel Grid.Column="1" 
+                        Orientation="Horizontal" 
+                        HorizontalAlignment="Right"
+                        Margin="0,10,0,10"
+                        Panel.ZIndex="1">
+                <StackPanel x:Name="LoggedInPanel" Visibility="Collapsed" Orientation="Horizontal">
+                    <TextBlock x:Name="UserGreeting" 
+                              Text="Hello, User" 
+                              Foreground="White" 
+                              FontSize="18" 
+                              VerticalAlignment="Center" 
+                              Margin="0,0,20,0" FontWeight="Bold"/>
+                    <Button Content="Log Out" 
+                            Click="LogoutButton_Click"
+                            Padding="20,5" 
+                            Foreground="White" 
+                            BorderBrush="White" 
+                            Background="Black" 
+                            FontSize="15"
+                            Margin="0,5,0,5" 
+                            FontWeight="Bold"/>
+                </StackPanel>
+                
+                <StackPanel x:Name="LoggedOutPanel" Visibility="Visible" Orientation="Horizontal">
+                    <Button Content="Log In" 
+                            Click="LoginButton_Click"
+                            Margin="0,5,10,5" 
+                            Padding="20,5" 
+                            Foreground="Black" 
+                            BorderBrush="White" 
+                            Background="White" 
+                            FontSize="15"
+                            FontWeight="Bold"/>
+                    <Button Content="Sign In" 
+                            Click="SignUpButton_Click"
+                            Padding="20,5" 
+                            Foreground="White" 
+                            BorderBrush="White" 
+                            Background="Black" 
+                            FontSize="15"
+                            Margin="0,5,0,5" 
+                            FontWeight="Bold"/>
+                </StackPanel>
             </StackPanel>
         </Grid>
+
+        <!-- Main Content with ScrollViewer -->
+        <ScrollViewer Grid.Row="1" x:Name="MainScrollViewer" ScrollChanged="MainScrollViewer_ScrollChanged">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <!-- Main Content Frame -->
+                <Frame Grid.Row="0" 
+                       x:Name="MainFrame" 
+                       NavigationUIVisibility="Hidden"/>
+
+                <!-- Footer -->
+                <Grid Grid.Row="1" Background="Black" x:Name="Footer" Visibility="Collapsed">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel Grid.Column="1" Margin="20">
+                        <Image Source="/WpfApp;component/image/logo.png" Height="70"/>
+                        <TextBlock Foreground="#FFFF7800" HorizontalAlignment="Center" FontWeight="Bold" FontSize="20">Koi Control</TextBlock>
+                    </StackPanel>
+
+                    <StackPanel Grid.Column="2" Margin="20">
+                        <TextBlock Text="Introduction" FontWeight="Bold" Margin="0,0,0,10" Foreground="#FFFF7800" FontSize="20"/>
+                        <TextBlock Text="About Us" Margin="0,5,0,0" Foreground="White" FontSize="15"/>
+                        <TextBlock Text="Our Mission" Margin="0,5,0,0" Foreground="White" FontSize="15"/>
+                        <TextBlock Text="Team" Margin="0,5,0,0" Foreground="White" FontSize="15"/>
+                    </StackPanel>
+
+                    <StackPanel Grid.Column="3" Margin="20">
+                        <TextBlock Text="Services" FontWeight="Bold" Margin="0,0,0,10" Foreground="#FFFF7800" FontSize="20"/>
+                        <TextBlock Text="Koi Care" Margin="0,5,0,0" Foreground="White" FontSize="15"/>
+                        <TextBlock Text="Water Params" Margin="0,5,0,0" Foreground="White" FontSize="15"/>
+                        <TextBlock Text="Food Calculator" Margin="0,5,0,0" Foreground="White" FontSize="15"/>
+                    </StackPanel>
+
+                    <StackPanel Grid.Column="4" Margin="20">
+                        <TextBlock Text="Support" FontWeight="Bold" Margin="0,0,0,10" Foreground="#FFFF7800" FontSize="20"/>
+                        <TextBlock Text="Help Center" Margin="0,5,0,0" Foreground="White" FontSize="15"/>
+                        <TextBlock Text="Contact Us" Margin="0,5,0,0" Foreground="White" FontSize="15"/>
+                        <TextBlock Text="FAQ" Margin="0,5,0,0" Foreground="White" FontSize="15"/>
+                    </StackPanel>
+
+                    <StackPanel Grid.Column="5" Margin="20">
+                        <TextBlock Text="Media" FontWeight="Bold" Margin="0,0,0,10" Foreground="#FFFF7800" FontSize="20"/>
+                        <TextBlock Text="Blog" Margin="0,5,0,0" Foreground="White" FontSize="15"/>
+                        <TextBlock Text="Gallery" Margin="0,5,0,0" Foreground="White" FontSize="15"/>
+                        <TextBlock Text="Videos" Margin="0,5,0,0" Foreground="White" FontSize="15"/>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+        </ScrollViewer>
     </Grid>
 </Window>

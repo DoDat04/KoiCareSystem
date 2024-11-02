@@ -18,11 +18,17 @@ namespace WpfApp.FoodCalc
     /// <summary>
     /// Interaction logic for FoodPage.xaml
     /// </summary>
+    /// 
     public partial class FoodPage : Page
     {
+        public string MemberIdText { get; set; }
+
         public FoodPage()
         {
             InitializeComponent();
+            var session = UserSession.GetInstance();
+            MemberIdText = $"Member ID: {session.MemberId}";
+            this.DataContext = this;
         }
     }
 }

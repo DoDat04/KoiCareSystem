@@ -44,5 +44,17 @@ namespace Services
         {
             iMemberRepository.UpdateMember(member);
         }
+
+        public void AddMember(Member member)
+        {
+            try
+            {
+                iMemberRepository.SaveMember(member);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Error adding member: {ex.Message}");
+            }
+        }
     }
 }

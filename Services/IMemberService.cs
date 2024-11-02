@@ -12,7 +12,7 @@ namespace Services
         List<Member> GetMembers();
         Member GetMemberByEmail(string email);
         Member GetMemberById(int id);
-        void SaveMember(Member member);
+        void AddMember(Member member);
         void UpdateMember(Member member);
         void RemoveMember(int id);
     }

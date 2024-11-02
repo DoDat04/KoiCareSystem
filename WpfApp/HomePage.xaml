@@ -5,13 +5,116 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:WpfApp"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="800" d:DesignWidth="1300"
       Title="HomePage">
 
-    <Grid Background="White">
-        <TextBlock Text="Home"
-         FontSize="24"
-         FontWeight="Bold" Height="50" Margin="0,10,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" Width="798" TextAlignment="Center"
-         />
-    </Grid>
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <Grid Background="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <!-- Header -->
+            <TextBlock Text="Home"
+                     Grid.Row="0"
+                     FontSize="32"
+                     FontWeight="Bold"
+                     HorizontalAlignment="Center"
+                     VerticalAlignment="Center"
+                     Margin="0,10,0,10"/>
+
+            <!-- First Section -->
+            <Grid Grid.Row="1" Margin="40,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+
+                <Image Source="/WpfApp;component/image/koi.png"
+                       Grid.Column="0"
+                       Width="400"
+                       Height="300"
+                       Stretch="Uniform"
+                       HorizontalAlignment="Center"
+                       Margin="0,0,40,0"/>
+
+                <StackPanel Grid.Column="1" 
+                          VerticalAlignment="Center"
+                          MaxWidth="600">
+                    <TextBlock Text="KoiControl - The Koi Web For Your Pond" 
+                             FontSize="28" 
+                             FontWeight="Bold" 
+                             TextWrapping="Wrap"
+                             Margin="0,0,0,20"/>
+                    <TextBlock Text="Manage your water parameters, your koi and your ponds in our koi app!" 
+                             FontSize="20" 
+                             TextWrapping="Wrap"
+                             Margin="0,0,40,0"/>
+                </StackPanel>
+            </Grid>
+
+            <!-- Second Section -->
+            <Grid Grid.Row="2" Margin="40,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0" 
+                          VerticalAlignment="Center"
+                          MaxWidth="600">
+                    <TextBlock Text="Determine the ideal amount of food!" 
+                             FontSize="28" 
+                             FontWeight="Bold" 
+                             TextWrapping="Wrap"
+                             Margin="40,0,0,20"/>
+                    <TextBlock Text="How much food do your koi need to grow ideally? Our food calculator automatically calculates the recommended amount of food for your koi!" 
+                             FontSize="20" 
+                             TextWrapping="Wrap"
+                               Margin="40,0,0,20"/>
+                </StackPanel>
+
+                <Image Source="/WpfApp;component/image/food.png"
+                       Grid.Column="1"
+                       Width="400"
+                       Height="300"
+                       Stretch="Uniform"
+                       HorizontalAlignment="Center"
+                       Margin="40,0,0,0"/>
+            </Grid>
+
+            <!-- Third Section -->
+            <Grid Grid.Row="3" Margin="40,0,40,60">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+
+                <Image Source="/WpfApp;component/image/Water.png"
+                       Grid.Column="0"
+                       Width="400"
+                       Height="300"
+                       Stretch="Uniform"
+                       HorizontalAlignment="Center"
+                       Margin="0,0,40,0"/>
+
+                <StackPanel Grid.Column="1" 
+                          VerticalAlignment="Center"
+                          MaxWidth="600">
+                    <TextBlock Text="Calculate the correct amount of salt!" 
+                             FontSize="28" 
+                             FontWeight="Bold" 
+                             TextWrapping="Wrap"
+                             Margin="0,0,0,20"/>
+                    <TextBlock Text="Salt is a popular tool for treating koi diseases, as it is both cheap and effective against some parasites or algae. With the salt calculator you can calculate the correct dosage for each of your managed ponds without errors and without calculators!" 
+                             FontSize="20" 
+                             TextWrapping="Wrap"
+                               Margin="40,0,0,20"/>
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </ScrollViewer>
 </Page>

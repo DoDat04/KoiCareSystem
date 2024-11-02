@@ -1,38 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\SEM5\\PRN212\\Assignment2\\",
+  "WorkspaceRootPath": "D:\\PRN212\\PRN212_KoiCare\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8282A24E-2BBF-4381-98BB-1A6A53029EB2}|BusinessObject\\BusinessObject.csproj|d:\\sem5\\prn212\\assignment2\\businessobject\\member.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8282A24E-2BBF-4381-98BB-1A6A53029EB2}|BusinessObject\\BusinessObject.csproj|solutionrelative:businessobject\\member.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3ECE248A-6A49-47B4-A4B5-561EC2DCF4E8}|WpfApp\\WpfApp.csproj|d:\\prn212\\prn212_koicare\\wpfapp\\foodcalc\\foodpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3ECE248A-6A49-47B4-A4B5-561EC2DCF4E8}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\foodcalc\\foodpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3ECE248A-6A49-47B4-A4B5-561EC2DCF4E8}|WpfApp\\WpfApp.csproj|d:\\sem5\\prn212\\assignment2\\wpfapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{3ECE248A-6A49-47B4-A4B5-561EC2DCF4E8}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{3ECE248A-6A49-47B4-A4B5-561EC2DCF4E8}|WpfApp\\WpfApp.csproj|d:\\prn212\\prn212_koicare\\wpfapp\\waterparam\\waterpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3ECE248A-6A49-47B4-A4B5-561EC2DCF4E8}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\waterparam\\waterpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3ECE248A-6A49-47B4-A4B5-561EC2DCF4E8}|WpfApp\\WpfApp.csproj|d:\\sem5\\prn212\\assignment2\\wpfapp\\mykoi\\koipage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3ECE248A-6A49-47B4-A4B5-561EC2DCF4E8}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\mykoi\\koipage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3ECE248A-6A49-47B4-A4B5-561EC2DCF4E8}|WpfApp\\WpfApp.csproj|d:\\prn212\\prn212_koicare\\wpfapp\\mypond\\pondpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3ECE248A-6A49-47B4-A4B5-561EC2DCF4E8}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\mypond\\pondpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3ECE248A-6A49-47B4-A4B5-561EC2DCF4E8}|WpfApp\\WpfApp.csproj|d:\\sem5\\prn212\\assignment2\\wpfapp\\addnewfishpopup.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3ECE248A-6A49-47B4-A4B5-561EC2DCF4E8}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\addnewfishpopup.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3ECE248A-6A49-47B4-A4B5-561EC2DCF4E8}|WpfApp\\WpfApp.csproj|d:\\sem5\\prn212\\assignment2\\wpfapp\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3ECE248A-6A49-47B4-A4B5-561EC2DCF4E8}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3ECE248A-6A49-47B4-A4B5-561EC2DCF4E8}|WpfApp\\WpfApp.csproj|d:\\sem5\\prn212\\assignment2\\wpfapp\\addnewfishpopup.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{3ECE248A-6A49-47B4-A4B5-561EC2DCF4E8}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\addnewfishpopup.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3ECE248A-6A49-47B4-A4B5-561EC2DCF4E8}|WpfApp\\WpfApp.csproj|d:\\sem5\\prn212\\assignment2\\wpfapp\\mykoi\\koipage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{3ECE248A-6A49-47B4-A4B5-561EC2DCF4E8}|WpfApp\\WpfApp.csproj|d:\\prn212\\prn212_koicare\\wpfapp\\mykoi\\koipage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{3ECE248A-6A49-47B4-A4B5-561EC2DCF4E8}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\mykoi\\koipage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FFC292C8-1BB7-4220-8DBF-2191120C201F}|Repositories\\Repositories.csproj|d:\\sem5\\prn212\\assignment2\\repositories\\fishrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFC292C8-1BB7-4220-8DBF-2191120C201F}|Repositories\\Repositories.csproj|solutionrelative:repositories\\fishrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,113 +26,55 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Member.cs",
-              "DocumentMoniker": "D:\\SEM5\\PRN212\\Assignment2\\BusinessObject\\Member.cs",
-              "RelativeDocumentMoniker": "BusinessObject\\Member.cs",
-              "ToolTip": "D:\\SEM5\\PRN212\\Assignment2\\BusinessObject\\Member.cs",
-              "RelativeToolTip": "BusinessObject\\Member.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAcwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T13:19:24.521Z",
+              "Title": "FoodPage.xaml",
+              "DocumentMoniker": "D:\\PRN212\\PRN212_KoiCare\\WpfApp\\FoodCalc\\FoodPage.xaml",
+              "RelativeDocumentMoniker": "WpfApp\\FoodCalc\\FoodPage.xaml",
+              "ToolTip": "D:\\PRN212\\PRN212_KoiCare\\WpfApp\\FoodCalc\\FoodPage.xaml",
+              "RelativeToolTip": "WpfApp\\FoodCalc\\FoodPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-02T14:22:24.324Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "KoiPage.xaml",
-              "DocumentMoniker": "D:\\SEM5\\PRN212\\Assignment2\\WpfApp\\MyKoi\\KoiPage.xaml",
-              "RelativeDocumentMoniker": "WpfApp\\MyKoi\\KoiPage.xaml",
-              "ToolTip": "D:\\SEM5\\PRN212\\Assignment2\\WpfApp\\MyKoi\\KoiPage.xaml",
-              "RelativeToolTip": "WpfApp\\MyKoi\\KoiPage.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-02T10:51:54.615Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "D:\\SEM5\\PRN212\\Assignment2\\WpfApp\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "WpfApp\\MainWindow.xaml",
-              "ToolTip": "D:\\SEM5\\PRN212\\Assignment2\\WpfApp\\MainWindow.xaml",
-              "RelativeToolTip": "WpfApp\\MainWindow.xaml",
+              "Title": "WaterPage.xaml",
+              "DocumentMoniker": "D:\\PRN212\\PRN212_KoiCare\\WpfApp\\WaterParam\\WaterPage.xaml",
+              "RelativeDocumentMoniker": "WpfApp\\WaterParam\\WaterPage.xaml",
+              "ToolTip": "D:\\PRN212\\PRN212_KoiCare\\WpfApp\\WaterParam\\WaterPage.xaml",
+              "RelativeToolTip": "WpfApp\\WaterParam\\WaterPage.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-02T10:47:59.861Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "D:\\SEM5\\PRN212\\Assignment2\\WpfApp\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "WpfApp\\MainWindow.xaml.cs",
-              "ToolTip": "D:\\SEM5\\PRN212\\Assignment2\\WpfApp\\MainWindow.xaml.cs",
-              "RelativeToolTip": "WpfApp\\MainWindow.xaml.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAAAEwEMAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T10:47:05.806Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "FishRepository.cs",
-              "DocumentMoniker": "D:\\SEM5\\PRN212\\Assignment2\\Repositories\\FishRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\FishRepository.cs",
-              "ToolTip": "D:\\SEM5\\PRN212\\Assignment2\\Repositories\\FishRepository.cs",
-              "RelativeToolTip": "Repositories\\FishRepository.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T10:06:36.955Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AddNewFishPopup.xaml",
-              "DocumentMoniker": "D:\\SEM5\\PRN212\\Assignment2\\WpfApp\\AddNewFishPopup.xaml",
-              "RelativeDocumentMoniker": "WpfApp\\AddNewFishPopup.xaml",
-              "ToolTip": "D:\\SEM5\\PRN212\\Assignment2\\WpfApp\\AddNewFishPopup.xaml",
-              "RelativeToolTip": "WpfApp\\AddNewFishPopup.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-02T04:04:53.617Z"
+              "WhenOpened": "2024-11-02T14:22:21.121Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "KoiPage.xaml.cs",
-              "DocumentMoniker": "D:\\SEM5\\PRN212\\Assignment2\\WpfApp\\MyKoi\\KoiPage.xaml.cs",
-              "RelativeDocumentMoniker": "WpfApp\\MyKoi\\KoiPage.xaml.cs",
-              "ToolTip": "D:\\SEM5\\PRN212\\Assignment2\\WpfApp\\MyKoi\\KoiPage.xaml.cs",
-              "RelativeToolTip": "WpfApp\\MyKoi\\KoiPage.xaml.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAuwDQAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T03:58:50.242Z"
+              "Title": "PondPage.xaml",
+              "DocumentMoniker": "D:\\PRN212\\PRN212_KoiCare\\WpfApp\\MyPond\\PondPage.xaml",
+              "RelativeDocumentMoniker": "WpfApp\\MyPond\\PondPage.xaml",
+              "ToolTip": "D:\\PRN212\\PRN212_KoiCare\\WpfApp\\MyPond\\PondPage.xaml",
+              "RelativeToolTip": "WpfApp\\MyPond\\PondPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-02T14:21:47.465Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "AddNewFishPopup.xaml.cs",
-              "DocumentMoniker": "D:\\SEM5\\PRN212\\Assignment2\\WpfApp\\AddNewFishPopup.xaml.cs",
-              "RelativeDocumentMoniker": "WpfApp\\AddNewFishPopup.xaml.cs",
-              "ToolTip": "D:\\SEM5\\PRN212\\Assignment2\\WpfApp\\AddNewFishPopup.xaml.cs",
-              "RelativeToolTip": "WpfApp\\AddNewFishPopup.xaml.cs",
-              "ViewState": "AgIAAD4AAAAAAAAAAAAwwFsAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T04:12:57.57Z"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+              "Title": "KoiPage.xaml",
+              "DocumentMoniker": "D:\\PRN212\\PRN212_KoiCare\\WpfApp\\MyKoi\\KoiPage.xaml",
+              "RelativeDocumentMoniker": "WpfApp\\MyKoi\\KoiPage.xaml",
+              "ToolTip": "D:\\PRN212\\PRN212_KoiCare\\WpfApp\\MyKoi\\KoiPage.xaml",
+              "RelativeToolTip": "WpfApp\\MyKoi\\KoiPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-02T14:16:07.195Z",
+              "EditorCaption": ""
             }
           ]
         }

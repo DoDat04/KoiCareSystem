@@ -25,31 +25,81 @@ namespace WpfApp
         {
             InitializeComponent();
             WindowStartupLocation = WindowStartupLocation.CenterScreen;
-            MainFrame.Navigate(new HomePage()); // Add this line to load HomePage at startup
-            
+            MainFrame.Navigate(new HomePage());
+            UpdateLoginState();
+        }
+
+        public void UpdateLoginState()
+        {
+            var session = UserSession.GetInstance();
+            if (session.IsLoggedIn)
+            {
+                LoggedInPanel.Visibility = Visibility.Visible;
+                LoggedOutPanel.Visibility = Visibility.Collapsed;
+                UserGreeting.Text = $"Hello, {session.Email}";
+            }
+            else
+            {
+                LoggedInPanel.Visibility = Visibility.Collapsed;
+                LoggedOutPanel.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void LogoutButton_Click(object sender, RoutedEventArgs e)
+        {
+            UserSession.GetInstance().Logout();
+            UpdateLoginState();
+            MainFrame.Navigate(new HomePage());
+        }
+
+        private void MainScrollViewer_ScrollChanged(object sender, ScrollChangedEventArgs e)
+        {
+            var scrollViewer = (ScrollViewer)sender;
+            bool isNearBottom = scrollViewer.ScrollableHeight - scrollViewer.VerticalOffset <= 50;
+            Footer.Visibility = isNearBottom ? Visibility.Visible : Visibility.Collapsed;
         }
 
         private void NavigateToKoi(object sender, MouseButtonEventArgs e)
         {
+            if (!UserSession.GetInstance().IsLoggedIn)
+            {
+                MessageBox.Show("Please log in to use this feature.", "Login Required", MessageBoxButton.OK, MessageBoxImage.Information);
+                return;
+            }
             MainFrame.Navigate(new KoiPage());
         }
 
         private void NavigateToPond(object sender, MouseButtonEventArgs e)
         {
+            if (!UserSession.GetInstance().IsLoggedIn)
+            {
+                MessageBox.Show("Please log in to use this feature.", "Login Required", MessageBoxButton.OK, MessageBoxImage.Information);
+                return;
+            }
             MainFrame.Navigate(new PondPage());
         }
 
         private void NavigateToWater(object sender, MouseButtonEventArgs e)
         {
+            if (!UserSession.GetInstance().IsLoggedIn)
+            {
+                MessageBox.Show("Please log in to use this feature.", "Login Required", MessageBoxButton.OK, MessageBoxImage.Information);
+                return;
+            }
             MainFrame.Navigate(new WaterPage());
         }
 
         private void NavigateToFood(object sender, MouseButtonEventArgs e)
         {
+            if (!UserSession.GetInstance().IsLoggedIn)
+            {
+                MessageBox.Show("Please log in to use this feature.", "Login Required", MessageBoxButton.OK, MessageBoxImage.Information);
+                return;
+            }
             MainFrame.Navigate(new FoodPage());
         }
 
-         private void NavigateToHome(object sender, MouseButtonEventArgs e)
+        private void NavigateToHome(object sender, MouseButtonEventArgs e)
         {
             MainFrame.Navigate(new HomePage());
         }

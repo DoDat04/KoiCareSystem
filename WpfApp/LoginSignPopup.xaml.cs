@@ -38,16 +38,14 @@ namespace WpfApp
                 TitleText.Text = "Login";
                 LoginPanel.Visibility = Visibility.Visible;
                 SignUpPanel.Visibility = Visibility.Collapsed;
-                SwitchText.Text = "Don't have an account? ";
-                SwitchLinkText.Text = "Sign up";
+               
             }
             else
             {
                 TitleText.Text = "Sign Up";
                 LoginPanel.Visibility = Visibility.Collapsed;
                 SignUpPanel.Visibility = Visibility.Visible;
-                SwitchText.Text = "Already have an account? ";
-                SwitchLinkText.Text = "Login";
+                
             }
         }
 
@@ -87,8 +85,10 @@ namespace WpfApp
                 }
                 else
                 {
-                    MessageBox.Show("Login successfully!");
-                    MessageBox.Show($"Member ID: {account.MemberId}");
+                    UserSession.GetInstance().Login(account.MemberId, account.Email, account.RoleId);
+                    MessageBox.Show("Login successful!");
+                    ((Home)Application.Current.MainWindow).UpdateLoginState();
+                    this.Close();
                 }
             }
             catch (Exception ex)
@@ -105,7 +105,6 @@ namespace WpfApp
 
         private void SignUpButton_Click(object sender, RoutedEventArgs e)
         {
-            // Add your sign up logic here
             string email = SignUpEmail.Text;
             string password = SignUpPassword.Password;
             string confirmPassword = SignUpConfirmPassword.Password;
@@ -123,8 +122,41 @@ namespace WpfApp
                 return;
             }
 
-            // TODO: Implement signup logic (e.g., save to database)
-            MessageBox.Show("Sign up clicked");
+            try
+            {
+                // Check if email already exists
+                var existingMember = _memberService.GetMemberByEmail(email);
+                if (existingMember != null)
+                {
+                    MessageBox.Show("An account with this email already exists.");
+                    return;
+                }
+
+                // Create new member
+                var newMember = new BusinessObject.Member
+                {
+                    Email = email,
+                    Password = password, // In production, this should be hashed
+                    RoleId = 2, // Assuming 2 is for regular users
+                    FirstName = "New", // These can be updated later
+                    LastName = "User",
+                    PhoneNumber = "0000000000",
+                    IsActive = true,
+                    CreateDate = DateTime.Now,
+                    CreateBy = email
+                };
+
+                _memberService.AddMember(newMember);
+                MessageBox.Show("Account created successfully! Please log in.");
+                
+                // Switch to login mode
+                isLoginMode = true;
+                UpdateUI();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred during sign up: {ex.Message}");
+            }
         }
     }
 }
