@@ -2,8 +2,6 @@ D:\PRN212\PRN212_KoiCare\Repositories\bin\Debug\net8.0\Repositories.deps.json
 D:\PRN212\PRN212_KoiCare\Repositories\bin\Debug\net8.0\Repositories.dll
 D:\PRN212\PRN212_KoiCare\Repositories\bin\Debug\net8.0\Repositories.pdb
 D:\PRN212\PRN212_KoiCare\Repositories\bin\Debug\net8.0\BusinessObject.dll
-D:\PRN212\PRN212_KoiCare\Repositories\bin\Debug\net8.0\DataAccessLayer.dll
-D:\PRN212\PRN212_KoiCare\Repositories\bin\Debug\net8.0\DataAccessLayer.pdb
 D:\PRN212\PRN212_KoiCare\Repositories\bin\Debug\net8.0\BusinessObject.pdb
 D:\PRN212\PRN212_KoiCare\Repositories\obj\Debug\net8.0\Repositories.csproj.AssemblyReference.cache
 D:\PRN212\PRN212_KoiCare\Repositories\obj\Debug\net8.0\Repositories.GeneratedMSBuildEditorConfig.editorconfig
@@ -15,3 +13,4 @@ D:\PRN212\PRN212_KoiCare\Repositories\obj\Debug\net8.0\Repositories.dll
 D:\PRN212\PRN212_KoiCare\Repositories\obj\Debug\net8.0\refint\Repositories.dll
 D:\PRN212\PRN212_KoiCare\Repositories\obj\Debug\net8.0\Repositories.pdb
 D:\PRN212\PRN212_KoiCare\Repositories\obj\Debug\net8.0\ref\Repositories.dll
+D:\PRN212\PRN212_KoiCare\Repositories\obj\Debug\net8.0\Repositories.sourcelink.json

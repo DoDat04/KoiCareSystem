@@ -44,7 +44,7 @@
               "RelativeDocumentMoniker": "WpfApp\\MainWindow.xaml.cs",
               "ToolTip": "D:\\PRN212\\PRN212_KoiCare\\WpfApp\\MainWindow.xaml.cs",
               "RelativeToolTip": "WpfApp\\MainWindow.xaml.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAQwDEAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAQwDAAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-02T02:57:10.005Z",
               "EditorCaption": ""
@@ -58,8 +58,7 @@
               "ToolTip": "D:\\PRN212\\PRN212_KoiCare\\WpfApp\\MainWindow.xaml",
               "RelativeToolTip": "WpfApp\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-02T02:57:06.856Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-02T02:57:06.856Z"
             },
             {
               "$type": "Document",
@@ -70,8 +69,7 @@
               "ToolTip": "D:\\PRN212\\PRN212_KoiCare\\WpfApp\\WaterParam\\WaterPage.xaml",
               "RelativeToolTip": "WpfApp\\WaterParam\\WaterPage.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-02T02:56:22.888Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-02T02:56:22.888Z"
             },
             {
               "$type": "Document",
@@ -82,8 +80,7 @@
               "ToolTip": "D:\\PRN212\\PRN212_KoiCare\\WpfApp\\MyKoi\\KoiPage.xaml",
               "RelativeToolTip": "WpfApp\\MyKoi\\KoiPage.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-02T02:55:11.359Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-02T02:55:11.359Z"
             },
             {
               "$type": "Document",
@@ -94,21 +91,19 @@
               "ToolTip": "D:\\PRN212\\PRN212_KoiCare\\WpfApp\\FoodCalc\\FoodPage.xaml",
               "RelativeToolTip": "WpfApp\\FoodCalc\\FoodPage.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-02T02:53:17.831Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-02T02:53:17.831Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "WpfApp",
+              "Title": "WpfApp.csproj",
               "DocumentMoniker": "D:\\PRN212\\PRN212_KoiCare\\WpfApp\\WpfApp.csproj",
               "RelativeDocumentMoniker": "WpfApp\\WpfApp.csproj",
               "ToolTip": "D:\\PRN212\\PRN212_KoiCare\\WpfApp\\WpfApp.csproj",
               "RelativeToolTip": "WpfApp\\WpfApp.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-11-02T02:50:18.511Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-02T02:50:18.511Z"
             }
           ]
         }

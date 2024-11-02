@@ -57,12 +57,10 @@ D:\PRN212\PRN212_KoiCare\WpfApp\bin\Debug\net8.0-windows\runtimes\win-x64\native
 D:\PRN212\PRN212_KoiCare\WpfApp\bin\Debug\net8.0-windows\runtimes\win-x86\native\WebView2Loader.dll
 D:\PRN212\PRN212_KoiCare\WpfApp\bin\Debug\net8.0-windows\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
 D:\PRN212\PRN212_KoiCare\WpfApp\bin\Debug\net8.0-windows\BusinessObject.dll
-D:\PRN212\PRN212_KoiCare\WpfApp\bin\Debug\net8.0-windows\DataAccessLayer.dll
 D:\PRN212\PRN212_KoiCare\WpfApp\bin\Debug\net8.0-windows\Repositories.dll
 D:\PRN212\PRN212_KoiCare\WpfApp\bin\Debug\net8.0-windows\Services.dll
 D:\PRN212\PRN212_KoiCare\WpfApp\bin\Debug\net8.0-windows\Services.pdb
 D:\PRN212\PRN212_KoiCare\WpfApp\bin\Debug\net8.0-windows\BusinessObject.pdb
-D:\PRN212\PRN212_KoiCare\WpfApp\bin\Debug\net8.0-windows\DataAccessLayer.pdb
 D:\PRN212\PRN212_KoiCare\WpfApp\bin\Debug\net8.0-windows\Repositories.pdb
 D:\PRN212\PRN212_KoiCare\WpfApp\obj\Debug\net8.0-windows\WpfApp.csproj.AssemblyReference.cache
 D:\PRN212\PRN212_KoiCare\WpfApp\obj\Debug\net8.0-windows\TestDatabase.g.cs

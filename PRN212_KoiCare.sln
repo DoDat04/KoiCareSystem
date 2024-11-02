@@ -3,15 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35303.130
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessObject", "BusinessObject\BusinessObject.csproj", "{8282A24E-2BBF-4381-98BB-1A6A53029EB2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessObject", "BusinessObject\BusinessObject.csproj", "{8282A24E-2BBF-4381-98BB-1A6A53029EB2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{73282EB5-6D3A-46D3-8145-04EBD7DBF634}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Repositories", "Repositories\Repositories.csproj", "{FFC292C8-1BB7-4220-8DBF-2191120C201F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repositories", "Repositories\Repositories.csproj", "{FFC292C8-1BB7-4220-8DBF-2191120C201F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services", "Services\Services.csproj", "{35F804EB-2BF1-49A5-A1D3-E522CD75DFEF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Services.csproj", "{35F804EB-2BF1-49A5-A1D3-E522CD75DFEF}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp", "WpfApp\WpfApp.csproj", "{3ECE248A-6A49-47B4-A4B5-561EC2DCF4E8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfApp", "WpfApp\WpfApp.csproj", "{3ECE248A-6A49-47B4-A4B5-561EC2DCF4E8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +21,6 @@ Global
 		{8282A24E-2BBF-4381-98BB-1A6A53029EB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8282A24E-2BBF-4381-98BB-1A6A53029EB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8282A24E-2BBF-4381-98BB-1A6A53029EB2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{73282EB5-6D3A-46D3-8145-04EBD7DBF634}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{73282EB5-6D3A-46D3-8145-04EBD7DBF634}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{73282EB5-6D3A-46D3-8145-04EBD7DBF634}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{73282EB5-6D3A-46D3-8145-04EBD7DBF634}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FFC292C8-1BB7-4220-8DBF-2191120C201F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FFC292C8-1BB7-4220-8DBF-2191120C201F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FFC292C8-1BB7-4220-8DBF-2191120C201F}.Release|Any CPU.ActiveCfg = Release|Any CPU

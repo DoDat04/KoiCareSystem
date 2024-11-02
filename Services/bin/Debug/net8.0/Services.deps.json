@@ -645,20 +645,9 @@
           }
         }
       },
-      "DataAccessLayer/1.0.0": {
-        "dependencies": {
-          "BusinessObject": "1.0.0"
-        },
-        "runtime": {
-          "DataAccessLayer.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      },
       "Repositories/1.0.0": {
         "dependencies": {
-          "DataAccessLayer": "1.0.0"
+          "BusinessObject": "1.0.0"
         },
         "runtime": {
           "Repositories.dll": {
@@ -1103,11 +1092,6 @@
       "hashPath": "system.windows.extensions.6.0.0.nupkg.sha512"
     },
     "BusinessObject/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DataAccessLayer/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

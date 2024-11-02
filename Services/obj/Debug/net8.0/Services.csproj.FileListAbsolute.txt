@@ -2,11 +2,9 @@ D:\PRN212\PRN212_KoiCare\Services\bin\Debug\net8.0\Services.deps.json
 D:\PRN212\PRN212_KoiCare\Services\bin\Debug\net8.0\Services.dll
 D:\PRN212\PRN212_KoiCare\Services\bin\Debug\net8.0\Services.pdb
 D:\PRN212\PRN212_KoiCare\Services\bin\Debug\net8.0\BusinessObject.dll
-D:\PRN212\PRN212_KoiCare\Services\bin\Debug\net8.0\DataAccessLayer.dll
 D:\PRN212\PRN212_KoiCare\Services\bin\Debug\net8.0\Repositories.dll
 D:\PRN212\PRN212_KoiCare\Services\bin\Debug\net8.0\Repositories.pdb
 D:\PRN212\PRN212_KoiCare\Services\bin\Debug\net8.0\BusinessObject.pdb
-D:\PRN212\PRN212_KoiCare\Services\bin\Debug\net8.0\DataAccessLayer.pdb
 D:\PRN212\PRN212_KoiCare\Services\obj\Debug\net8.0\Services.csproj.AssemblyReference.cache
 D:\PRN212\PRN212_KoiCare\Services\obj\Debug\net8.0\Services.GeneratedMSBuildEditorConfig.editorconfig
 D:\PRN212\PRN212_KoiCare\Services\obj\Debug\net8.0\Services.AssemblyInfoInputs.cache
@@ -17,3 +15,4 @@ D:\PRN212\PRN212_KoiCare\Services\obj\Debug\net8.0\Services.dll
 D:\PRN212\PRN212_KoiCare\Services\obj\Debug\net8.0\refint\Services.dll
 D:\PRN212\PRN212_KoiCare\Services\obj\Debug\net8.0\Services.pdb
 D:\PRN212\PRN212_KoiCare\Services\obj\Debug\net8.0\ref\Services.dll
+D:\PRN212\PRN212_KoiCare\Services\obj\Debug\net8.0\Services.sourcelink.json
