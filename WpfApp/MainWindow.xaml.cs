@@ -26,7 +26,17 @@ namespace WpfApp
             InitializeComponent();
             WindowStartupLocation = WindowStartupLocation.CenterScreen;
             MainFrame.Navigate(new HomePage()); // Add this line to load HomePage at startup
-            
+        }
+
+        private void MainScrollViewer_ScrollChanged(object sender, ScrollChangedEventArgs e)
+        {
+            var scrollViewer = (ScrollViewer)sender;
+
+            // Calculate if we're near the bottom (within 50 pixels)
+            bool isNearBottom = scrollViewer.ScrollableHeight - scrollViewer.VerticalOffset <= 50;
+
+            // Show/hide footer based on scroll position
+            Footer.Visibility = isNearBottom ? Visibility.Visible : Visibility.Collapsed;
         }
 
         private void NavigateToKoi(object sender, MouseButtonEventArgs e)
@@ -49,7 +59,7 @@ namespace WpfApp
             MainFrame.Navigate(new FoodPage());
         }
 
-         private void NavigateToHome(object sender, MouseButtonEventArgs e)
+        private void NavigateToHome(object sender, MouseButtonEventArgs e)
         {
             MainFrame.Navigate(new HomePage());
         }
