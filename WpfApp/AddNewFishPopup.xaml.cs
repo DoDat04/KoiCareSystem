@@ -34,7 +34,8 @@ namespace WpfApp
         {
             try
             {
-                var ponds = _pondService.GetAll();
+                var session = UserSession.GetInstance();
+                var ponds = _pondService.GetAll(session.MemberId);
                 PondComboBox.ItemsSource = ponds;
             }
             catch (Exception ex)
@@ -52,6 +53,7 @@ namespace WpfApp
         {
             try
             {
+                var session = UserSession.GetInstance();
                 string name = NameTextBox.Text;
                 string breed = BreedTextBox.Text;
                 string genderFish = (SexComboBox.SelectedItem as ComboBoxItem)?.Content.ToString();
@@ -63,7 +65,7 @@ namespace WpfApp
                 Fish newFish = new Fish
                 (
                     pondId: pondId,
-                    memberId: 1, 
+                    memberId: session.MemberId, 
                     name: name,
                     length: length,
                     weight: weight,

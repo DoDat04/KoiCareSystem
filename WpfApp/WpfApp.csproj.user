@@ -16,6 +16,9 @@
     <Compile Update="FoodCalc\ShowFood.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="KoiDetailPopup.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="LoginSignPopup.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -61,6 +64,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="FoodCalc\ShowFood.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="KoiDetailPopup.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="LoginSignPopup.xaml">

@@ -9,10 +9,12 @@ namespace Repositories
 {
     public class PondRepository : IPondRepository
     {
-        public List<Pond> GetAll()
+        public List<Pond> GetAll(int memberId)
         {
             using var _dbContext = new KoiCareContext();
-            return _dbContext.Ponds.ToList();
+            return _dbContext.Ponds
+                .Where(x => x.MemberId == memberId)
+                .ToList();
         }
     }
 }

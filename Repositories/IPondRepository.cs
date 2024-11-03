@@ -9,6 +9,6 @@ namespace Repositories
 {
     public interface IPondRepository
     {
-        List<Pond> GetAll();
+        List<Pond> GetAll(int memberId);
     }
 }

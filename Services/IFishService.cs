@@ -9,7 +9,9 @@ namespace Services
 {
     public interface IFishService
     {
-        List<Fish> GetAll();
+        List<Fish> GetAll(int memberId);
         public void AddNewFish(Fish fish);
+        public void UpdateFish(Fish fish);
+        public void DeleteFish(int id);
     }
 }

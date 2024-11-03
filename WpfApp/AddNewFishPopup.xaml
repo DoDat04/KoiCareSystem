@@ -44,19 +44,19 @@
             <StackPanel Grid.Row="1" Margin="10">
                 <!-- Name TextBox -->
                 <StackPanel Orientation="Horizontal" Margin="0,5">
-                    <TextBlock Text="Name:" Width="100" VerticalAlignment="Center"/>
+                    <TextBlock Text="Name:" Width="100" FontWeight="Bold" VerticalAlignment="Center"/>
                     <TextBox Width="200" x:Name="NameTextBox"/>
                 </StackPanel>
 
                 <!-- Breed TextBox -->
                 <StackPanel Orientation="Horizontal" Margin="0,5">
-                    <TextBlock Text="Breed:" Width="100" VerticalAlignment="Center"/>
+                    <TextBlock Text="Breed:" Width="100" FontWeight="Bold" VerticalAlignment="Center"/>
                     <TextBox Width="200" x:Name="BreedTextBox"/>
                 </StackPanel>
 
                 <!-- Sex ComboBox -->
                 <StackPanel Orientation="Horizontal" Margin="0,5">
-                    <TextBlock Text="Sex:" Width="100" VerticalAlignment="Center"/>
+                    <TextBlock Text="Sex:" Width="100" FontWeight="Bold" VerticalAlignment="Center"/>
                     <ComboBox Width="200" x:Name="SexComboBox">
                         <ComboBoxItem Content="Male"/>
                         <ComboBoxItem Content="Female"/>
@@ -65,24 +65,24 @@
 
                 <!-- Weight TextBox -->
                 <StackPanel Orientation="Horizontal" Margin="0,5">
-                    <TextBlock Text="Weight:" Width="100" VerticalAlignment="Center"/>
+                    <TextBlock Text="Weight:" Width="100" FontWeight="Bold" VerticalAlignment="Center"/>
                     <TextBox Width="200" x:Name="WeightTextBox"/>
                 </StackPanel>
 
                 <!-- Length TextBox -->
                 <StackPanel Orientation="Horizontal" Margin="0,5">
-                    <TextBlock Text="Length:" Width="100" VerticalAlignment="Center"/>
+                    <TextBlock Text="Length:" Width="100" FontWeight="Bold" VerticalAlignment="Center"/>
                     <TextBox Width="200" x:Name="LengthTextBox"/>
                 </StackPanel>
 
                 <!-- Date of Birth DatePicker -->
                 <StackPanel Orientation="Horizontal" Margin="0,5">
-                    <TextBlock Text="Date of Birth:" Width="100" VerticalAlignment="Center"/>
+                    <TextBlock Text="Date of Birth:" Width="100" FontWeight="Bold" VerticalAlignment="Center"/>
                     <DatePicker Width="200" x:Name="DateOfBirthDatePicker"/>
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal" Margin="0,5">
-                    <TextBlock Text="Pond:" Width="100" VerticalAlignment="Center"/>
+                    <TextBlock Text="Pond:" Width="100" FontWeight="Bold" VerticalAlignment="Center"/>
                     <ComboBox x:Name="PondComboBox" 
                           Width="200" 
                           DisplayMemberPath="Name" 
@@ -92,9 +92,8 @@
             </StackPanel>
 
             <!-- Footer Buttons -->
-            <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20">
-                <Button x:Name="btnSave" Content="Save" Width="100" Margin="10" Click="btnSave_Click"/>
-                <Button Content="Cancel" Width="100" Margin="10" Click="CloseButton_Click"/>
+            <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,60">
+                <Button x:Name="btnSave" Content="Save" Click="btnSave_Click" Height="40" Width="101" Background="#FFED5050"/>
             </StackPanel>
         </Grid>
     </Border>

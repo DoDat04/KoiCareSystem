@@ -1,0 +1,91 @@
+﻿<Window x:Class="WpfApp.KoiDetailPopup"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Koi Detail" 
+        Height="627" 
+        Width="603"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Background="Transparent"
+        Loaded="Window_Loaded"
+        AllowsTransparency="True">
+
+    <Border CornerRadius="20" 
+            Background="White" 
+            BorderBrush="Black" 
+            BorderThickness="2" RenderTransformOrigin="0.5,0.5">
+        <Grid Margin="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <!-- Header -->
+            <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Stretch">
+                <TextBlock x:Name="TitleText"
+                           Text="Koi Details"
+                           FontSize="24"
+                           FontWeight="Bold"
+                           HorizontalAlignment="Center"
+                           Margin="0,10,0,10"
+                           VerticalAlignment="Center"/>
+
+                <!-- Close Button -->
+                <Button Content="✕" 
+                        HorizontalAlignment="Right" 
+                        VerticalAlignment="Top" 
+                        Click="CloseButton_Click"
+                        Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}"
+                        Margin="380,10,0,0"/>
+            </StackPanel>
+
+            <StackPanel Grid.Row="1" Margin="10">
+                <!-- Name TextBox -->
+                <StackPanel Orientation="Horizontal" Margin="0,5">
+                    <TextBlock Text="Fish Name:" Width="100" FontWeight="Bold" VerticalAlignment="Center"/>
+                    <TextBox Text="{Binding Name}" Width="200"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0,5">
+                    <TextBlock Text="Gender:" Width="100" FontWeight="Bold" VerticalAlignment="Center"/>
+                    <ComboBox Width="200" SelectedValue="{Binding Gender}" SelectedValuePath="Content">
+                        <ComboBoxItem Content="Male" />
+                        <ComboBoxItem Content="Female" />
+                    </ComboBox>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0,5">
+                    <TextBlock Text="Weight:" Width="100" FontWeight="Bold" VerticalAlignment="Center"/>
+                    <TextBox Text="{Binding Weight}" Width="200"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0,5">
+                    <TextBlock Text="Length:" Width="100" FontWeight="Bold" VerticalAlignment="Center"/>
+                    <TextBox Text="{Binding Length}" Width="200"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0,5">
+                    <TextBlock Text="Birth Date:" Width="100" FontWeight="Bold" VerticalAlignment="Center"/>
+                    <DatePicker SelectedDate="{Binding BirthDate}" Width="200"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0,5">
+                    <TextBlock Text="Breed:" Width="100" FontWeight="Bold" VerticalAlignment="Center"/>
+                    <TextBox Text="{Binding Breed}" Width="200"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0,5">
+                    <TextBlock Text="This Koi is in:" Width="100" FontWeight="Bold" VerticalAlignment="Center"/>
+                    <TextBox Text="{Binding Pond.Name}" Width="200" IsReadOnly="True"/>
+                </StackPanel>
+            </StackPanel>
+
+            <!-- Footer Buttons -->
+            <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,60">
+                <Button Content="Update" HorizontalAlignment="Center" Margin="0,20,0,0" Click="Update_Click" Height="40" Width="101" Background="#FFED5050"/>
+            </StackPanel>
+        </Grid>
+    </Border>
+</Window>

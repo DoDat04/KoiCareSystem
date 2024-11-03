@@ -11,33 +11,78 @@
 
     <Grid Background="White">
         <TextBlock Text="My Koi"
-                     FontSize="24"
-                     FontWeight="Bold" Height="50" Margin="0,10,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" Width="798" TextAlignment="Center"
-                     />
-        <TextBlock Text="{Binding MemberIdText}"
-          FontSize="24"
-          FontWeight="Bold" 
-          Height="50" 
-          Margin="0,50,100,0" 
-          HorizontalAlignment="Center" 
-          VerticalAlignment="Top" 
-          Width="798" 
-          TextAlignment="Center"/>
-        <!-- Add your Koi management content here -->
-        <DataGrid x:Name="dgFishInfo" Margin="0,149,1,10"
-AutoGenerateColumns="False" IsReadOnly="True"
-HeadersVisibility="Column" BorderBrush="Gray" BorderThickness="1">
+                   FontSize="24"
+                   FontWeight="Bold"
+                   Height="50"
+                   Margin="0,10,0,0"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Top"
+                   Width="798"
+                   TextAlignment="Center" />
+
+        <DataGrid x:Name="dgFishInfo" Margin="10,119,412,98"
+          AutoGenerateColumns="False"
+          IsReadOnly="True"
+          HeadersVisibility="Column"
+          BorderBrush="Gray"
+          BorderThickness="1"
+          SelectionChanged="dgFishInfo_SelectionChanged">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Fish ID" Binding="{Binding FishId}" Width="*"/>
-                <DataGridTextColumn Header="Pond ID" Binding="{Binding PondId}" Width="*"/>
-                <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="*"/>
-                <DataGridTextColumn Header="Length" Binding="{Binding Length}" Width="*"/>
-                <DataGridTextColumn Header="Weight" Binding="{Binding Weight}" Width="*"/>
-                <DataGridTextColumn Header="BirthDate" Binding="{Binding BirthDate}" Width="*"/>
-                <DataGridTextColumn Header="Gender" Binding="{Binding Gender}" Width="*"/>
-                <DataGridTextColumn Header="Breed" Binding="{Binding Breed}" Width="*"/>
+                <!-- Image Column -->
+                <DataGridTemplateColumn Header="Image" Width="400">
+                    <!-- Fixed Width -->
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Image Source="pack://application:,,,/WpfApp;component/image/koi.png" Width="200" Height="200"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <!-- Name Column -->
+                <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="120" FontSize="25"/>
+                <!-- Star Sizing for Flexibility -->
+
+                <!-- View Detail Button -->
+                <DataGridTemplateColumn Header="Actions" Width="*">
+                    <!-- Fixed Width -->
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="View Detail" Click="ViewDetail_Click"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="btnAddNewFish" Content="Add a new fish" HorizontalAlignment="Left" Margin="180,82,0,0" VerticalAlignment="Top" Click="btnAddNewFish_Click"/>
+
+        <Button x:Name="btnAddNewFish"
+                Content="Add a new fish"
+                HorizontalAlignment="Left"
+                Margin="44,65,0,0"
+                VerticalAlignment="Top"
+                Click="btnAddNewFish_Click" Height="37" Width="107" BorderBrush="#FF9C4141" Background="#FFEC5959" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.433"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button x:Name="btnDelete"
+            Content="Delete fish"
+            HorizontalAlignment="Left"
+            Margin="197,65,0,0"
+            VerticalAlignment="Top"
+            Click="btnDelete_Click" Height="37" Width="107" BorderBrush="#FF9C4141" Background="#FFEC5959" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.433"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
     </Grid>
 </Page>

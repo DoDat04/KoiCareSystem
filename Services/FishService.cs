@@ -21,9 +21,19 @@ namespace Services
             _fishRepository.AddNewFish(fish);
         }
 
-        public List<Fish> GetAll()
+        public void DeleteFish(int id)
         {
-            return _fishRepository.GetAll();
+            _fishRepository.DeleteFish(id);
+        }
+
+        public List<Fish> GetAll(int memberId)
+        {
+            return _fishRepository.GetAll(memberId);
+        }
+
+        public void UpdateFish(Fish fish)
+        {
+            _fishRepository.UpdateFish(fish);
         }
     }
 }

@@ -15,9 +15,9 @@ namespace Services
         {
             _pondRepository = new PondRepository();
         }
-        public List<Pond> GetAll()
+        public List<Pond> GetAll(int memberId)
         {
-            return _pondRepository.GetAll();    
+            return _pondRepository.GetAll(memberId);    
         }
     }
 }

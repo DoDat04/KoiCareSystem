@@ -9,6 +9,6 @@ namespace Services
 {
     public interface IPondService
     {
-        List<Pond> GetAll();
+        List<Pond> GetAll(int memberId);
     }
 }
