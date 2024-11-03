@@ -7,7 +7,7 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="AddNewFishPopup.xaml.cs">
+    <Compile Update="MyKoi\AddNewFishPopup.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="FoodCalc\FoodPage.xaml.cs">
@@ -16,7 +16,7 @@
     <Compile Update="FoodCalc\ShowFood.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="KoiDetailPopup.xaml.cs">
+    <Compile Update="MyKoi\KoiDetailPopup.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="LoginSignPopup.xaml.cs">
@@ -28,13 +28,7 @@
     <Compile Update="HomePage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="MyKoi\AddKoi.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="MyKoi\KoiPage.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="MyKoi\ShowKoi.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="MyPond\AddPond.xaml.cs">
@@ -49,6 +43,12 @@
     <Compile Update="TestDatabase.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="User\ForgotPass.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="User\Profile.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="WaterParam\AddWater.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -57,7 +57,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="AddNewFishPopup.xaml">
+    <Page Update="MyKoi\AddNewFishPopup.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="FoodCalc\FoodPage.xaml">
@@ -66,7 +66,7 @@
     <Page Update="FoodCalc\ShowFood.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="KoiDetailPopup.xaml">
+    <Page Update="MyKoi\KoiDetailPopup.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="LoginSignPopup.xaml">
@@ -78,13 +78,7 @@
     <Page Update="HomePage.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="MyKoi\AddKoi.xaml">
-      <SubType>Designer</SubType>
-    </Page>
     <Page Update="MyKoi\KoiPage.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="MyKoi\ShowKoi.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MyPond\AddPond.xaml">
@@ -97,6 +91,12 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="TestDatabase.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="User\ForgotPass.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="User\Profile.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="WaterParam\AddWater.xaml">

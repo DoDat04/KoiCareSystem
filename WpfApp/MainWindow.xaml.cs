@@ -36,7 +36,8 @@ namespace WpfApp
             {
                 LoggedInPanel.Visibility = Visibility.Visible;
                 LoggedOutPanel.Visibility = Visibility.Collapsed;
-                UserGreeting.Text = $"Hello, {session.Email}";
+                ProfileLink.Inlines.Clear();
+                ProfileLink.Inlines.Add(session.Email);
             }
             else
             {
@@ -114,6 +115,11 @@ namespace WpfApp
         {
             var loginWindow = new LoginSignPopup(false);
             loginWindow.ShowDialog();
+        }
+
+        private void ProfileLink_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new User.Profile());
         }
     }
 }

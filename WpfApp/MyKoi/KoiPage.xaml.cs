@@ -32,7 +32,6 @@ namespace WpfApp
             _fishService = new FishService();
             var session = UserSession.GetInstance();
             MemberIdText = $"Member ID: {session.MemberId}";
-            this.DataContext = this;
         }
 
         public void ListAllFish()
@@ -41,7 +40,7 @@ namespace WpfApp
             {
                 var session = UserSession.GetInstance();
                 var fishInfo = _fishService.GetAll(session.MemberId);
-                dgFishInfo.ItemsSource = fishInfo;
+                KoiItemsControl.ItemsSource = fishInfo;
             }
             catch (Exception ex)
             {
@@ -60,7 +59,7 @@ namespace WpfApp
             bool? result = addNewFishPopup.ShowDialog();
             if (result == true)
             {
-                ((Home)Application.Current.MainWindow).MainFrame.Navigate(new KoiPage());
+                ListAllFish();
             }
         }
 
@@ -69,48 +68,50 @@ namespace WpfApp
             Button button = sender as Button;
             if (button != null)
             {
-                Fish selectedKoi = button.DataContext as Fish; // Assuming Koi is your model
+                Fish selectedKoi = button.DataContext as Fish;
                 if (selectedKoi != null)
                 {
-                    // Create and show the detail popup
                     KoiDetailPopup detailPopup = new KoiDetailPopup(selectedKoi);
-                    detailPopup.ShowDialog();
+                    bool? result = detailPopup.ShowDialog();
+                    if (result == true)
+                    {
+                        ListAllFish();
+                    }
                 }
             }
-        }
-
-        private void dgFishInfo_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
         }
 
         private void btnDelete_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-                if (dgFishInfo.SelectedItem != null)
+                Button button = sender as Button;
+                if (button != null)
                 {
-                    var selectedFish = (Fish)dgFishInfo.SelectedItem;
-                    MessageBoxResult result = MessageBox.Show("Are you sure to delete this customer?", "Confirm delete",
-                            MessageBoxButton.YesNo, MessageBoxImage.Warning);
-                    if (result == MessageBoxResult.Yes)
+                    Fish selectedFish = button.DataContext as Fish;
+                    if (selectedFish != null)
                     {
-                        _fishService.DeleteFish(selectedFish.FishId);
-                        MessageBox.Show("Delete Fish Successfully", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+                        MessageBoxResult result = MessageBox.Show("Are you sure you want to delete this fish?", 
+                            "Confirm Delete", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+                        
+                        if (result == MessageBoxResult.Yes)
+                        {
+                            _fishService.DeleteFish(selectedFish.FishId);
+                            MessageBox.Show("Fish deleted successfully", "Success", 
+                                MessageBoxButton.OK, MessageBoxImage.Information);
+                            ListAllFish();
+                        }
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Please select a fish to delete", "Notification", MessageBoxButton.OK, MessageBoxImage.Information);
+                    MessageBox.Show("Please select a fish to delete", "Notification", 
+                        MessageBoxButton.OK, MessageBoxImage.Information);
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Error: {ex.Message}");
-            }
-            finally
-            {
-                ListAllFish();
             }
         }
     }

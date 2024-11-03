@@ -40,11 +40,18 @@
                         Panel.ZIndex="1">
                 <StackPanel x:Name="LoggedInPanel" Visibility="Collapsed" Orientation="Horizontal">
                     <TextBlock x:Name="UserGreeting" 
-                              Text="Hello, User" 
-                              Foreground="White" 
-                              FontSize="18" 
-                              VerticalAlignment="Center" 
-                              Margin="0,0,20,0" FontWeight="Bold"/>
+                               Foreground="White" 
+                               FontSize="15" 
+                               VerticalAlignment="Center" 
+                               Margin="0,0,20,0">
+                        <Run Text="Hello, "/>
+                        <Hyperlink x:Name="ProfileLink" 
+                                   Foreground="White" 
+                                   TextDecorations="Underline"
+                                   Click="ProfileLink_Click">
+                            <Run Text="{Binding Email}"/>
+                        </Hyperlink>
+                    </TextBlock>
                     <Button Content="Log Out" 
                             Click="LogoutButton_Click"
                             Padding="20,5" 
@@ -80,64 +87,68 @@
         </Grid>
 
         <!-- Main Content with ScrollViewer -->
-        <ScrollViewer Grid.Row="1" x:Name="MainScrollViewer" ScrollChanged="MainScrollViewer_ScrollChanged">
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="Auto"/>
-                </Grid.RowDefinitions>
+        <Grid Grid.Row="1">
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    
+                    <!-- Main Content -->
+                    <Frame x:Name="MainFrame" 
+                           Grid.Row="0"
+                           NavigationUIVisibility="Hidden"/>
+                    
+                    <!-- Footer -->
+                    <Grid Grid.Row="1"
+                          Background="Black" 
+                          x:Name="Footer">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
 
-                <!-- Main Content Frame -->
-                <Frame Grid.Row="0" 
-                       x:Name="MainFrame" 
-                       NavigationUIVisibility="Hidden"/>
+                        <StackPanel Grid.Column="1" Margin="20">
+                            <Image Source="/WpfApp;component/image/logo.png" Height="70"/>
+                            <TextBlock Foreground="#FFFF7800" HorizontalAlignment="Center" FontWeight="Bold" FontSize="20">Koi Control</TextBlock>
+                        </StackPanel>
 
-                <!-- Footer -->
-                <Grid Grid.Row="1" Background="Black" x:Name="Footer" Visibility="Collapsed">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
+                        <StackPanel Grid.Column="2" Margin="20">
+                            <TextBlock Text="Introduction" FontWeight="Bold" Margin="0,0,0,10" Foreground="#FFFF7800" FontSize="20"/>
+                            <TextBlock Text="About Us" Margin="0,5,0,0" Foreground="White" FontSize="15"/>
+                            <TextBlock Text="Our Mission" Margin="0,5,0,0" Foreground="White" FontSize="15"/>
+                            <TextBlock Text="Team" Margin="0,5,0,0" Foreground="White" FontSize="15"/>
+                        </StackPanel>
 
-                    <StackPanel Grid.Column="1" Margin="20">
-                        <Image Source="/WpfApp;component/image/logo.png" Height="70"/>
-                        <TextBlock Foreground="#FFFF7800" HorizontalAlignment="Center" FontWeight="Bold" FontSize="20">Koi Control</TextBlock>
-                    </StackPanel>
+                        <StackPanel Grid.Column="3" Margin="20">
+                            <TextBlock Text="Services" FontWeight="Bold" Margin="0,0,0,10" Foreground="#FFFF7800" FontSize="20"/>
+                            <TextBlock Text="Koi Care" Margin="0,5,0,0" Foreground="White" FontSize="15"/>
+                            <TextBlock Text="Water Params" Margin="0,5,0,0" Foreground="White" FontSize="15"/>
+                            <TextBlock Text="Food Calculator" Margin="0,5,0,0" Foreground="White" FontSize="15"/>
+                        </StackPanel>
 
-                    <StackPanel Grid.Column="2" Margin="20">
-                        <TextBlock Text="Introduction" FontWeight="Bold" Margin="0,0,0,10" Foreground="#FFFF7800" FontSize="20"/>
-                        <TextBlock Text="About Us" Margin="0,5,0,0" Foreground="White" FontSize="15"/>
-                        <TextBlock Text="Our Mission" Margin="0,5,0,0" Foreground="White" FontSize="15"/>
-                        <TextBlock Text="Team" Margin="0,5,0,0" Foreground="White" FontSize="15"/>
-                    </StackPanel>
+                        <StackPanel Grid.Column="4" Margin="20">
+                            <TextBlock Text="Support" FontWeight="Bold" Margin="0,0,0,10" Foreground="#FFFF7800" FontSize="20"/>
+                            <TextBlock Text="Help Center" Margin="0,5,0,0" Foreground="White" FontSize="15"/>
+                            <TextBlock Text="Contact Us" Margin="0,5,0,0" Foreground="White" FontSize="15"/>
+                            <TextBlock Text="FAQ" Margin="0,5,0,0" Foreground="White" FontSize="15"/>
+                        </StackPanel>
 
-                    <StackPanel Grid.Column="3" Margin="20">
-                        <TextBlock Text="Services" FontWeight="Bold" Margin="0,0,0,10" Foreground="#FFFF7800" FontSize="20"/>
-                        <TextBlock Text="Koi Care" Margin="0,5,0,0" Foreground="White" FontSize="15"/>
-                        <TextBlock Text="Water Params" Margin="0,5,0,0" Foreground="White" FontSize="15"/>
-                        <TextBlock Text="Food Calculator" Margin="0,5,0,0" Foreground="White" FontSize="15"/>
-                    </StackPanel>
-
-                    <StackPanel Grid.Column="4" Margin="20">
-                        <TextBlock Text="Support" FontWeight="Bold" Margin="0,0,0,10" Foreground="#FFFF7800" FontSize="20"/>
-                        <TextBlock Text="Help Center" Margin="0,5,0,0" Foreground="White" FontSize="15"/>
-                        <TextBlock Text="Contact Us" Margin="0,5,0,0" Foreground="White" FontSize="15"/>
-                        <TextBlock Text="FAQ" Margin="0,5,0,0" Foreground="White" FontSize="15"/>
-                    </StackPanel>
-
-                    <StackPanel Grid.Column="5" Margin="20">
-                        <TextBlock Text="Media" FontWeight="Bold" Margin="0,0,0,10" Foreground="#FFFF7800" FontSize="20"/>
-                        <TextBlock Text="Blog" Margin="0,5,0,0" Foreground="White" FontSize="15"/>
-                        <TextBlock Text="Gallery" Margin="0,5,0,0" Foreground="White" FontSize="15"/>
-                        <TextBlock Text="Videos" Margin="0,5,0,0" Foreground="White" FontSize="15"/>
-                    </StackPanel>
+                        <StackPanel Grid.Column="5" Margin="20">
+                            <TextBlock Text="Media" FontWeight="Bold" Margin="0,0,0,10" Foreground="#FFFF7800" FontSize="20"/>
+                            <TextBlock Text="Blog" Margin="0,5,0,0" Foreground="White" FontSize="15"/>
+                            <TextBlock Text="Gallery" Margin="0,5,0,0" Foreground="White" FontSize="15"/>
+                            <TextBlock Text="Videos" Margin="0,5,0,0" Foreground="White" FontSize="15"/>
+                        </StackPanel>
+                    </Grid>
                 </Grid>
-            </Grid>
-        </ScrollViewer>
+            </ScrollViewer>
+        </Grid>
     </Grid>
 </Window>
