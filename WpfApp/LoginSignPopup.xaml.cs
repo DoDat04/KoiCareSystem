@@ -83,6 +83,18 @@ namespace WpfApp
                 {
                     MessageBox.Show("Wrong password!");
                 }
+                else if (account.RoleId == 1)
+                {
+                    MessageBox.Show("Login successful!");
+                    AdminWindow adminWindow = new AdminWindow();
+                    adminWindow.Show();
+                    ((Home)Application.Current.MainWindow).Close();
+                    this.Close();
+                }
+                else if (account.IsActive == false)
+                {
+                    MessageBox.Show("Your account was banned", "Notification", MessageBoxButton.OK, MessageBoxImage.Warning);
+                }
                 else
                 {
                     UserSession.GetInstance().Login(account.MemberId, account.Email, account.RoleId);

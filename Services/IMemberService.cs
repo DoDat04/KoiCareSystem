@@ -15,5 +15,6 @@ namespace Services
         void AddMember(Member member);
         void UpdateMember(Member member);
         void RemoveMember(int id);
+        void RestoreMember(int id);
     }
 }

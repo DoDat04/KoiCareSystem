@@ -15,5 +15,6 @@ namespace Repositories
         void SaveMember(Member member);
         void UpdateMember(Member member);
         void RemoveMember(int id);
+        void RestoreMember(int id);
     }
 }

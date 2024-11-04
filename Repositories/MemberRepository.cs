@@ -26,12 +26,9 @@ namespace Repositories
         public List<Member> GetMembers()
         {
             var _dbContext = new KoiCareContext();
-            List<Member> members = new List<Member>();
-            foreach (var member in _dbContext.Members)
-            {
-                members.Add(member);
-            }
-            return members;
+            return _dbContext.Members
+                .Where(x => x.RoleId == 2)
+                .ToList();
         }
 
         public void RemoveMember(int id)
@@ -39,16 +36,27 @@ namespace Repositories
             try
             {
                 var _dbContext = new KoiCareContext();
-                var member = _dbContext.Members.FirstOrDefault(m => m.MemberId == id);
+                var member = _dbContext.Members.Find(id);
                 if (member != null)
                 {
-                    _dbContext.Members.Remove(member);
+                    member.IsActive = false;
                     _dbContext.SaveChanges();
                 }
             }
             catch (Exception ex)
             {
                 throw new Exception($"Error removing member: {ex.Message}");
+            }
+        }
+
+        public void RestoreMember(int id)
+        {
+            using var _dbContext = new KoiCareContext();
+            var member = _dbContext.Members.Find(id);
+            if (member != null)
+            {
+                member.IsActive = true;
+                _dbContext.SaveChanges();
             }
         }
 

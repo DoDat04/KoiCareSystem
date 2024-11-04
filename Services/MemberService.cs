@@ -56,5 +56,10 @@ namespace Services
                 throw new Exception($"Error adding member: {ex.Message}");
             }
         }
+
+        public void RestoreMember(int id)
+        {
+            iMemberRepository.RestoreMember(id);
+        }
     }
 }

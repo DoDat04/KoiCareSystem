@@ -172,9 +172,7 @@ D:\SEM5\PRN212\Assignment2\WpfApp\obj\Debug\net8.0-windows\FoodCalc\ShowFood.g.c
 D:\SEM5\PRN212\Assignment2\WpfApp\obj\Debug\net8.0-windows\HomePage.g.cs
 D:\SEM5\PRN212\Assignment2\WpfApp\obj\Debug\net8.0-windows\LoginSignPopup.g.cs
 D:\SEM5\PRN212\Assignment2\WpfApp\obj\Debug\net8.0-windows\MainWindow.g.cs
-D:\SEM5\PRN212\Assignment2\WpfApp\obj\Debug\net8.0-windows\MyKoi\AddKoi.g.cs
 D:\SEM5\PRN212\Assignment2\WpfApp\obj\Debug\net8.0-windows\MyKoi\KoiPage.g.cs
-D:\SEM5\PRN212\Assignment2\WpfApp\obj\Debug\net8.0-windows\MyKoi\ShowKoi.g.cs
 D:\SEM5\PRN212\Assignment2\WpfApp\obj\Debug\net8.0-windows\MyPond\AddPond.g.cs
 D:\SEM5\PRN212\Assignment2\WpfApp\obj\Debug\net8.0-windows\MyPond\PondPage.g.cs
 D:\SEM5\PRN212\Assignment2\WpfApp\obj\Debug\net8.0-windows\MyPond\ShowPond.g.cs
@@ -189,9 +187,7 @@ D:\SEM5\PRN212\Assignment2\WpfApp\obj\Debug\net8.0-windows\FoodCalc\ShowFood.bam
 D:\SEM5\PRN212\Assignment2\WpfApp\obj\Debug\net8.0-windows\HomePage.baml
 D:\SEM5\PRN212\Assignment2\WpfApp\obj\Debug\net8.0-windows\LoginSignPopup.baml
 D:\SEM5\PRN212\Assignment2\WpfApp\obj\Debug\net8.0-windows\MainWindow.baml
-D:\SEM5\PRN212\Assignment2\WpfApp\obj\Debug\net8.0-windows\MyKoi\AddKoi.baml
 D:\SEM5\PRN212\Assignment2\WpfApp\obj\Debug\net8.0-windows\MyKoi\KoiPage.baml
-D:\SEM5\PRN212\Assignment2\WpfApp\obj\Debug\net8.0-windows\MyKoi\ShowKoi.baml
 D:\SEM5\PRN212\Assignment2\WpfApp\obj\Debug\net8.0-windows\MyPond\AddPond.baml
 D:\SEM5\PRN212\Assignment2\WpfApp\obj\Debug\net8.0-windows\MyPond\PondPage.baml
 D:\SEM5\PRN212\Assignment2\WpfApp\obj\Debug\net8.0-windows\MyPond\ShowPond.baml
@@ -210,10 +206,6 @@ D:\SEM5\PRN212\Assignment2\WpfApp\obj\Debug\net8.0-windows\refint\WpfApp.dll
 D:\SEM5\PRN212\Assignment2\WpfApp\obj\Debug\net8.0-windows\WpfApp.pdb
 D:\SEM5\PRN212\Assignment2\WpfApp\obj\Debug\net8.0-windows\WpfApp.genruntimeconfig.cache
 D:\SEM5\PRN212\Assignment2\WpfApp\obj\Debug\net8.0-windows\ref\WpfApp.dll
-D:\SEM5\PRN212\Assignment2\WpfApp\obj\Debug\net8.0-windows\AddNewFishPopup.g.cs
-D:\SEM5\PRN212\Assignment2\WpfApp\obj\Debug\net8.0-windows\AddNewFishPopup.baml
-D:\SEM5\PRN212\Assignment2\WpfApp\obj\Debug\net8.0-windows\KoiDetailPopup.baml
-D:\SEM5\PRN212\Assignment2\WpfApp\obj\Debug\net8.0-windows\KoiDetailPopup.g.cs
 D:\PRN212\PRN212_KoiCare\WpfApp\obj\Debug\net8.0-windows\MyKoi\AddNewFishPopup.baml
 D:\PRN212\PRN212_KoiCare\WpfApp\obj\Debug\net8.0-windows\MyKoi\KoiDetailPopup.baml
 D:\PRN212\PRN212_KoiCare\WpfApp\obj\Debug\net8.0-windows\MyKoi\AddNewFishPopup.g.cs
@@ -222,3 +214,13 @@ D:\PRN212\PRN212_KoiCare\WpfApp\obj\Debug\net8.0-windows\User\Profile.g.cs
 D:\PRN212\PRN212_KoiCare\WpfApp\obj\Debug\net8.0-windows\User\Profile.baml
 D:\PRN212\PRN212_KoiCare\WpfApp\obj\Debug\net8.0-windows\User\ForgotPass.g.cs
 D:\PRN212\PRN212_KoiCare\WpfApp\obj\Debug\net8.0-windows\User\ForgotPass.baml
+D:\SEM5\PRN212\Assignment2\WpfApp\obj\Debug\net8.0-windows\MyKoi\AddNewFishPopup.baml
+D:\SEM5\PRN212\Assignment2\WpfApp\obj\Debug\net8.0-windows\MyKoi\KoiDetailPopup.baml
+D:\SEM5\PRN212\Assignment2\WpfApp\obj\Debug\net8.0-windows\MyKoi\AddNewFishPopup.g.cs
+D:\SEM5\PRN212\Assignment2\WpfApp\obj\Debug\net8.0-windows\MyKoi\KoiDetailPopup.g.cs
+D:\SEM5\PRN212\Assignment2\WpfApp\obj\Debug\net8.0-windows\User\ForgotPass.g.cs
+D:\SEM5\PRN212\Assignment2\WpfApp\obj\Debug\net8.0-windows\User\Profile.g.cs
+D:\SEM5\PRN212\Assignment2\WpfApp\obj\Debug\net8.0-windows\User\ForgotPass.baml
+D:\SEM5\PRN212\Assignment2\WpfApp\obj\Debug\net8.0-windows\User\Profile.baml
+D:\SEM5\PRN212\Assignment2\WpfApp\obj\Debug\net8.0-windows\AdminWindow.g.cs
+D:\SEM5\PRN212\Assignment2\WpfApp\obj\Debug\net8.0-windows\AdminWindow.baml
