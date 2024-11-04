@@ -93,7 +93,8 @@ namespace WpfApp
                 }
                 else if (account.IsActive == false)
                 {
-                    MessageBox.Show("Your account was banned", "Notification", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    MessageBox.Show("We're sorry to inform you that your account has been banned due to a violation of our terms of service. We appreciate your understanding in this matter.\r\n\r\nThank you for being a part of our community. We wish you all the best and hope you have a great day ahead!"
+                        , "Your account is banned", MessageBoxButton.OK, MessageBoxImage.Warning);
                 }
                 else
                 {

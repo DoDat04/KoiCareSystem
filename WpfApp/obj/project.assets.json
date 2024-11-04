@@ -3238,19 +3238,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Do Dat\\.nuget\\packages\\": {}
+    "C:\\Users\\MSI\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\SEM5\\PRN212\\Assignment2\\WpfApp\\WpfApp.csproj",
+      "projectUniqueName": "D:\\PRN212\\PRN212_KoiCare\\WpfApp\\WpfApp.csproj",
       "projectName": "WpfApp",
-      "projectPath": "D:\\SEM5\\PRN212\\Assignment2\\WpfApp\\WpfApp.csproj",
-      "packagesPath": "C:\\Users\\Do Dat\\.nuget\\packages\\",
-      "outputPath": "D:\\SEM5\\PRN212\\Assignment2\\WpfApp\\obj\\",
+      "projectPath": "D:\\PRN212\\PRN212_KoiCare\\WpfApp\\WpfApp.csproj",
+      "packagesPath": "C:\\Users\\MSI\\.nuget\\packages\\",
+      "outputPath": "D:\\PRN212\\PRN212_KoiCare\\WpfApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Do Dat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\MSI\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3258,15 +3258,14 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "projectReferences": {
-            "D:\\SEM5\\PRN212\\Assignment2\\Services\\Services.csproj": {
-              "projectPath": "D:\\SEM5\\PRN212\\Assignment2\\Services\\Services.csproj"
+            "D:\\PRN212\\PRN212_KoiCare\\Services\\Services.csproj": {
+              "projectPath": "D:\\PRN212\\PRN212_KoiCare\\Services\\Services.csproj"
             }
           }
         }
@@ -3304,7 +3303,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

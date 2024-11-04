@@ -1,27 +1,15 @@
 ﻿using BusinessObject;
 using Services;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace WpfApp
 {
-    /// <summary>
-    /// Interaction logic for AdminWindow.xaml
-    /// </summary>
     public partial class AdminWindow : Window
     {
         private readonly IMemberService _memberService;
+
         public AdminWindow()
         {
             InitializeComponent();
@@ -37,7 +25,7 @@ namespace WpfApp
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
@@ -46,74 +34,51 @@ namespace WpfApp
             LoadMember();
         }
 
-        private void btnDeleteMember_Click(object sender, RoutedEventArgs e)
+        private void OnToggleStatusClick(object sender, RoutedEventArgs e)
         {
             try
             {
-                if (dgMemberList.SelectedItem != null)
+                var button = (Button)sender;
+                var member = (Member)button.DataContext;
+                string action = member.IsActive ? "ban" : "unban";
+
+                MessageBoxResult result = MessageBox.Show(
+                    $"Are you sure you want to {action} this member?",
+                    "Confirm Action",
+                    MessageBoxButton.YesNo,
+                    MessageBoxImage.Question);
+
+                if (result == MessageBoxResult.Yes)
                 {
-                    var selectedMember = (Member)dgMemberList.SelectedItem;
-                    if (selectedMember.IsActive == false)
+                    if (member.IsActive)
                     {
-                        MessageBox.Show("This customer has already been deleted", "Notification", MessageBoxButton.OK, MessageBoxImage.Information);
+                        _memberService.RemoveMember(member.MemberId);
+                        MessageBox.Show("Member has been banned successfully", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
                     }
                     else
                     {
-                        MessageBoxResult result = MessageBox.Show("Are you sure to delete this member?", "Confirm delete",
-                            MessageBoxButton.YesNo, MessageBoxImage.Warning);
-
-                        if (result == MessageBoxResult.Yes)
-                        {
-                            _memberService.RemoveMember(selectedMember.MemberId);
-                            MessageBox.Show("Delete Member Successfully");
-                        }
+                        _memberService.RestoreMember(member.MemberId);
+                        MessageBox.Show("Member has been unbanned successfully", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
                     }
-                }
-                else
-                {
-                    MessageBox.Show("Please select a member to delete", "Notification", MessageBoxButton.OK, MessageBoxImage.Information);
+                    LoadMember();
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error: {ex.Message}");
-            }
-            finally
-            {
-                LoadMember();
+                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
-        private void btnRestoreMember_Click(object sender, RoutedEventArgs e)
+        private void OnLogoutClick(object sender, RoutedEventArgs e)
         {
-            try
-            {
-                if (dgMemberList.SelectedItem != null)
-                {
-                    var selectedMember = (Member)dgMemberList.SelectedItem;
-                    if (selectedMember.IsActive == true)
-                    {
-                        MessageBox.Show("This member is still activate", "Notification", MessageBoxButton.OK, MessageBoxImage.Information);
-                    }
-                    else
-                    {
-                        _memberService.RestoreMember(selectedMember.MemberId);
-                        MessageBox.Show("Restore Member Successfully", "Notification", MessageBoxButton.OK, MessageBoxImage.Information);
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Please select a member to restore", "Notification", MessageBoxButton.OK, MessageBoxImage.Information);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error: {ex.Message}");
-            }
-            finally
-            {
-                LoadMember();
-            }
+            Home window = new Home();
+            window.Show();
+            this.Close();
+        }
+
+        private void dgMemberList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            dgMemberList.UnselectAll();
         }
     }
 }
