@@ -77,7 +77,7 @@ namespace WpfApp.User {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/WpfApp;component/user/forgotpass.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/WpfApp;V1.0.0.0;component/user/forgotpass.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\User\ForgotPass.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

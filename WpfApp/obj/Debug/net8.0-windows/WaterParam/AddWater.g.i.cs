@@ -53,7 +53,7 @@ namespace WpfApp.WaterParam {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/WpfApp;component/waterparam/addwater.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/WpfApp;V1.0.0.0;component/waterparam/addwater.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\WaterParam\AddWater.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

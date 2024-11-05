@@ -53,7 +53,7 @@ namespace WpfApp.FoodCalc {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/WpfApp;component/foodcalc/foodpage.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/WpfApp;V1.0.0.0;component/foodcalc/foodpage.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\FoodCalc\FoodPage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

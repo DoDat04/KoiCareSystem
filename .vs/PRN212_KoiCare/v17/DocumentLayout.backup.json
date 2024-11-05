@@ -3,16 +3,28 @@
   "WorkspaceRootPath": "D:\\SEM5\\PRN212\\Assignment2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3ECE248A-6A49-47B4-A4B5-561EC2DCF4E8}|WpfApp\\WpfApp.csproj|d:\\sem5\\prn212\\assignment2\\wpfapp\\adminwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3ECE248A-6A49-47B4-A4B5-561EC2DCF4E8}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\adminwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3ECE248A-6A49-47B4-A4B5-561EC2DCF4E8}|WpfApp\\WpfApp.csproj|d:\\sem5\\prn212\\assignment2\\wpfapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{3ECE248A-6A49-47B4-A4B5-561EC2DCF4E8}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFC292C8-1BB7-4220-8DBF-2191120C201F}|Repositories\\Repositories.csproj|d:\\sem5\\prn212\\assignment2\\repositories\\fishrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFC292C8-1BB7-4220-8DBF-2191120C201F}|Repositories\\Repositories.csproj|solutionrelative:repositories\\fishrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFC292C8-1BB7-4220-8DBF-2191120C201F}|Repositories\\Repositories.csproj|d:\\sem5\\prn212\\assignment2\\repositories\\memberrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFC292C8-1BB7-4220-8DBF-2191120C201F}|Repositories\\Repositories.csproj|solutionrelative:repositories\\memberrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3ECE248A-6A49-47B4-A4B5-561EC2DCF4E8}|WpfApp\\WpfApp.csproj|d:\\sem5\\prn212\\assignment2\\wpfapp\\adminwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{3ECE248A-6A49-47B4-A4B5-561EC2DCF4E8}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\adminwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FFC292C8-1BB7-4220-8DBF-2191120C201F}|Repositories\\Repositories.csproj|d:\\sem5\\prn212\\assignment2\\repositories\\memberrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFC292C8-1BB7-4220-8DBF-2191120C201F}|Repositories\\Repositories.csproj|solutionrelative:repositories\\memberrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3ECE248A-6A49-47B4-A4B5-561EC2DCF4E8}|WpfApp\\WpfApp.csproj|d:\\sem5\\prn212\\assignment2\\wpfapp\\adminwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3ECE248A-6A49-47B4-A4B5-561EC2DCF4E8}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\adminwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3ECE248A-6A49-47B4-A4B5-561EC2DCF4E8}|WpfApp\\WpfApp.csproj|d:\\sem5\\prn212\\assignment2\\wpfapp\\mykoi\\addnewfishpopup.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3ECE248A-6A49-47B4-A4B5-561EC2DCF4E8}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\mykoi\\addnewfishpopup.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3ECE248A-6A49-47B4-A4B5-561EC2DCF4E8}|WpfApp\\WpfApp.csproj|d:\\sem5\\prn212\\assignment2\\wpfapp\\loginsignpopup.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -37,6 +49,47 @@
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\SEM5\\PRN212\\Assignment2\\WpfApp\\appsettings.json",
+              "RelativeDocumentMoniker": "WpfApp\\appsettings.json",
+              "ToolTip": "D:\\SEM5\\PRN212\\Assignment2\\WpfApp\\appsettings.json",
+              "RelativeToolTip": "WpfApp\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-05T06:02:08.844Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FishRepository.cs",
+              "DocumentMoniker": "D:\\SEM5\\PRN212\\Assignment2\\Repositories\\FishRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\FishRepository.cs",
+              "ToolTip": "D:\\SEM5\\PRN212\\Assignment2\\Repositories\\FishRepository.cs",
+              "RelativeToolTip": "Repositories\\FishRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T16:22:44.301Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AddNewFishPopup.xaml",
+              "DocumentMoniker": "D:\\SEM5\\PRN212\\Assignment2\\WpfApp\\MyKoi\\AddNewFishPopup.xaml",
+              "RelativeDocumentMoniker": "WpfApp\\MyKoi\\AddNewFishPopup.xaml",
+              "ToolTip": "D:\\SEM5\\PRN212\\Assignment2\\WpfApp\\MyKoi\\AddNewFishPopup.xaml",
+              "RelativeToolTip": "WpfApp\\MyKoi\\AddNewFishPopup.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-04T15:43:01.943Z"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "MemberRepository.cs",
@@ -44,14 +97,13 @@
               "RelativeDocumentMoniker": "Repositories\\MemberRepository.cs",
               "ToolTip": "D:\\SEM5\\PRN212\\Assignment2\\Repositories\\MemberRepository.cs",
               "RelativeToolTip": "Repositories\\MemberRepository.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAIwDoAAAApAAAAAAAAAA==",
+              "ViewState": "AgIAABoAAAAAAAAAAAAwwDoAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T11:25:25.108Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-04T11:25:25.108Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "AdminWindow.xaml.cs",
               "DocumentMoniker": "D:\\SEM5\\PRN212\\Assignment2\\WpfApp\\AdminWindow.xaml.cs",
               "RelativeDocumentMoniker": "WpfApp\\AdminWindow.xaml.cs",
@@ -59,24 +111,22 @@
               "RelativeToolTip": "WpfApp\\AdminWindow.xaml.cs",
               "ViewState": "AgIAAFkAAAAAAAAAAAAuwGkAAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T11:16:14.882Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-04T11:16:14.882Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "AdminWindow.xaml",
               "DocumentMoniker": "D:\\SEM5\\PRN212\\Assignment2\\WpfApp\\AdminWindow.xaml",
               "RelativeDocumentMoniker": "WpfApp\\AdminWindow.xaml",
               "ToolTip": "D:\\SEM5\\PRN212\\Assignment2\\WpfApp\\AdminWindow.xaml",
               "RelativeToolTip": "WpfApp\\AdminWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-03T18:09:02.232Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-03T18:09:02.232Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "LoginSignPopup.xaml.cs",
               "DocumentMoniker": "D:\\SEM5\\PRN212\\Assignment2\\WpfApp\\LoginSignPopup.xaml.cs",
               "RelativeDocumentMoniker": "WpfApp\\LoginSignPopup.xaml.cs",
@@ -84,8 +134,7 @@
               "RelativeToolTip": "WpfApp\\LoginSignPopup.xaml.cs",
               "ViewState": "AgIAAEkAAAAAAAAAAAAcwFwAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-03T18:08:38.25Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-03T18:08:38.25Z"
             }
           ]
         }
