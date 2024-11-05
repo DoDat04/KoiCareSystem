@@ -224,3 +224,5 @@ D:\SEM5\PRN212\Assignment2\WpfApp\obj\Debug\net8.0-windows\User\ForgotPass.baml
 D:\SEM5\PRN212\Assignment2\WpfApp\obj\Debug\net8.0-windows\User\Profile.baml
 D:\SEM5\PRN212\Assignment2\WpfApp\obj\Debug\net8.0-windows\AdminWindow.g.cs
 D:\SEM5\PRN212\Assignment2\WpfApp\obj\Debug\net8.0-windows\AdminWindow.baml
+D:\PRN212\PRN212_KoiCare\WpfApp\obj\Debug\net8.0-windows\AdminWindow.g.cs
+D:\PRN212\PRN212_KoiCare\WpfApp\obj\Debug\net8.0-windows\AdminWindow.baml
