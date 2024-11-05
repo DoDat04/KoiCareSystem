@@ -5,8 +5,172 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp.MyPond"
         mc:Ignorable="d"
-        Title="ShowPond" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="ShowPond" Height="570"
+        Width="600"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Background="Transparent"
+        AllowsTransparency="True">
+    <Border CornerRadius="20" 
+            Background="White" 
+            BorderBrush="#DDDDDD" 
+            BorderThickness="1">
+        <Grid Margin="30">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="400"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <!-- Header -->
+            <Grid Grid.Row="0" Margin="0,0,0,10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock x:Name="TitleText"
+                          Text="Pond Details"
+                          FontSize="28" 
+                          FontWeight="SemiBold"
+                          HorizontalAlignment="Center"
+                          VerticalAlignment="Center"/>
+
+                <Button Grid.Column="1"
+                        Content="✕"
+                        Click="btnClose_Click"
+                        Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}"
+                        Width="32"
+                        Height="32"
+                        FontSize="16"/>
+            </Grid>
+
+            <!-- Content -->
+            <StackPanel Grid.Row="1" Margin="10,10">
+                <Grid Height="366">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="140"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <!-- Pond Name -->
+                    <TextBlock Text="Pond Name" FontSize="16"
+                             Grid.Row="0" Grid.Column="0"
+                             FontWeight="SemiBold" 
+                             VerticalAlignment="Center"
+                             Margin="0,0,20,20"/>
+                    <TextBox Text="{Binding Name}" 
+                            Grid.Row="0" Grid.Column="1"
+                            Height="35" FontSize="16"
+                            Padding="10,5"
+                            Margin="0,0,0,20"/>
+
+                    <!-- Length -->
+                    <TextBlock Text="Length" FontSize="16"
+                             Grid.Row="1" Grid.Column="0"
+                             FontWeight="SemiBold" 
+                             VerticalAlignment="Center"
+                             Margin="0,0,20,20"/>
+                    <TextBox Text="{Binding Length}" 
+                            Grid.Row="1" Grid.Column="1"
+                            Height="35" FontSize="16"
+                            Padding="10,5"
+                            Margin="0,0,0,20"/>
+
+                    <!-- Width -->
+                    <TextBlock Text="Width" FontSize="16"
+                             Grid.Row="2" Grid.Column="0"
+                             FontWeight="SemiBold" 
+                             VerticalAlignment="Center"
+                             Margin="0,0,20,20"/>
+                    <TextBox Text="{Binding Width}" 
+                            Grid.Row="2" Grid.Column="1"
+                            Height="35" FontSize="16"
+                            Padding="10,5"
+                            Margin="0,0,0,20"/>
+
+                    <!-- Depth -->
+                    <TextBlock Text="Depth" FontSize="16"
+                             Grid.Row="3" Grid.Column="0"
+                             FontWeight="SemiBold" 
+                             VerticalAlignment="Center"
+                             Margin="0,0,20,20"/>
+                    <TextBox Text="{Binding Depth}" 
+                            Grid.Row="3" Grid.Column="1"
+                            Height="35" FontSize="16"
+                            Padding="10,5"
+                            Margin="0,0,0,20"/>
+
+                    <!-- Is Active -->
+                    <TextBlock Text="Active Status" FontSize="16"
+                             Grid.Row="4" Grid.Column="0"
+                             FontWeight="SemiBold" 
+                             VerticalAlignment="Center"
+                             Margin="0,0,20,20"/>
+                    <TextBox Text="{Binding IsActive}" 
+                            Grid.Row="4" Grid.Column="1"
+                            Height="35" FontSize="16"
+                            Padding="10,5"
+                            Margin="0,0,0,20"/>
+
+                    <!-- Fish List Header -->
+                    <TextBlock Text="Fish List" FontSize="16" 
+                             FontWeight="Bold" 
+                             Grid.Row="4" Grid.Column="0" 
+                             Margin="0,59,0,-29"/>
+                    <ListView Name="FishListView" Grid.Row="4" Grid.Column="1" Margin="0,59,-5,-81">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}" Width="120"/>
+                                <GridViewColumn Header="Length" DisplayMemberBinding="{Binding Length}" Width="80"/>
+                                <GridViewColumn Header="Weight" DisplayMemberBinding="{Binding Weight}" Width="80"/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                </Grid>
+            </StackPanel>
+
+            <!-- Footer -->
+            <StackPanel Grid.Row="2" 
+                        Orientation="Horizontal" 
+                        HorizontalAlignment="Center">
+                <Button Content="Update" 
+                        Click="Update_Click"
+                        Height="45" Margin="0,0,20,0"
+                        Width="140"
+                        Background="Black"
+                        Foreground="White"
+                        FontSize="20"
+                        FontWeight="SemiBold">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="8"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button Content="Delete" 
+                        Click="DeleteButton_Click"
+                        Height="45"
+                        Width="140" Margin="20,0,0,0"
+                        Background="Red"
+                        Foreground="White"
+                        FontSize="20"
+                        FontWeight="SemiBold">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="8"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+            </StackPanel>
+        </Grid>
+    </Border>
 </Window>

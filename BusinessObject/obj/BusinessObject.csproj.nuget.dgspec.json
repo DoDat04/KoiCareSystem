@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\SEM5\\PRN212\\Assignment2\\BusinessObject\\BusinessObject.csproj": {}
+    "D:\\PRN212-ASSIGNMENT\\BusinessObject\\BusinessObject.csproj": {}
   },
   "projects": {
-    "D:\\SEM5\\PRN212\\Assignment2\\BusinessObject\\BusinessObject.csproj": {
+    "D:\\PRN212-ASSIGNMENT\\BusinessObject\\BusinessObject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\SEM5\\PRN212\\Assignment2\\BusinessObject\\BusinessObject.csproj",
+        "projectUniqueName": "D:\\PRN212-ASSIGNMENT\\BusinessObject\\BusinessObject.csproj",
         "projectName": "BusinessObject",
-        "projectPath": "D:\\SEM5\\PRN212\\Assignment2\\BusinessObject\\BusinessObject.csproj",
-        "packagesPath": "C:\\Users\\Do Dat\\.nuget\\packages\\",
-        "outputPath": "D:\\SEM5\\PRN212\\Assignment2\\BusinessObject\\obj\\",
+        "projectPath": "D:\\PRN212-ASSIGNMENT\\BusinessObject\\BusinessObject.csproj",
+        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
+        "outputPath": "D:\\PRN212-ASSIGNMENT\\BusinessObject\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Do Dat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -87,7 +87,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

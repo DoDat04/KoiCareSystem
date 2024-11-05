@@ -3238,19 +3238,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Do Dat\\.nuget\\packages\\": {}
+    "C:\\Users\\ADMIN\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\SEM5\\PRN212\\Assignment2\\WpfApp\\WpfApp.csproj",
+      "projectUniqueName": "D:\\PRN212-ASSIGNMENT\\WpfApp\\WpfApp.csproj",
       "projectName": "WpfApp",
-      "projectPath": "D:\\SEM5\\PRN212\\Assignment2\\WpfApp\\WpfApp.csproj",
-      "packagesPath": "C:\\Users\\Do Dat\\.nuget\\packages\\",
-      "outputPath": "D:\\SEM5\\PRN212\\Assignment2\\WpfApp\\obj\\",
+      "projectPath": "D:\\PRN212-ASSIGNMENT\\WpfApp\\WpfApp.csproj",
+      "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
+      "outputPath": "D:\\PRN212-ASSIGNMENT\\WpfApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Do Dat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3265,8 +3265,8 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "projectReferences": {
-            "D:\\SEM5\\PRN212\\Assignment2\\Services\\Services.csproj": {
-              "projectPath": "D:\\SEM5\\PRN212\\Assignment2\\Services\\Services.csproj"
+            "D:\\PRN212-ASSIGNMENT\\Services\\Services.csproj": {
+              "projectPath": "D:\\PRN212-ASSIGNMENT\\Services\\Services.csproj"
             }
           }
         }
@@ -3304,7 +3304,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

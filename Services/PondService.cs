@@ -19,5 +19,24 @@ namespace Services
         {
             return _pondRepository.GetAll(memberId);    
         }
+        public Pond GetById(int pondId)
+        {
+            return _pondRepository.GetById(pondId);
+        }
+
+        public void AddPond(Pond pond)
+        {
+            _pondRepository.AddPond(pond);
+        }
+
+        public void UpdatePond(Pond pond)
+        {
+            _pondRepository.UpdatePond(pond);
+        }
+
+        public void DeletePond(int pondId)
+        {
+            _pondRepository.DeletePond(pondId);
+        }
     }
 }
