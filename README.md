@@ -18,7 +18,7 @@
   - If not, open **Add Water**.
 
 ### Manage Food Calculation
-- List ponds and retrieve Koi from `PondID`.
+- List ponds from `MemberID` and retrieve Koi from `PondID`.
 - Calculate average age and size based on the selected food type.
 
 ### Manage Users
