@@ -48,9 +48,9 @@ namespace WpfApp.FoodCalc
                     p.Length,
                     p.Width,
                     p.Depth,
-                    TotalFish = _fishService.GetFishCount(p.PondId),
-                    AvgFishAge = _fishService.GetAvgFishAge(p.PondId),
-                    AvgFishSize = _fishService.GetAvgFishSize(p.PondId)
+                    TotalFish = _fishService.GetFishByPondId(p.PondId)?.Count() ?? 0,
+                    AvgFishAge = _fishService.GetFishByPondId(p.PondId)?.Any() == true ? _fishService.GetAvgFishAge(p.PondId) : 0,
+                    AvgFishSize = _fishService.GetFishByPondId(p.PondId)?.Any() == true ? _fishService.GetAvgFishSize(p.PondId) : 0
                 });
 
             Ponds.Clear();
@@ -86,29 +86,37 @@ namespace WpfApp.FoodCalc
             var pond = button.Tag as PondViewModel;
             var combo = stackPanel.Children.OfType<ComboBox>().FirstOrDefault();
 
-            if (combo == null || combo.SelectedValue == null)
+
+            var totalFish = _fishService.GetFishByPondId(pond.PondId)?.Count() ?? 0;
+            if (totalFish == 0)
             {
-                MessageBox.Show("Please select a food type first!");
+                MessageBox.Show($"Please add koi to {pond.Name} before calculating food.",
+                    "No Fish Found", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
 
-            var foodTypeId = (int)combo.SelectedValue;
-            var foodTypeName = (combo.SelectedItem as FoodType)?.Name;
+            if (combo == null || combo.SelectedValue == null)
+            {
+                MessageBox.Show("Please select a food type first!", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
 
             if (pond == null) return;
 
-            var totalFish = _fishService.GetFishCount(pond.PondId);
+
+            var foodTypeId = (int)combo.SelectedValue;
+            var foodTypeName = (combo.SelectedItem as FoodType)?.Name;
             var avgFishSize = _fishService.GetAvgFishSize(pond.PondId);
             var avgFishAge = _fishService.GetAvgFishAge(pond.PondId);
+
             decimal recommendedAmount = CalculateRecommendedFood(totalFish, avgFishSize, avgFishAge, foodTypeName);
-
-            SaveFoodCalculation(pond.PondId, foodTypeId, recommendedAmount);
-
+            SaveFoodCalculation(pond.PondId, foodTypeId, recommendedAmount);        
+            
             MessageBox.Show(
-                $"Recommended feeding for pond {pond.Name}:\n" +
+                $"Recommended feeding for {pond.Name}:\n" +
                 $"{recommendedAmount:F2}g of {foodTypeName} per day",
-                "Feeding Recommendation",
-                MessageBoxButton.OK,
+                "Feeding Recommendation", 
+                MessageBoxButton.OK, 
                 MessageBoxImage.Information);
         }
 

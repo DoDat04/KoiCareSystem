@@ -145,13 +145,14 @@
                              FontWeight="SemiBold" 
                              VerticalAlignment="Center"
                              Margin="0,0,20,20"/>
-                    <TextBox Text="{Binding Pond.Name}" 
-                            Grid.Row="6" Grid.Column="1"
-                            Height="35" FontSize="16"
-                            Padding="10,5"
-                            IsReadOnly="True"
-                            Background="#F5F5F5"
-                            Margin="0,0,0,20"/>
+                    <ComboBox x:Name="PondComboBox"
+                              SelectedValue="{Binding PondId}"
+                              SelectedValuePath="PondId"
+                              DisplayMemberPath="Name"
+                              Grid.Row="6" Grid.Column="1"
+                              Height="35" FontSize="16"
+                              Padding="10,5"
+                              Margin="0,0,0,20"/>
                 </Grid>
             </StackPanel>
 

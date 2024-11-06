@@ -9,10 +9,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="TestDatabase.xaml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="image\food.png" />
     <None Remove="image\koi.png" />
     <None Remove="image\logo.png" />
     <None Remove="image\water.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Remove="TestDatabase.xaml" />
   </ItemGroup>
 
   <ItemGroup>

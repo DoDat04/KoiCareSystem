@@ -7,28 +7,22 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="AdminWindow.xaml.cs">
+    <Compile Update="HomeNAdmin\AdminWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="MyKoi\AddNewFishPopup.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="FoodCalc\FoodPage.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="FoodCalc\ShowFood.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="MyKoi\KoiDetailPopup.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="LoginSignPopup.xaml.cs">
+    <Compile Update="HomeNAdmin\LoginSignPopup.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="MainWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="HomePage.xaml.cs">
+    <Compile Update="HomeNAdmin\HomePage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="MyKoi\KoiPage.xaml.cs">
@@ -41,9 +35,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="MyPond\ShowPond.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="TestDatabase.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="User\ForgotPass.xaml.cs">
@@ -60,28 +51,22 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="AdminWindow.xaml">
+    <Page Update="HomeNAdmin\AdminWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MyKoi\AddNewFishPopup.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="FoodCalc\FoodPage.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="FoodCalc\ShowFood.xaml">
-      <SubType>Designer</SubType>
-    </Page>
     <Page Update="MyKoi\KoiDetailPopup.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="LoginSignPopup.xaml">
+    <Page Update="HomeNAdmin\LoginSignPopup.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="HomePage.xaml">
+    <Page Update="HomeNAdmin\HomePage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MyKoi\KoiPage.xaml">
@@ -94,9 +79,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MyPond\ShowPond.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="TestDatabase.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="User\ForgotPass.xaml">

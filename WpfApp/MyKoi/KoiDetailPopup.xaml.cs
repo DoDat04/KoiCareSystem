@@ -23,9 +23,12 @@ namespace WpfApp
     {
         private readonly IPondService _pondService;
         private readonly IFishService _fishService;
+        private Fish _currentFish;
+
         public KoiDetailPopup(Fish fish)
         {
             InitializeComponent();
+            _currentFish = fish;
             DataContext = fish;
             _pondService = new PondService();
             _fishService = new FishService();
@@ -34,14 +37,11 @@ namespace WpfApp
             var genderComboBox = this.FindName("GenderComboBox") as ComboBox;
             if (genderComboBox != null)
             {
-                // Add items if they're not already present
                 if (genderComboBox.Items.Count == 0)
                 {
                     genderComboBox.Items.Add("Male");
                     genderComboBox.Items.Add("Female");
                 }
-                
-                // Set the selected value
                 genderComboBox.SelectedValue = fish.Gender;
             }
         }
@@ -52,11 +52,13 @@ namespace WpfApp
             {
                 var session = UserSession.GetInstance();
                 var ponds = _pondService.GetAll(session.MemberId);
-                //PondComboBox.ItemsSource = ponds;
+                PondComboBox.ItemsSource = ponds;
+                PondComboBox.SelectedValue = _currentFish.PondId;
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show($"Error loading ponds: {ex.Message}", "Error", 
+                    MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
@@ -91,12 +93,24 @@ namespace WpfApp
             var fish = (Fish)DataContext;
             try
             {
+                if (PondComboBox.SelectedValue == null)
+                {
+                    MessageBox.Show("Please select a pond", "Validation Error", 
+                        MessageBoxButton.OK, MessageBoxImage.Warning);
+                    return;
+                }
+
+                fish.PondId = (int)PondComboBox.SelectedValue;
                 _fishService.UpdateFish(fish);
-                MessageBox.Show("Fish details updated successfully!" ,"Success", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show("Fish details updated successfully!", "Success", 
+                    MessageBoxButton.OK, MessageBoxImage.Information);
+                DialogResult = true;
+                Close();
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error updating fish details: {ex.Message}");
+                MessageBox.Show($"Error updating fish details: {ex.Message}", "Error", 
+                    MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 

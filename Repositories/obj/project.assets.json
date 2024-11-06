@@ -3069,19 +3069,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Do Dat\\.nuget\\packages\\": {}
+    "C:\\Users\\MSI\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\SEM5\\PRN212\\Assignment2\\Repositories\\Repositories.csproj",
+      "projectUniqueName": "D:\\PRN212\\PRN212_KoiCare\\Repositories\\Repositories.csproj",
       "projectName": "Repositories",
-      "projectPath": "D:\\SEM5\\PRN212\\Assignment2\\Repositories\\Repositories.csproj",
-      "packagesPath": "C:\\Users\\Do Dat\\.nuget\\packages\\",
-      "outputPath": "D:\\SEM5\\PRN212\\Assignment2\\Repositories\\obj\\",
+      "projectPath": "D:\\PRN212\\PRN212_KoiCare\\Repositories\\Repositories.csproj",
+      "packagesPath": "C:\\Users\\MSI\\.nuget\\packages\\",
+      "outputPath": "D:\\PRN212\\PRN212_KoiCare\\Repositories\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Do Dat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\MSI\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3089,15 +3089,14 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\SEM5\\PRN212\\Assignment2\\BusinessObject\\BusinessObject.csproj": {
-              "projectPath": "D:\\SEM5\\PRN212\\Assignment2\\BusinessObject\\BusinessObject.csproj"
+            "D:\\PRN212\\PRN212_KoiCare\\BusinessObject\\BusinessObject.csproj": {
+              "projectPath": "D:\\PRN212\\PRN212_KoiCare\\BusinessObject\\BusinessObject.csproj"
             }
           }
         }
@@ -3132,7 +3131,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
