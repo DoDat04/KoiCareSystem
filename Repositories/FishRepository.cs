@@ -63,5 +63,29 @@ namespace Repositories
                 .Where(x => x.PondId == pondId)
                 .ToList();
         }
+        
+        public int GetFishCount(int memberId)
+        {
+            using var dbContext = new KoiCareContext();
+            return dbContext.Fish
+                .Count(x => x.MemberId == memberId);
+        }
+
+        public double GetAvgFishAge(int argPondId)
+        {
+            using var dbContext = new KoiCareContext();
+            return dbContext.Fish
+                .Where(x => x.PondId == argPondId && x.IsActive)
+                .Select(f => EF.Functions.DateDiffMonth(f.BirthDate, DateTime.Now))
+                .Average();
+        }
+
+        public decimal GetAvgFishSize(int argPondId)
+        {
+            using var dbContext = new KoiCareContext();
+            return dbContext.Fish
+                .Where(x => x.PondId == argPondId && x.IsActive)
+                .Average(f => f.Length);
+        }
     }
 }

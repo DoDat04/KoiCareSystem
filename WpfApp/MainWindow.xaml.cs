@@ -97,7 +97,7 @@ namespace WpfApp
                 MessageBox.Show("Please log in to use this feature.", "Login Required", MessageBoxButton.OK, MessageBoxImage.Information);
                 return;
             }
-            MainFrame.Navigate(new FoodPage());
+            MainFrame.Navigate(new FishFoodCalculator());
         }
 
         private void NavigateToHome(object sender, MouseButtonEventArgs e)

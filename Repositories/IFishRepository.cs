@@ -14,5 +14,8 @@ namespace Repositories
         public void AddNewFish(Fish fish);
         public void UpdateFish(Fish fish);
         public void DeleteFish(int id);
+        int GetFishCount(int memberId);
+        double GetAvgFishAge(int argPondId);
+        decimal GetAvgFishSize(int argPondId);
     }
 }

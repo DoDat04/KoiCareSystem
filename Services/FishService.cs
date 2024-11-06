@@ -40,5 +40,20 @@ namespace Services
         {
             return _fishRepository.GetByPondId(pondId);
         }
+        
+        public int GetFishCount(int memberId)
+        {
+            return _fishRepository.GetFishCount(memberId);
+        }
+        
+        public double GetAvgFishAge(int argPondId)
+        {
+            return _fishRepository.GetAvgFishAge(argPondId);
+        }
+
+        public decimal GetAvgFishSize(int argPondId)
+        {
+            return _fishRepository.GetAvgFishSize(argPondId);
+        }
     }
 }

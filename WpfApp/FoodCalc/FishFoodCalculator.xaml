@@ -1,0 +1,143 @@
+﻿<Page x:Class="WpfApp.FoodCalc.FishFoodCalculator"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        mc:Ignorable="d"
+        Title="Fish Food Calculator" Height="700" Width="1200"
+        Background="#F5F5F5">
+    
+    <Page.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#2196F3"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Padding" Value="15,8"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                                CornerRadius="4"
+                                Padding="{TemplateBinding Padding}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#1976D2"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style TargetType="ComboBox">
+            <Setter Property="Height" Value="32"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="BorderBrush" Value="#BDBDBD"/>
+            <Setter Property="Background" Value="White"/>
+        </Style>
+    </Page.Resources>
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <StackPanel Grid.Row="0" Margin="0,0,0,20">
+            <TextBlock Text="Fish Food Calculator" 
+                       FontSize="32" 
+                       FontWeight="Bold"
+                       Foreground="#1565C0"/>
+            <TextBlock Text="Manage and calculate food requirements for your fish ponds"
+                       FontSize="16"
+                       Foreground="#757575"
+                       Margin="0,5,0,0"/>
+        </StackPanel>
+
+        <!-- Search and Filter Section -->
+        <!-- <StackPanel Grid.Row="1"  -->
+        <!--             Orientation="Horizontal"  -->
+        <!--             Margin="0,0,0,20"> -->
+        <!--     <TextBox Width="250" -->
+        <!--              Height="32" -->
+        <!--              Padding="8,0" -->
+        <!--              VerticalContentAlignment="Center" -->
+        <!--              BorderThickness="1" -->
+        <!--              BorderBrush="#BDBDBD" -->
+        <!--              Background="White" -->
+        <!--              /> -->
+        <!--     <ComboBox Width="150" -->
+        <!--               Margin="10,0" -->
+        <!--               /> -->
+        <!--     <Button Content="Refresh Data" -->
+        <!--             Margin="10,0"/> -->
+        <!-- </StackPanel> -->
+
+        <!-- DataGrid -->
+        <DataGrid x:Name="PondsGrid" 
+                  Grid.Row="2" 
+                  AutoGenerateColumns="False"
+                  IsReadOnly="True"
+                  Background="White"
+                  BorderThickness="1"
+                  BorderBrush="#E0E0E0"
+                  RowBackground="White"
+                  AlternatingRowBackground="#F8F8F8"
+                  GridLinesVisibility="Horizontal"
+                  HorizontalGridLinesBrush="#E0E0E0"
+                  RowHeaderWidth="0"
+                  CanUserResizeRows="False">
+            
+            <DataGrid.Resources>
+                <Style TargetType="DataGridColumnHeader">
+                    <Setter Property="Background" Value="#F5F5F5"/>
+                    <Setter Property="Padding" Value="10,12"/>
+                    <Setter Property="FontWeight" Value="SemiBold"/>
+                </Style>
+            </DataGrid.Resources>
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Pond ID" 
+                                  Binding="{Binding PondID}" 
+                                  Width="80"/>
+                <DataGridTextColumn Header="Name" 
+                                  Binding="{Binding Name}" 
+                                  Width="150"/>
+                <DataGridTextColumn Header="Dimensions (L×W×D)" 
+                                  Binding="{Binding Dimensions}" 
+                                  Width="150"/>
+                <DataGridTextColumn Header="Avg Fish Age (months)" 
+                                  Binding="{Binding AvgFishAge}" 
+                                  Width="150"/>
+                <DataGridTextColumn Header="Avg Fish Size (cm)" 
+                                  Binding="{Binding AvgFishSize}" 
+                                  Width="120"/>
+                <DataGridTextColumn Header="Total Fish" 
+                                  Binding="{Binding TotalFish}" 
+                                  Width="100"/>
+                <DataGridTemplateColumn Header="Actions" Width="*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal" Margin="5">
+                                <ComboBox x:Name="FoodTypeCombo"
+                                         Width="200"
+                                         Margin="0,0,10,0"
+                                         ItemsSource="{Binding DataContext.FoodTypes, RelativeSource={RelativeSource AncestorType=Page}}"
+                                         DisplayMemberPath="Name"
+                                         SelectedValuePath="FoodTypeId"/>
+                                <Button Content="Calculate Food" 
+                                        Click="CalculateFood_Click"
+                                        Tag="{Binding}"
+                                        Width="120"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Page>
