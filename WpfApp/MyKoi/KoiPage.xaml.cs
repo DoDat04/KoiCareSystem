@@ -24,12 +24,14 @@ namespace WpfApp
     public partial class KoiPage : Page
     {
         private readonly IFishService _fishService;
+        private readonly IPondService _pondService;
         public string MemberIdText { get; set; }
 
         public KoiPage()
         {
             InitializeComponent();
             _fishService = new FishService();
+            _pondService = new PondService();
             var session = UserSession.GetInstance();
             MemberIdText = $"Member ID: {session.MemberId}";
         }
@@ -55,11 +57,21 @@ namespace WpfApp
 
         private void btnAddNewFish_Click(object sender, RoutedEventArgs e)
         {
-            AddNewFishPopup addNewFishPopup = new AddNewFishPopup();
-            bool? result = addNewFishPopup.ShowDialog();
-            if (result == true)
+            var session = UserSession.GetInstance();
+            var pond = _pondService.GetAll(session.MemberId);
+            if (pond == null || !pond.Any())
             {
-                ListAllFish();
+                MessageBox.Show("Please create pond first", "Notification", MessageBoxButton.OK, MessageBoxImage.Information);
+                return;
+            }
+            else
+            {
+                AddNewFishPopup addNewFishPopup = new AddNewFishPopup();
+                bool? result = addNewFishPopup.ShowDialog();
+                if (result == true)
+                {
+                    ListAllFish();
+                }
             }
         }
 
