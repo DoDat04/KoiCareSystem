@@ -1,24 +1,10 @@
 ﻿using BusinessObject;
 using Services;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace WpfApp.MyPond
 {
-    /// <summary>
-    /// Interaction logic for AddPond.xaml
-    /// </summary>
     public partial class AddPond : Window
     {
         private readonly IPondService _pondService;
@@ -33,37 +19,65 @@ namespace WpfApp.MyPond
         {
             try
             {
-                string name = PondNameTextBox.Text;
-                decimal length = decimal.Parse(LengthTextBox.Text);
-                decimal width = decimal.Parse(WidthTextBox.Text);
-                decimal depth = decimal.Parse(DepthTextBox.Text);
-                bool isActive = IsActiveCheckBox.IsChecked ?? false;
+                if (!ValidateInputs())
+                    return;
 
                 var session = UserSession.GetInstance();
-                Pond newPond = new Pond
+                var newPond = new Pond
                 {
-                    Name = name,
-                    Length = length,
-                    Width = width,
-                    Depth = depth,
+                    Name = PondNameTextBox.Text,
+                    Length = decimal.Parse(LengthTextBox.Text),
+                    Width = decimal.Parse(WidthTextBox.Text),
+                    Depth = decimal.Parse(DepthTextBox.Text),
                     MemberId = session.MemberId,
-                    IsActive = isActive,
+                    IsActive = true,
                     CreateDate = DateTime.Now
                 };
 
                 _pondService.AddPond(newPond);
                 MessageBox.Show("Pond added successfully!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
-                this.DialogResult = true;
+                DialogResult = true;
+                Close();
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error adding pond: {ex.Message}");
+                MessageBox.Show($"Error adding pond: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+        }
+
+        private bool ValidateInputs()
+        {
+            if (string.IsNullOrWhiteSpace(PondNameTextBox.Text))
+            {
+                MessageBox.Show("Please enter a pond name.", "Validation Error", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return false;
+            }
+
+            if (!decimal.TryParse(LengthTextBox.Text, out decimal length) || length <= 0)
+            {
+                MessageBox.Show("Please enter a valid length.", "Validation Error", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return false;
+            }
+
+            if (!decimal.TryParse(WidthTextBox.Text, out decimal width) || width <= 0)
+            {
+                MessageBox.Show("Please enter a valid width.", "Validation Error", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return false;
+            }
+
+            if (!decimal.TryParse(DepthTextBox.Text, out decimal depth) || depth <= 0)
+            {
+                MessageBox.Show("Please enter a valid depth.", "Validation Error", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return false;
+            }
+
+            return true;
         }
 
         private void CancelButton_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            DialogResult = false;
+            Close();
         }
     }
 }

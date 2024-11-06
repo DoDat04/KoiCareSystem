@@ -88,7 +88,10 @@ namespace WpfApp
                     MessageBox.Show("Login successful!");
                     AdminWindow adminWindow = new AdminWindow();
                     adminWindow.Show();
-                    ((Home)Application.Current.MainWindow).Close();
+                    if (Application.Current.MainWindow is Home homeWindow)
+                    {
+                        homeWindow.Close();
+                    }
                     this.Close();
                 }
                 else if (account.IsActive == false)
@@ -100,7 +103,10 @@ namespace WpfApp
                 {
                     UserSession.GetInstance().Login(account.MemberId, account.Email, account.RoleId);
                     MessageBox.Show("Login successful!");
-                    ((Home)Application.Current.MainWindow).UpdateLoginState();
+                    if (Application.Current.MainWindow is Home homeWindow)
+                    {
+                        homeWindow.UpdateLoginState();
+                    }
                     this.Close();
                 }
             }

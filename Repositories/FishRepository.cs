@@ -55,5 +55,13 @@ namespace Repositories
                 _dbContext.SaveChanges(); 
             }
         }
+
+        public List<Fish> GetByPondId(int pondId)
+        {
+            using var _dbContext = new KoiCareContext();
+            return _dbContext.Fish
+                .Where(x => x.PondId == pondId)
+                .ToList();
+        }
     }
 }

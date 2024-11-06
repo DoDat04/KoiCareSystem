@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-D:\PRN212-ASSIGNMENT\WpfApp\obj\Debug\net8.0-windows\
+D:\PRN212\PRN212_KoiCare\WpfApp\obj\Debug\net8.0-windows\
 WpfApp
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-D:\PRN212-ASSIGNMENT\WpfApp\App.xaml
+D:\PRN212\PRN212_KoiCare\WpfApp\App.xaml
 17-901832426
 
 21-1382921345
-247-1788964907
+2471481723060
 AdminWindow.xaml;FoodCalc\FoodPage.xaml;FoodCalc\ShowFood.xaml;HomePage.xaml;LoginSignPopup.xaml;MainWindow.xaml;MyKoi\AddNewFishPopup.xaml;MyKoi\KoiDetailPopup.xaml;MyKoi\KoiPage.xaml;MyPond\AddPond.xaml;MyPond\PondPage.xaml;MyPond\ShowPond.xaml;TestDatabase.xaml;User\ForgotPass.xaml;User\Profile.xaml;WaterParam\AddWater.xaml;WaterParam\WaterPage.xaml;
 
 False

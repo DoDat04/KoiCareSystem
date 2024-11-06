@@ -35,5 +35,10 @@ namespace Services
         {
             _fishRepository.UpdateFish(fish);
         }
+
+        public List<Fish> GetFishByPondId(int pondId)
+        {
+            return _fishRepository.GetByPondId(pondId);
+        }
     }
 }
