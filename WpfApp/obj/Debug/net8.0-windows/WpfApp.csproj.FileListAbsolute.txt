@@ -336,3 +336,5 @@ D:\PRN212\PRN212_KoiCare\WpfApp\obj\Debug\net8.0-windows\HomeNAdmin\HomePage.bam
 D:\PRN212\PRN212_KoiCare\WpfApp\obj\Debug\net8.0-windows\HomeNAdmin\LoginSignPopup.baml
 D:\PRN212\PRN212_KoiCare\WpfApp\obj\Debug\net8.0-windows\MainWindow.g.cs
 D:\PRN212\PRN212_KoiCare\WpfApp\obj\Debug\net8.0-windows\MainWindow.baml
+D:\PRN212\PRN212_KoiCare\WpfApp\obj\Debug\net8.0-windows\WaterParam\ShowWater.g.cs
+D:\PRN212\PRN212_KoiCare\WpfApp\obj\Debug\net8.0-windows\WaterParam\ShowWater.baml

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BusinessObject;
+using Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,13 +22,60 @@ namespace WpfApp.WaterParam
     /// </summary>
     public partial class WaterPage : Page
     {
-        public string MemberIdText { get; set; }
+        private readonly IPondService _pondService;
+        private readonly IWaterParamService _waterParameterService;
+
         public WaterPage()
         {
             InitializeComponent();
             var session = UserSession.GetInstance();
-            MemberIdText = $"Member ID: {session.MemberId}";
-            this.DataContext = this;
+            _pondService = new PondService();
+            _waterParameterService = new WaterParamService();
+            LoadPonds();
+        }
+
+        private void LoadPonds()
+        {
+            try
+            {
+                var session = UserSession.GetInstance();
+                PondItemsControl.ItemsSource = _pondService.GetAll(session.MemberId);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading ponds: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        private void CheckParameters_Click(object sender, RoutedEventArgs e)
+        {
+            if (sender is Button button && button.Tag is Pond selectedPond)
+            {
+                try
+                {
+                    var waterParam = _waterParameterService.GetLatestByPondId(selectedPond.PondId);
+                    
+                    if (waterParam != null)
+                    {
+                        ShowWater showWaterWindow = new(waterParam, selectedPond);
+                        showWaterWindow.ShowDialog();
+                    }
+                    else
+                    {
+                        AddWater addWaterWindow = new AddWater(selectedPond);
+                        bool? result = addWaterWindow.ShowDialog();
+                        if (result == true)
+                        {
+                            // Optionally refresh the view
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error checking water parameters: {ex.Message}", 
+                        "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
         }
     }
 }

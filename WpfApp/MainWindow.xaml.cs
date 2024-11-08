@@ -25,6 +25,7 @@ namespace WpfApp
         {
             InitializeComponent();
             WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            WindowState = WindowState.Normal;
             MainFrame.Navigate(new HomePage());
             UpdateLoginState();
         }

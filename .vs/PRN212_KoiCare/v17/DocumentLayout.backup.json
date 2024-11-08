@@ -1,7 +1,16 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\PRN212\\PRN212_KoiCare\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3ECE248A-6A49-47B4-A4B5-561EC2DCF4E8}|WpfApp\\WpfApp.csproj|d:\\prn212\\prn212_koicare\\wpfapp\\mypond\\pondpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3ECE248A-6A49-47B4-A4B5-561EC2DCF4E8}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\mypond\\pondpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3ECE248A-6A49-47B4-A4B5-561EC2DCF4E8}|WpfApp\\WpfApp.csproj|d:\\prn212\\prn212_koicare\\wpfapp\\foodcalc\\fishfoodcalculator.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3ECE248A-6A49-47B4-A4B5-561EC2DCF4E8}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\foodcalc\\fishfoodcalculator.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -22,6 +31,30 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PondPage.xaml",
+              "DocumentMoniker": "D:\\PRN212\\PRN212_KoiCare\\WpfApp\\MyPond\\PondPage.xaml",
+              "RelativeDocumentMoniker": "WpfApp\\MyPond\\PondPage.xaml",
+              "ToolTip": "D:\\PRN212\\PRN212_KoiCare\\WpfApp\\MyPond\\PondPage.xaml",
+              "RelativeToolTip": "WpfApp\\MyPond\\PondPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-08T07:50:25.233Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FishFoodCalculator.xaml",
+              "DocumentMoniker": "D:\\PRN212\\PRN212_KoiCare\\WpfApp\\FoodCalc\\FishFoodCalculator.xaml",
+              "RelativeDocumentMoniker": "WpfApp\\FoodCalc\\FishFoodCalculator.xaml",
+              "ToolTip": "D:\\PRN212\\PRN212_KoiCare\\WpfApp\\FoodCalc\\FishFoodCalculator.xaml",
+              "RelativeToolTip": "WpfApp\\FoodCalc\\FishFoodCalculator.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-08T07:50:22.464Z",
+              "EditorCaption": ""
             }
           ]
         }

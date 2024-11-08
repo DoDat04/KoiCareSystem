@@ -1,12 +1,146 @@
-﻿<Window x:Class="WpfApp.WaterParam.AddWater"
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Window x:Class="WpfApp.WaterParam.AddWater"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp.WaterParam"
-        mc:Ignorable="d"
-        Title="AddWater" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="Add Water Parameters" 
+        Height="460" 
+        Width="600"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Background="Transparent"
+        AllowsTransparency="True">
+
+    <Border CornerRadius="20" 
+            Background="White" 
+            BorderBrush="#DDDDDD" 
+            BorderThickness="1" Height="460" VerticalAlignment="Top">
+        <Grid Margin="30,30,30,30">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="300"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <!-- Header -->
+            <Grid Grid.Row="0" Margin="0,0,0,10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Text="Add Water Parameters"
+                          FontSize="28" 
+                          FontWeight="SemiBold"
+                          HorizontalAlignment="Center"
+                          VerticalAlignment="Center"/>
+
+                <Button Grid.Column="1"
+                        Content="✕"
+                        Click="CancelButton_Click"
+                        Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}"
+                        Width="32"
+                        Height="32"
+                        FontSize="16"/>
+            </Grid>
+
+            <!-- Content -->
+            <StackPanel Grid.Row="1" Margin="10,10">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="140"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <!-- pH Level -->
+                    <TextBlock Text="pH Level" FontSize="16"
+                             Grid.Row="0" Grid.Column="0"
+                             FontWeight="SemiBold" 
+                             VerticalAlignment="Center"
+                             Margin="0,0,20,20"/>
+                    <TextBox x:Name="PhTextBox"
+                            Grid.Row="0" Grid.Column="1"
+                            Height="35" FontSize="16"
+                            Padding="10,5"
+                            Margin="0,0,0,20"/>
+
+                    <!-- Ammonia -->
+                    <TextBlock Text="Ammonia (mg/L)" FontSize="16"
+                             Grid.Row="1" Grid.Column="0"
+                             FontWeight="SemiBold" 
+                             VerticalAlignment="Center"
+                             Margin="0,0,20,20"/>
+                    <TextBox x:Name="AmmoniaTextBox"
+                            Grid.Row="1" Grid.Column="1"
+                            Height="35" FontSize="16"
+                            Padding="10,5"
+                            Margin="0,0,0,20"/>
+
+                    <!-- Nitrite -->
+                    <TextBlock Text="Nitrite (mg/L)" FontSize="16"
+                             Grid.Row="2" Grid.Column="0"
+                             FontWeight="SemiBold" 
+                             VerticalAlignment="Center"
+                             Margin="0,0,20,20"/>
+                    <TextBox x:Name="NitriteTextBox"
+                            Grid.Row="2" Grid.Column="1"
+                            Height="35" FontSize="16"
+                            Padding="10,5"
+                            Margin="0,0,0,20"/>
+
+                    <!-- Nitrate -->
+                    <TextBlock Text="Nitrate (mg/L)" FontSize="16"
+                             Grid.Row="3" Grid.Column="0"
+                             FontWeight="SemiBold" 
+                             VerticalAlignment="Center"
+                             Margin="0,0,20,20"/>
+                    <TextBox x:Name="NitrateTextBox"
+                            Grid.Row="3" Grid.Column="1"
+                            Height="35" FontSize="16"
+                            Padding="10,5"
+                            Margin="0,0,0,20"/>
+
+                    <!-- Temperature -->
+                    <TextBlock Text="Temperature (°C)" FontSize="16"
+                             Grid.Row="4" Grid.Column="0"
+                             FontWeight="SemiBold" 
+                             VerticalAlignment="Center"
+                             Margin="0,0,20,20"/>
+                    <TextBox x:Name="TemperatureTextBox"
+                            Grid.Row="4" Grid.Column="1"
+                            Height="35" FontSize="16"
+                            Padding="10,5"
+                            Margin="0,0,0,20"/>
+                </Grid>
+            </StackPanel>
+
+            <!-- Footer -->
+            <Button Grid.Row="2"
+                    Content="Save" 
+                    Click="SaveButton_Click"
+                    Height="45"
+                    Width="140"
+                    Background="DarkOrange"
+                    Foreground="White"
+                    FontSize="20"
+                    FontWeight="SemiBold"
+                    HorizontalAlignment="Center">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="8"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+        </Grid>
+    </Border>
 </Window>

@@ -46,6 +46,9 @@
     <Compile Update="WaterParam\AddWater.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="WaterParam\ShowWater.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="WaterParam\WaterPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -88,6 +91,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="WaterParam\AddWater.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="WaterParam\ShowWater.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="WaterParam\WaterPage.xaml">

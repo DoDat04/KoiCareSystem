@@ -16,7 +16,6 @@ namespace WpfApp
         {
             InitializeComponent();
             var session = UserSession.GetInstance();
-            MemberIdText = $"Member ID: {session.MemberId}";
             _pondService = new PondService();
             LoadPonds();
         }
