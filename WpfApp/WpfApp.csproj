@@ -13,9 +13,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="image\fish.png" />
     <None Remove="image\food.png" />
     <None Remove="image\koi.png" />
     <None Remove="image\logo.png" />
+    <None Remove="image\pond.png" />
+    <None Remove="image\store.png" />
     <None Remove="image\water.png" />
   </ItemGroup>
 
@@ -28,13 +31,22 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="image\fish.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="image\food.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="image\koi.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="image\logo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="image\pond.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="image\store.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="image\water.png">

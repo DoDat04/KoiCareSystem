@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using WpfApp.FoodCalc;
+using WpfApp.Store;
 using WpfApp.WaterParam;
 
 namespace WpfApp
@@ -99,6 +100,16 @@ namespace WpfApp
                 return;
             }
             MainFrame.Navigate(new FishFoodCalculator());
+        }
+
+        private void NavigateToStore(object sender, MouseButtonEventArgs e)
+        {
+            if (!UserSession.GetInstance().IsLoggedIn)
+            {
+                MessageBox.Show("Please log in to use this feature.", "Login Required", MessageBoxButton.OK, MessageBoxImage.Information);
+                return;
+            }
+            MainFrame.Navigate(new StorePage());
         }
 
         private void NavigateToHome(object sender, MouseButtonEventArgs e)

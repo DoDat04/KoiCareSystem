@@ -81,13 +81,13 @@
 
                                 <!-- Pond Image -->
                                 <Border Grid.Row="0" 
-                                        Margin="10,10,10,5"
+                                        Margin="10,10,10,15"
                                         CornerRadius="8"
                                         Background="#F5F5F5">
-                                    <Image Source="pack://application:,,,/WpfApp;component/image/pond.png" 
+                                    <Image Source="/WpfApp;component/image/pond.png" 
                                            Stretch="Uniform"
-                                           Width="140"
-                                           Height="140"/>
+                                           Width="200"
+                                           Height="200"/>
                                 </Border>
 
                                 <!-- Pond Name -->

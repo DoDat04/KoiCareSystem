@@ -7,7 +7,28 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="HomeNAdmin\Categories\AddCategoryWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="HomeNAdmin\AdminWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="HomeNAdmin\Categories\ManageCategory.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="HomeNAdmin\Categories\ShowCategoryWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="HomeNAdmin\Products\AddProductWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="HomeNAdmin\Products\ManageProduct.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="HomeNAdmin\ManageUser.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="HomeNAdmin\Products\ShowProductWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="MyKoi\AddNewFishPopup.xaml.cs">
@@ -37,6 +58,15 @@
     <Compile Update="MyPond\ShowPond.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Store\ProductDetail.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Store\Purchase.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Store\StorePage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="User\ForgotPass.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -54,7 +84,28 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="HomeNAdmin\Categories\AddCategoryWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="HomeNAdmin\AdminWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="HomeNAdmin\Categories\ManageCategory.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="HomeNAdmin\Categories\ShowCategoryWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="HomeNAdmin\Products\AddProductWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="HomeNAdmin\Products\ManageProduct.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="HomeNAdmin\ManageUser.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="HomeNAdmin\Products\ShowProductWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MyKoi\AddNewFishPopup.xaml">
@@ -82,6 +133,15 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MyPond\ShowPond.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Store\ProductDetail.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Store\Purchase.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Store\StorePage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="User\ForgotPass.xaml">

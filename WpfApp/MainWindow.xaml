@@ -25,11 +25,12 @@
             <!-- Navigation Menu -->
             <StackPanel Grid.Column="0" Orientation="Horizontal" Margin="20,15,20,15" Grid.ColumnSpan="5" VerticalAlignment="Center" HorizontalAlignment="Left">
                 <Image Source="/WpfApp;component/image/logo.png" Height="30" Margin="50,0,20,0"/>
-                <TextBlock Text="Home" Margin="40,0,40,0" FontWeight="Bold" Cursor="Hand" Foreground="White" VerticalAlignment="Center" FontSize="18" MouseLeftButtonDown="NavigateToHome"/>
-                <TextBlock Text="My Koi" Margin="40,0,40,0" FontWeight="Bold" Cursor="Hand" Foreground="White" VerticalAlignment="Center" FontSize="18" MouseLeftButtonDown="NavigateToKoi"/>
-                <TextBlock Text="My Pond" Margin="40,0,40,0" FontWeight="Bold" Cursor="Hand" Foreground="White" VerticalAlignment="Center" FontSize="18" MouseLeftButtonDown="NavigateToPond"/>
-                <TextBlock Text="Water Params" Margin="40,0,40,0" FontWeight="Bold" Cursor="Hand" Foreground="White" VerticalAlignment="Center" FontSize="18" MouseLeftButtonDown="NavigateToWater"/>
-                <TextBlock Text="Food Calculator" Margin="40,0,40,0" FontWeight="Bold" Cursor="Hand" Foreground="White" VerticalAlignment="Center" FontSize="18" MouseLeftButtonDown="NavigateToFood"/>
+                <TextBlock Text="Home" Margin="30,0,30,0" FontWeight="Bold" Cursor="Hand" Foreground="White" VerticalAlignment="Center" FontSize="18" MouseLeftButtonDown="NavigateToHome"/>
+                <TextBlock Text="My Koi" Margin="30,0,30,0" FontWeight="Bold" Cursor="Hand" Foreground="White" VerticalAlignment="Center" FontSize="18" MouseLeftButtonDown="NavigateToKoi"/>
+                <TextBlock Text="My Pond" Margin="30,0,30,0" FontWeight="Bold" Cursor="Hand" Foreground="White" VerticalAlignment="Center" FontSize="18" MouseLeftButtonDown="NavigateToPond"/>
+                <TextBlock Text="Water Params" Margin="30,0,30,0" FontWeight="Bold" Cursor="Hand" Foreground="White" VerticalAlignment="Center" FontSize="18" MouseLeftButtonDown="NavigateToWater"/>
+                <TextBlock Text="Food Calculator" Margin="30,0,30,0" FontWeight="Bold" Cursor="Hand" Foreground="White" VerticalAlignment="Center" FontSize="18" MouseLeftButtonDown="NavigateToFood"/>
+                <TextBlock Text="Store" Margin="30,0,30,0" FontWeight="Bold" Cursor="Hand" Foreground="DarkOrange" VerticalAlignment="Center" FontSize="18" MouseLeftButtonDown="NavigateToStore"/>
             </StackPanel>
 
             <!-- Login Area -->
