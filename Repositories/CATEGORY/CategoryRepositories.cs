@@ -1,6 +1,6 @@
 ﻿using BusinessObject;
 
-namespace Repositories
+namespace Repositories.CATEGORY
 {
     public class CategoryRepositories : ICategoryRepositories
     {

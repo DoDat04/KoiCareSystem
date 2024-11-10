@@ -1,7 +1,7 @@
 ﻿using BusinessObject;
 using Microsoft.EntityFrameworkCore;
 
-namespace Repositories
+namespace Repositories.WATER
 {
     public class WaterParamRepository : IWaterParamRepository
     {

@@ -1,7 +1,7 @@
 ﻿using BusinessObject;
 using Microsoft.EntityFrameworkCore;
 
-namespace Repositories
+namespace Repositories.PRODUCT
 {
     public class ProductDAO
     {

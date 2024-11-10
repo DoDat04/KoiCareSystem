@@ -40,7 +40,7 @@
                                 Margin="10"
                                 Background="White"
                                 BorderBrush="#DDDDDD"
-                                BorderThickness="1"
+                                BorderThickness="1" MouseDown="Product_MouseDown"
                                 CornerRadius="12">
                             <Border.Effect>
                                 <DropShadowEffect BlurRadius="10" 

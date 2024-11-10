@@ -3,6 +3,7 @@ using Services;       // Assuming this namespace contains your services for acce
 using System;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 
 namespace WpfApp.Store
 {
@@ -36,7 +37,14 @@ namespace WpfApp.Store
                 // Optionally show an error message to the user
             }
         }
+        private void Product_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (sender is Border border && border.DataContext is Product product)
+            {
+                // Navigate to ProductDetail page and pass the selected product
+                NavigationService.Navigate(new ProductDetail(product));
+            }
+        }
 
-        
     }
 }

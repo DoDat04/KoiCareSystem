@@ -1,5 +1,5 @@
 ﻿using BusinessObject;
-using Repositories;
+using Repositories.MEMBER;
 using System;
 using System.Collections.Generic;
 using System.Linq;

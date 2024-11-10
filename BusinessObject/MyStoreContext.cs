@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BusinessObject;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,7 @@ namespace BusinessObject
     {
         public static List<Category> Categories = new List<Category>();
         public static List<Product> Products = new List<Product>();
+        public static List<Cart> Carts = new List<Cart>();
 
         static MyStoreContext()
         {
@@ -24,7 +26,6 @@ namespace BusinessObject
             Categories.Add(waterCategory);
             Categories.Add(accessoriesCategory);
 
-            // Adding sample products
             Products.Add(new Product
             {
                 ProductId = 1,
@@ -32,6 +33,7 @@ namespace BusinessObject
                 CategoryId = foodCategory.CategoryId,
                 UnitsInStock = 150,
                 UnitPrice = 29.99m,
+                Description = "High-quality pellets for Koi fish, providing essential nutrients.",
                 Category = foodCategory
             });
 
@@ -42,6 +44,7 @@ namespace BusinessObject
                 CategoryId = foodCategory.CategoryId,
                 UnitsInStock = 100,
                 UnitPrice = 34.99m,
+                Description = "Nutritious wheat germ pellets ideal for Koi during cool months.",
                 Category = foodCategory
             });
 
@@ -52,6 +55,7 @@ namespace BusinessObject
                 CategoryId = toolsCategory.CategoryId,
                 UnitsInStock = 60,
                 UnitPrice = 19.99m,
+                Description = "Comprehensive kit to monitor water quality in your pond.",
                 Category = toolsCategory
             });
 
@@ -62,6 +66,7 @@ namespace BusinessObject
                 CategoryId = toolsCategory.CategoryId,
                 UnitsInStock = 25,
                 UnitPrice = 149.99m,
+                Description = "Powerful vacuum for cleaning debris from pond surfaces.",
                 Category = toolsCategory
             });
 
@@ -72,6 +77,7 @@ namespace BusinessObject
                 CategoryId = waterCategory.CategoryId,
                 UnitsInStock = 80,
                 UnitPrice = 24.99m,
+                Description = "Effective solution to control algae growth in ponds.",
                 Category = waterCategory
             });
 
@@ -82,6 +88,7 @@ namespace BusinessObject
                 CategoryId = waterCategory.CategoryId,
                 UnitsInStock = 50,
                 UnitPrice = 14.99m,
+                Description = "Conditioner to promote safe and healthy water for fish.",
                 Category = waterCategory
             });
 
@@ -92,6 +99,7 @@ namespace BusinessObject
                 CategoryId = accessoriesCategory.CategoryId,
                 UnitsInStock = 40,
                 UnitPrice = 39.99m,
+                Description = "Durable net for safely capturing Koi fish.",
                 Category = accessoriesCategory
             });
 
@@ -102,6 +110,7 @@ namespace BusinessObject
                 CategoryId = accessoriesCategory.CategoryId,
                 UnitsInStock = 15,
                 UnitPrice = 249.99m,
+                Description = "Beautiful floating fountain to enhance the aesthetics of your pond.",
                 Category = accessoriesCategory
             });
         }

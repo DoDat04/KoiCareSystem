@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Repositories
+namespace Repositories.CATEGORY
 {
     public class CategoryDAO
     {

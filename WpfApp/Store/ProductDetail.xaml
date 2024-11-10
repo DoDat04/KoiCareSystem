@@ -5,10 +5,112 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:WpfApp.Store"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="450"
+      d:DesignWidth="1200"
       Title="ProductDetail">
 
     <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
         
+        <!-- Header -->
+        <TextBlock Text="Product Details"
+                  Grid.Row="0"
+                  FontSize="32"
+                  FontWeight="SemiBold"
+                  Margin="0,20,0,20"
+                  HorizontalAlignment="Center"/>
+
+        <!-- Content -->
+        <Grid Grid.Row="1" Margin="40,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Product Image -->
+            <Grid Grid.Column="0">
+                <Image Source="/WpfApp;component/image/store.png" 
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"
+                       Stretch="Uniform" 
+                       Width="200" 
+                       Height="200"/>
+            </Grid>
+
+            <!-- Product Details -->
+            <StackPanel Grid.Column="1" 
+                        Margin="40,0"
+                        VerticalAlignment="Top">
+                <TextBlock x:Name="ProductNameTextBlock" 
+                          FontSize="28" 
+                          FontWeight="SemiBold"
+                          Margin="0,0,0,20"/>
+
+                <TextBlock Text="Price" 
+                          FontSize="20"
+                          FontWeight="SemiBold"
+                          Foreground="#666666"
+                          Margin="0,0,0,5"/>
+                <TextBlock x:Name="ProductPriceTextBlock" 
+                          FontSize="24" 
+                          FontWeight="SemiBold"
+                          Foreground="DarkOrange"
+                          Margin="0,0,0,20"/>
+
+                <TextBlock Text="Stock Status" 
+                          FontSize="20"
+                          FontWeight="SemiBold"
+                          Foreground="#666666"
+                          Margin="0,0,0,5"/>
+                <TextBlock x:Name="ProductStockTextBlock" 
+                          FontSize="24" 
+                          FontWeight="SemiBold"
+                          Margin="0,0,0,30"/>
+
+                <TextBlock Text="Quantity" 
+                          FontSize="20"
+                          FontWeight="SemiBold"
+                          Foreground="#666666"
+                          Margin="0,0,0,5"/>
+                <TextBox x:Name="QuantityTextBox"
+                         Width="100"
+                         FontSize="24"
+                         Margin="0,0,0,20"
+                         HorizontalAlignment="Left"
+                         Text="1"/>
+                <!-- Default quantity set to 1 -->
+
+                <TextBlock Text="Description" 
+                          FontSize="20"
+                          FontWeight="SemiBold"
+                          Foreground="#666666"
+                          Margin="0,0,0,5"/>
+                <TextBlock x:Name="ProductDescriptionTextBlock" 
+                          FontSize="24"
+                          TextWrapping="Wrap"
+                          LineHeight="24"
+                          Margin="0,0,0,40"/>
+
+                <Button Content="Purchase Now" 
+                        Click="Button_Click"
+                        Height="45"
+                        Width="200" Margin="0,0,0,50"
+                        Background="DarkOrange"
+                        Foreground="White"
+                        FontSize="20"
+                        FontWeight="SemiBold"
+                        HorizontalAlignment="Center" 
+                        VerticalAlignment="Center">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="8"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+            </StackPanel>
+        </Grid>
     </Grid>
 </Page>

@@ -4,6 +4,7 @@ using System.Windows;
 using System.Windows.Controls;
 using BusinessObject;
 using Repositories;
+using Repositories.FOOD;
 using Services;
 
 namespace WpfApp.FoodCalc

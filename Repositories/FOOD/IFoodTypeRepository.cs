@@ -1,6 +1,6 @@
 ﻿using BusinessObject;
 
-namespace Repositories;
+namespace Repositories.FOOD;
 
 public interface IFoodTypeRepository
 {

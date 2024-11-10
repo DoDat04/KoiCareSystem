@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using BusinessObject;
 
-namespace Repositories
+namespace Repositories.PRODUCT
 {
     public interface IProductRepositories
     {

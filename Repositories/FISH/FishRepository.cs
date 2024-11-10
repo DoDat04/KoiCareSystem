@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Repositories
+namespace Repositories.FISH
 {
     public class FishRepository : IFishRepository
     {
@@ -25,7 +25,7 @@ namespace Repositories
             {
                 _dbContext.Remove(existingFish);
                 _dbContext.SaveChanges();
-            }          
+            }
         }
 
         public List<Fish> GetAll(int memberId)
@@ -52,7 +52,7 @@ namespace Repositories
                 existingFish.Gender = fish.Gender;
                 existingFish.Breed = fish.Breed;
 
-                _dbContext.SaveChanges(); 
+                _dbContext.SaveChanges();
             }
         }
 
@@ -63,7 +63,7 @@ namespace Repositories
                 .Where(x => x.PondId == pondId)
                 .ToList();
         }
-        
+
         public int GetFishCount(int memberId)
         {
             using var dbContext = new KoiCareContext();
