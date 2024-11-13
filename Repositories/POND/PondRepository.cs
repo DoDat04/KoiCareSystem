@@ -54,6 +54,7 @@ namespace Repositories.POND
             existingPond.Width = pond.Width;
             existingPond.Depth = pond.Depth;
             existingPond.IsActive = pond.IsActive;
+            existingPond.ImagePath = pond.ImagePath;
             _dbContext.SaveChanges();
         }
 

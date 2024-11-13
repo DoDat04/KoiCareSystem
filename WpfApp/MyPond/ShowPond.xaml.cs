@@ -2,6 +2,7 @@
 using Services;
 using System;
 using System.Windows;
+using System.Windows.Media.Imaging;
 
 namespace WpfApp.MyPond
 {
@@ -10,6 +11,7 @@ namespace WpfApp.MyPond
         private readonly IPondService _pondService;
         private readonly IFishService _fishService;
         private readonly Pond _pond;
+        private string _imagePath;
 
         public ShowPond(Pond pond)
         {
@@ -18,21 +20,34 @@ namespace WpfApp.MyPond
             DataContext = _pond;
             _pondService = new PondService();
             _fishService = new FishService();
-            LoadFishList();
+            
+            // Load pond image if exists
+            if (!string.IsNullOrEmpty(pond.ImagePath))
+            {
+                try 
+                {
+                    _imagePath = pond.ImagePath;
+                    var bitmap = new BitmapImage();
+                    bitmap.BeginInit();
+                    bitmap.UriSource = new Uri(pond.ImagePath);
+                    bitmap.CacheOption = BitmapCacheOption.OnLoad;
+                    bitmap.EndInit();
+                    PondImage.Source = bitmap;
+                    
+                }
+                catch 
+                {
+                    _imagePath = null;
+                    PondImage.Source = new BitmapImage(new Uri("/WpfApp;component/image/pond.png", UriKind.Relative));
+                   
+                }
+            }
+            
+          
         }
 
-        private void LoadFishList()
-        {
-            try
-            {
-                var fishList = _fishService.GetFishByPondId(_pond.PondId);
-                FishListView.ItemsSource = fishList;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error loading fish list: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
-        }
+        
+        
 
         private void CloseButton_Click(object sender, RoutedEventArgs e)
         {
@@ -46,6 +61,16 @@ namespace WpfApp.MyPond
             {
                 if (!ValidateInputs())
                     return;
+
+                // Handle image update
+                if (!string.IsNullOrEmpty(_imagePath) && _imagePath != _pond.ImagePath)
+                {
+                    string fileName = Guid.NewGuid().ToString() + System.IO.Path.GetExtension(_imagePath);
+                    string destinationPath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "PondImages", fileName);
+                    System.IO.Directory.CreateDirectory(System.IO.Path.GetDirectoryName(destinationPath));
+                    System.IO.File.Copy(_imagePath, destinationPath, true);
+                    _pond.ImagePath = destinationPath;
+                }
 
                 _pondService.UpdatePond(_pond);
                 MessageBox.Show("Pond updated successfully!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
@@ -104,6 +129,38 @@ namespace WpfApp.MyPond
                 catch (Exception ex)
                 {
                     MessageBox.Show($"Error deleting pond: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
+        }
+
+        private void btnUploadImage_Click(object sender, RoutedEventArgs e)
+        {
+            var openFileDialog = new Microsoft.Win32.OpenFileDialog
+            {
+                Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp",
+                Title = "Select a Pond Image"
+            };
+
+            if (openFileDialog.ShowDialog() == true)
+            {
+                try
+                {
+                    _imagePath = openFileDialog.FileName;
+                    var bitmap = new BitmapImage();
+                    bitmap.BeginInit();
+                    bitmap.UriSource = new Uri(_imagePath);
+                    bitmap.CacheOption = BitmapCacheOption.OnLoad;
+                    bitmap.EndInit();
+                    PondImage.Source = bitmap;
+                    
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error loading image: {ex.Message}", "Error", 
+                        MessageBoxButton.OK, MessageBoxImage.Error);
+                    _imagePath = null;
+                    PondImage.Source = new BitmapImage(new Uri("/WpfApp;component/image/pond.png", UriKind.Relative));
+                    
                 }
             }
         }

@@ -15,6 +15,8 @@ public partial class Fish
 
     public decimal Length { get; set; }
 
+    public string? ImagePath { get; set; }  // New property for the image path
+
     public decimal Weight { get; set; }
 
     public DateTime BirthDate { get; set; }
@@ -41,7 +43,7 @@ public partial class Fish
 
     public virtual Pond Pond { get; set; } = null!;
 
-    public Fish(int pondId, int memberId, string name, decimal length, decimal weight, DateTime birthDate, string gender, string breed, bool isActive, DateTime? createDate)
+    public Fish(int pondId, int memberId, string? imagePath, string name, decimal length, decimal weight, DateTime birthDate, string gender, string breed, bool isActive, DateTime? createDate)
     {
         PondId = pondId;
         MemberId = memberId;
@@ -51,6 +53,7 @@ public partial class Fish
         BirthDate = birthDate;
         Gender = gender;
         Breed = breed;
+        ImagePath = imagePath;  // Initialize ImagePath
         IsActive = isActive;
         CreateDate = createDate ?? DateTime.Now;
     }

@@ -14,11 +14,11 @@
     <Border CornerRadius="20" 
             Background="White" 
             BorderBrush="#DDDDDD" 
-            BorderThickness="1">
-        <Grid Margin="30">
+            BorderThickness="1" Margin="0,0,0,112">
+        <Grid Margin="30,30,30,22">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
-                <RowDefinition Height="380"/>
+                <RowDefinition Height="280"/>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
 
@@ -46,8 +46,42 @@
             </Grid>
 
             <!-- Content -->
-            <StackPanel Grid.Row="1" Margin="10,10">
-                <Grid>
+            <Grid Grid.Row="1" Margin="10,10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0" Margin="0,0,20,0">
+                    <Image x:Name="PondImage"
+                           Height="200" 
+                           Width="200"
+                           Stretch="Uniform"
+                           Margin="0,0,0,10">
+                        <Image.Source>
+                            <BitmapImage UriSource="/WpfApp;component/image/pond.png"/>
+                        </Image.Source>
+                    </Image>
+                    <Button x:Name="btnUploadImage"
+                            Content="Upload Image"
+                            Height="35" 
+                            Width="120"
+                            FontSize="16"
+                            Padding="10,5"
+                            Click="btnUploadImage_Click">
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+                    <TextBlock x:Name="ImageNameText"
+                               TextWrapping="Wrap"
+                               TextTrimming="CharacterEllipsis"
+                               Margin="0,10,0,0"/>
+                </StackPanel>
+
+                <Grid Grid.Column="1">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="140"/>
                         <ColumnDefinition Width="*"/>
@@ -108,30 +142,8 @@
                             Height="35" FontSize="16"
                             Padding="10,5"
                             Margin="0,0,0,20"/>
-
-                    <!-- Fish List -->
-                    <TextBlock Text="Fish List" FontSize="16"
-                             Grid.Row="5" Grid.Column="0"
-                             FontWeight="SemiBold" 
-                             VerticalAlignment="Top"
-                             Margin="0,0,20,0"/>
-                    <ListView x:Name="FishListView"
-                              Grid.Row="5" Grid.Column="1"
-                              Height="120"
-                              ScrollViewer.HorizontalScrollBarVisibility="Disabled"
-                              Margin="0,0,0,0">
-                        <ListView.View>
-                            <GridView>
-                                <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}" Width="110"/>
-                                <GridViewColumn Header="Length" DisplayMemberBinding="{Binding Length}" Width="80"/>
-                                <GridViewColumn Header="Weight" DisplayMemberBinding="{Binding Weight}" Width="80"/>
-                                <GridViewColumn Header="Gender" DisplayMemberBinding="{Binding Gender}" Width="80"/>
-                                <GridViewColumn Header="Breed" DisplayMemberBinding="{Binding Breed}" Width="80"/>
-                            </GridView>
-                        </ListView.View>
-                    </ListView>
                 </Grid>
-            </StackPanel>
+            </Grid>
 
             <!-- Footer -->
             <StackPanel Grid.Row="2" 

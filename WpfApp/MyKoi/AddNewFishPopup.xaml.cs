@@ -23,11 +23,14 @@ namespace WpfApp
     {
         private readonly IPondService _pondService;
         private readonly IFishService _fishService;
+        private string _imagePath; // Variable to hold the image path
+
         public AddNewFishPopup()
         {
             InitializeComponent();
             _pondService = new PondService();
             _fishService = new FishService();
+            // Default image is now set in XAML
         }
 
         public void LoadPonds()
@@ -40,7 +43,8 @@ namespace WpfApp
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                System.Windows.MessageBox.Show(ex.Message);
+               
             }
         }
 
@@ -49,6 +53,36 @@ namespace WpfApp
             this.Close();
         }
 
+        private void btnUploadImage_Click(object sender, RoutedEventArgs e)
+        {
+            var openFileDialog = new Microsoft.Win32.OpenFileDialog
+            {
+                Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp",
+                Title = "Select a Fish Image"
+            };
+
+            if (openFileDialog.ShowDialog() == true)
+            {
+                try
+                {
+                    _imagePath = openFileDialog.FileName;
+                    var bitmap = new BitmapImage();
+                    bitmap.BeginInit();
+                    bitmap.UriSource = new Uri(_imagePath);
+                    bitmap.CacheOption = BitmapCacheOption.OnLoad;
+                    bitmap.EndInit();
+                    FishImage.Source = bitmap;
+                    
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error loading image: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    _imagePath = null;
+                    FishImage.Source = new BitmapImage(new Uri("/WpfApp;component/image/fish.png", UriKind.Relative));
+                   
+                }
+            }
+        }
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -73,7 +107,9 @@ namespace WpfApp
                     gender: genderFish,
                     breed: breed,
                     isActive: true, 
-                    createDate: null 
+                    createDate: null,
+                    imagePath: _imagePath 
+
                 );
 
                 _fishService.AddNewFish(newFish);

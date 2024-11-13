@@ -24,6 +24,7 @@ namespace WpfApp
         private readonly IPondService _pondService;
         private readonly IFishService _fishService;
         private Fish _currentFish;
+        private string _imagePath;
 
         public KoiDetailPopup(Fish fish)
         {
@@ -43,6 +44,20 @@ namespace WpfApp
                     genderComboBox.Items.Add("Female");
                 }
                 genderComboBox.SelectedValue = fish.Gender;
+            }
+
+            // Load fish image if exists
+            if (!string.IsNullOrEmpty(fish.ImagePath))
+            {
+                try
+                {
+                    _imagePath = fish.ImagePath;
+                    FishImage.Source = new BitmapImage(new Uri(fish.ImagePath));
+                }
+                catch
+                {
+                    FishImage.Source = new BitmapImage(new Uri("/WpfApp;component/image/fish.png", UriKind.Relative));
+                }
             }
         }
 
@@ -101,6 +116,24 @@ namespace WpfApp
                 }
 
                 fish.PondId = (int)PondComboBox.SelectedValue;
+                
+                // Update image path if a new image was selected
+                if (!string.IsNullOrEmpty(_imagePath) && _imagePath != fish.ImagePath)
+                {
+                    // Copy the image to your application's storage location
+                    string fileName = Guid.NewGuid().ToString() + System.IO.Path.GetExtension(_imagePath);
+                    string destinationPath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "FishImages", fileName);
+                    
+                    // Ensure directory exists
+                    System.IO.Directory.CreateDirectory(System.IO.Path.GetDirectoryName(destinationPath));
+                    
+                    // Copy the file
+                    System.IO.File.Copy(_imagePath, destinationPath, true);
+                    
+                    // Update the fish's image path
+                    fish.ImagePath = destinationPath;
+                }
+
                 _fishService.UpdateFish(fish);
                 MessageBox.Show("Fish details updated successfully!", "Success", 
                     MessageBoxButton.OK, MessageBoxImage.Information);
@@ -122,6 +155,36 @@ namespace WpfApp
         private void CloseButton_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void btnUploadImage_Click(object sender, RoutedEventArgs e)
+        {
+            var openFileDialog = new Microsoft.Win32.OpenFileDialog
+            {
+                Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp",
+                Title = "Select a Fish Image"
+            };
+
+            if (openFileDialog.ShowDialog() == true)
+            {
+                try
+                {
+                    _imagePath = openFileDialog.FileName;
+                    var bitmap = new BitmapImage();
+                    bitmap.BeginInit();
+                    bitmap.UriSource = new Uri(_imagePath);
+                    bitmap.CacheOption = BitmapCacheOption.OnLoad;
+                    bitmap.EndInit();
+                    FishImage.Source = bitmap;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error loading image: {ex.Message}", "Error", 
+                        MessageBoxButton.OK, MessageBoxImage.Error);
+                    _imagePath = null;
+                    FishImage.Source = new BitmapImage(new Uri("/WpfApp;component/image/fish.png", UriKind.Relative));
+                }
+            }
         }
     }
 }

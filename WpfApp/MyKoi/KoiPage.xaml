@@ -83,10 +83,24 @@
                                         Margin="10,10,10,15"
                                         CornerRadius="8"
                                         Background="#F5F5F5">
-                                    <Image Source="/WpfApp;component/image/fish.png"
-                                           Stretch="Uniform"
-                                           Width="200"
-                                           Height="200"/>
+                                    <Image>
+                                        <Image.Style>
+                                            <Style TargetType="Image">
+                                                <Style.Triggers>
+                                                    <DataTrigger Binding="{Binding ImagePath}" Value="{x:Null}">
+                                                        <Setter Property="Source" Value="/WpfApp;component/image/fish.png"/>
+                                                    </DataTrigger>
+                                                    <DataTrigger Binding="{Binding ImagePath}" Value="">
+                                                        <Setter Property="Source" Value="/WpfApp;component/image/fish.png"/>
+                                                    </DataTrigger>
+                                                </Style.Triggers>
+                                                <Setter Property="Source" Value="{Binding ImagePath}"/>
+                                                <Setter Property="Stretch" Value="Uniform"/>
+                                                <Setter Property="Width" Value="200"/>
+                                                <Setter Property="Height" Value="200"/>
+                                            </Style>
+                                        </Image.Style>
+                                    </Image>
                                 </Border>
 
                                 <!-- Koi Name -->

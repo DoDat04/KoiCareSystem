@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\PRN212\\PRN212_KoiCare\\Services\\Services.csproj": {}
+    "C:\\Users\\MSI\\OneDrive\\Máy tính\\PRN212_KoiCare\\Services\\Services.csproj": {}
   },
   "projects": {
-    "D:\\PRN212\\PRN212_KoiCare\\BusinessObject\\BusinessObject.csproj": {
+    "C:\\Users\\MSI\\OneDrive\\Máy tính\\PRN212_KoiCare\\BusinessObject\\BusinessObject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PRN212\\PRN212_KoiCare\\BusinessObject\\BusinessObject.csproj",
+        "projectUniqueName": "C:\\Users\\MSI\\OneDrive\\Máy tính\\PRN212_KoiCare\\BusinessObject\\BusinessObject.csproj",
         "projectName": "BusinessObject",
-        "projectPath": "D:\\PRN212\\PRN212_KoiCare\\BusinessObject\\BusinessObject.csproj",
+        "projectPath": "C:\\Users\\MSI\\OneDrive\\Máy tính\\PRN212_KoiCare\\BusinessObject\\BusinessObject.csproj",
         "packagesPath": "C:\\Users\\MSI\\.nuget\\packages\\",
-        "outputPath": "D:\\PRN212\\PRN212_KoiCare\\BusinessObject\\obj\\",
+        "outputPath": "C:\\Users\\MSI\\OneDrive\\Máy tính\\PRN212_KoiCare\\BusinessObject\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\MSI\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -90,14 +90,14 @@
         }
       }
     },
-    "D:\\PRN212\\PRN212_KoiCare\\Repositories\\Repositories.csproj": {
+    "C:\\Users\\MSI\\OneDrive\\Máy tính\\PRN212_KoiCare\\Repositories\\Repositories.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PRN212\\PRN212_KoiCare\\Repositories\\Repositories.csproj",
+        "projectUniqueName": "C:\\Users\\MSI\\OneDrive\\Máy tính\\PRN212_KoiCare\\Repositories\\Repositories.csproj",
         "projectName": "Repositories",
-        "projectPath": "D:\\PRN212\\PRN212_KoiCare\\Repositories\\Repositories.csproj",
+        "projectPath": "C:\\Users\\MSI\\OneDrive\\Máy tính\\PRN212_KoiCare\\Repositories\\Repositories.csproj",
         "packagesPath": "C:\\Users\\MSI\\.nuget\\packages\\",
-        "outputPath": "D:\\PRN212\\PRN212_KoiCare\\Repositories\\obj\\",
+        "outputPath": "C:\\Users\\MSI\\OneDrive\\Máy tính\\PRN212_KoiCare\\Repositories\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\MSI\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -114,8 +114,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\PRN212\\PRN212_KoiCare\\BusinessObject\\BusinessObject.csproj": {
-                "projectPath": "D:\\PRN212\\PRN212_KoiCare\\BusinessObject\\BusinessObject.csproj"
+              "C:\\Users\\MSI\\OneDrive\\Máy tính\\PRN212_KoiCare\\BusinessObject\\BusinessObject.csproj": {
+                "projectPath": "C:\\Users\\MSI\\OneDrive\\Máy tính\\PRN212_KoiCare\\BusinessObject\\BusinessObject.csproj"
               }
             }
           }
@@ -154,14 +154,14 @@
         }
       }
     },
-    "D:\\PRN212\\PRN212_KoiCare\\Services\\Services.csproj": {
+    "C:\\Users\\MSI\\OneDrive\\Máy tính\\PRN212_KoiCare\\Services\\Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PRN212\\PRN212_KoiCare\\Services\\Services.csproj",
+        "projectUniqueName": "C:\\Users\\MSI\\OneDrive\\Máy tính\\PRN212_KoiCare\\Services\\Services.csproj",
         "projectName": "Services",
-        "projectPath": "D:\\PRN212\\PRN212_KoiCare\\Services\\Services.csproj",
+        "projectPath": "C:\\Users\\MSI\\OneDrive\\Máy tính\\PRN212_KoiCare\\Services\\Services.csproj",
         "packagesPath": "C:\\Users\\MSI\\.nuget\\packages\\",
-        "outputPath": "D:\\PRN212\\PRN212_KoiCare\\Services\\obj\\",
+        "outputPath": "C:\\Users\\MSI\\OneDrive\\Máy tính\\PRN212_KoiCare\\Services\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\MSI\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -178,8 +178,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\PRN212\\PRN212_KoiCare\\Repositories\\Repositories.csproj": {
-                "projectPath": "D:\\PRN212\\PRN212_KoiCare\\Repositories\\Repositories.csproj"
+              "C:\\Users\\MSI\\OneDrive\\Máy tính\\PRN212_KoiCare\\Repositories\\Repositories.csproj": {
+                "projectPath": "C:\\Users\\MSI\\OneDrive\\Máy tính\\PRN212_KoiCare\\Repositories\\Repositories.csproj"
               }
             }
           }

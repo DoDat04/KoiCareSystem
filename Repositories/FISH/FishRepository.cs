@@ -51,6 +51,7 @@ namespace Repositories.FISH
                 existingFish.BirthDate = fish.BirthDate;
                 existingFish.Gender = fish.Gender;
                 existingFish.Breed = fish.Breed;
+                existingFish.ImagePath = fish.ImagePath; 
 
                 _dbContext.SaveChanges();
             }

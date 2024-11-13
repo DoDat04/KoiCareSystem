@@ -4414,11 +4414,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\PRN212\\PRN212_KoiCare\\BusinessObject\\BusinessObject.csproj",
+      "projectUniqueName": "C:\\Users\\MSI\\OneDrive\\Máy tính\\PRN212_KoiCare\\BusinessObject\\BusinessObject.csproj",
       "projectName": "BusinessObject",
-      "projectPath": "D:\\PRN212\\PRN212_KoiCare\\BusinessObject\\BusinessObject.csproj",
+      "projectPath": "C:\\Users\\MSI\\OneDrive\\Máy tính\\PRN212_KoiCare\\BusinessObject\\BusinessObject.csproj",
       "packagesPath": "C:\\Users\\MSI\\.nuget\\packages\\",
-      "outputPath": "D:\\PRN212\\PRN212_KoiCare\\BusinessObject\\obj\\",
+      "outputPath": "C:\\Users\\MSI\\OneDrive\\Máy tính\\PRN212_KoiCare\\BusinessObject\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\MSI\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -16,6 +16,7 @@ public partial class Pond
     public decimal Width { get; set; }
 
     public decimal Depth { get; set; }
+    public string? ImagePath { get; set; }
 
     public bool IsActive { get; set; }
 
