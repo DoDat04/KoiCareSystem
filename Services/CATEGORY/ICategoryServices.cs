@@ -1,6 +1,6 @@
 ﻿using BusinessObject;
 
-namespace Services
+namespace Services.CATEGORY
 {
     public interface ICategoryServices
     {

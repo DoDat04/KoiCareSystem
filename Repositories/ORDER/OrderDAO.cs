@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Services
+namespace Repositories.ORDER
 {
-    class CartService
+    public class OrderDAO
     {
 
     }

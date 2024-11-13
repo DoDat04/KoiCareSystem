@@ -6,6 +6,9 @@ using BusinessObject;
 using Repositories;
 using Repositories.FOOD;
 using Services;
+using Services.FISH;
+using Services.FOOD;
+using Services.POND;
 
 namespace WpfApp.FoodCalc
 {

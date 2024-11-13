@@ -1,13 +1,13 @@
-﻿using System;
+﻿using BusinessObject;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Repositories.CART
 {
     public interface ICartRepositories
     {
-
+        void AddCart(Cart cart);
+        void RemoveCart(int cartId);
+        Cart GetCartByMemberId(int memberId);
+        List<Cart> GetAllCarts();
     }
 }

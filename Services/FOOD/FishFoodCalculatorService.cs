@@ -1,7 +1,7 @@
 ﻿using BusinessObject;
 using Repositories.FOOD;
 
-namespace Services;
+namespace Services.FOOD;
 
 public class FishFoodCalculatorService(IFishFoodCalculatorRepository fishFoodCalculatorRepository)
     : IFishFoodCalculatorService
@@ -10,22 +10,22 @@ public class FishFoodCalculatorService(IFishFoodCalculatorRepository fishFoodCal
     {
         fishFoodCalculatorRepository.AddNewFoodCalculator(foodCalculator);
     }
-    
+
     public void DeleteFoodCalculator(int id)
     {
         fishFoodCalculatorRepository.DeleteFoodCalculator(id);
     }
-    
+
     public List<FoodCalculator> GetAll()
     {
         return fishFoodCalculatorRepository.GetAll();
     }
-    
+
     public void UpdateFoodCalculator(FoodCalculator foodCalculator)
     {
         fishFoodCalculatorRepository.UpdateFoodCalculator(foodCalculator);
     }
-    
+
     public FoodCalculator GetFoodCalculator(int id)
     {
         return fishFoodCalculatorRepository.GetFoodCalculator(id);

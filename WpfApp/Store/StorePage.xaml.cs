@@ -1,5 +1,6 @@
 ﻿using BusinessObject; // Assuming this namespace contains your product and other related classes
 using Services;       // Assuming this namespace contains your services for accessing data
+using Services.PRODUCT;
 using System;
 using System.Windows;
 using System.Windows.Controls;

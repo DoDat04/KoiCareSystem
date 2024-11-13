@@ -16,6 +16,11 @@
         </Grid.RowDefinitions>
         
         <!-- Header -->
+        <Button Width="100" Height="30" HorizontalAlignment="Left" 
+                VerticalAlignment="Center" Margin="29,0,0,0" Background="White"
+                BorderThickness="2" Click="Button_Click_1" Foreground="Black" >
+            Return to Store
+        </Button>
         <TextBlock Text="Product Details"
                   Grid.Row="0"
                   FontSize="32"
@@ -94,7 +99,7 @@
                           LineHeight="24"
                           Margin="0,0,0,40"/>
 
-                <Button Content="Purchase Now" 
+                <Button Content="Add to Cart" 
                         Click="Button_Click"
                         Height="45"
                         Width="200" Margin="0,0,0,50"

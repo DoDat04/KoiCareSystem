@@ -1,7 +1,7 @@
 ﻿using BusinessObject;
 using Repositories.FOOD;
 
-namespace Services;
+namespace Services.FOOD;
 
 public class FoodTypeService(IFoodTypeRepository foodTypeRepository) : IFoodTypeService
 {

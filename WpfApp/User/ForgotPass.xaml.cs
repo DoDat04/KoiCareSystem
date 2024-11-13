@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using BusinessObject;
 using Services;
+using Services.MEMBER;
 
 namespace WpfApp.User
 {

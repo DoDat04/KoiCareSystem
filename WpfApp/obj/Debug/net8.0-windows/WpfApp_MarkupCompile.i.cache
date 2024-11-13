@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\MSI\OneDrive\Máy tính\PRN212_KoiCare\WpfApp\App.xaml
-26-873216320
+30790384678
 
-321288620327
+36-1566975142
 247-1076156940
-FoodCalc\FishFoodCalculator.xaml;HomeNAdmin\AdminWindow.xaml;HomeNAdmin\Categories\AddCategoryWindow.xaml;HomeNAdmin\Categories\ManageCategory.xaml;HomeNAdmin\Categories\ShowCategoryWindow.xaml;HomeNAdmin\HomePage.xaml;HomeNAdmin\LoginSignPopup.xaml;HomeNAdmin\ManageUser.xaml;HomeNAdmin\Products\AddProductWindow.xaml;HomeNAdmin\Products\ManageProduct.xaml;HomeNAdmin\Products\ShowProductWindow.xaml;MainWindow.xaml;MyKoi\AddNewFishPopup.xaml;MyKoi\KoiDetailPopup.xaml;MyKoi\KoiPage.xaml;MyPond\AddPond.xaml;MyPond\PondPage.xaml;MyPond\ShowPond.xaml;Store\ProductDetail.xaml;Store\Purchase.xaml;Store\StorePage.xaml;User\ForgotPass.xaml;User\Profile.xaml;WaterParam\AddWater.xaml;WaterParam\ShowWater.xaml;WaterParam\WaterPage.xaml;
+FoodCalc\FishFoodCalculator.xaml;HomeNAdmin\AdminWindow.xaml;HomeNAdmin\Categories\AddCategoryWindow.xaml;HomeNAdmin\Categories\ManageCategory.xaml;HomeNAdmin\Categories\ShowCategoryWindow.xaml;HomeNAdmin\HistoryOrder\History.xaml;HomeNAdmin\HistoryOrder\Receipt.xaml;HomeNAdmin\HomePage.xaml;HomeNAdmin\LoginSignPopup.xaml;HomeNAdmin\ManageUser.xaml;HomeNAdmin\Products\AddProductWindow.xaml;HomeNAdmin\Products\ManageProduct.xaml;HomeNAdmin\Products\ShowProductWindow.xaml;MainWindow.xaml;MyKoi\AddNewFishPopup.xaml;MyKoi\KoiDetailPopup.xaml;MyKoi\KoiPage.xaml;MyPond\AddPond.xaml;MyPond\PondPage.xaml;MyPond\ShowPond.xaml;Store\Cart.xaml;Store\HistoryOrder.xaml;Store\ProductDetail.xaml;Store\Purchase.xaml;Store\StorePage.xaml;User\ForgotPass.xaml;User\Profile.xaml;WaterParam\AddWater.xaml;WaterParam\ShowWater.xaml;WaterParam\WaterPage.xaml;
 
 True
 

@@ -12,6 +12,7 @@ namespace BusinessObject
         public static List<Category> Categories = new List<Category>();
         public static List<Product> Products = new List<Product>();
         public static List<Cart> Carts = new List<Cart>();
+        public static List<Order> Orders = new List<Order>();
 
         static MyStoreContext()
         {

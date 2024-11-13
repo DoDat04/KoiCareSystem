@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using BusinessObject;
 
-namespace Services
+namespace Services.PRODUCT
 {
     public interface IProductServices
     {

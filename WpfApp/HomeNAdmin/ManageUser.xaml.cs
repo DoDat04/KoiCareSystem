@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using BusinessObject;
 using Services;
+using Services.MEMBER;
 
 namespace WpfApp.HomeNAdmin
 {

@@ -1,5 +1,7 @@
 ﻿using BusinessObject;
 using Services;
+using Services.FISH;
+using Services.POND;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,7 +35,6 @@ namespace WpfApp
             _fishService = new FishService();
             _pondService = new PondService();
             var session = UserSession.GetInstance();
-            MemberIdText = $"Member ID: {session.MemberId}";
         }
 
         public void ListAllFish()

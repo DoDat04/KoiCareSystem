@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using BusinessObject;
 using Repositories.PRODUCT;
 
-namespace Services
+namespace Services.PRODUCT
 {
     public class ProductServices : IProductServices
     {
@@ -33,7 +33,7 @@ namespace Services
 
         public async Task UpdateAsync(Product product)
         {
-            await _productRepository.UpdateAsync(product );
+            await _productRepository.UpdateAsync(product);
         }
 
         public async Task DeleteAsync(int id)

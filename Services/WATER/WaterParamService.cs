@@ -7,7 +7,7 @@ using BusinessObject;
 using Repositories;
 using Repositories.WATER;
 
-namespace Services
+namespace Services.WATER
 {
     public class WaterParamService : IWaterParamService
     {

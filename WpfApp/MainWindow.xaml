@@ -44,7 +44,7 @@
                                Foreground="White" 
                                FontSize="15" 
                                VerticalAlignment="Center" 
-                               Margin="0,0,20,0">
+                               Margin="0,0,10,0">
                         <Run Text="Hello, "/>
                         <Hyperlink x:Name="ProfileLink" 
                                    Foreground="White" 
@@ -53,6 +53,19 @@
                             <Run Text="{Binding Email}"/>
                         </Hyperlink>
                     </TextBlock>
+                   
+                    <Button  
+                            Foreground="White" BorderBrush="Transparent" Click="Cart_Click"
+                            Background="Black" Padding="20,5" 
+                            Content="🛒" FontSize="20" BorderThickness="0"/>
+                    <Button Content="Order History" Click="Order_Click"
+                          Padding="20,5" 
+                          Foreground="White" 
+                          BorderBrush="White" 
+                          Background="DarkOrange" 
+                          FontSize="15"
+                          Margin="0,5,10,5" 
+                          FontWeight="Bold"/>
                     <Button Content="Log Out" 
                             Click="LogoutButton_Click"
                             Padding="20,5" 
@@ -62,6 +75,8 @@
                             FontSize="15"
                             Margin="0,5,0,5" 
                             FontWeight="Bold"/>
+                    
+
                 </StackPanel>
                 
                 <StackPanel x:Name="LoggedOutPanel" Visibility="Visible" Orientation="Horizontal">

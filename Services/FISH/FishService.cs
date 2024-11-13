@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Services
+namespace Services.FISH
 {
     public class FishService : IFishService
     {
@@ -40,12 +40,12 @@ namespace Services
         {
             return _fishRepository.GetByPondId(pondId);
         }
-        
+
         public int GetFishCount(int memberId)
         {
             return _fishRepository.GetFishCount(memberId);
         }
-        
+
         public double GetAvgFishAge(int argPondId)
         {
             return _fishRepository.GetAvgFishAge(argPondId);

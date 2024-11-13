@@ -36,7 +36,7 @@ namespace WpfApp.Store
                     _product.UnitsInStock = (short)(_product.UnitsInStock - quantity); // Decrease stock with casting
 
                     // Optionally, navigate to the Purchase page
-                    NavigationService.Navigate(new Purchase());
+                    //NavigationService.Navigate(new Purchase());
                 }
                 else
                 {
@@ -47,6 +47,11 @@ namespace WpfApp.Store
             {
                 MessageBox.Show("Please enter a valid quantity.");
             }
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new StorePage());
         }
     }
 }

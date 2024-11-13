@@ -1,7 +1,7 @@
 ﻿using BusinessObject;
 using Repositories.CATEGORY;
 
-namespace Services
+namespace Services.CATEGORY
 {
     public class CategoryServices : ICategoryServices
     {

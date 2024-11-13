@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Services
+namespace Services.POND
 {
     public class PondService : IPondService
     {
@@ -18,7 +18,7 @@ namespace Services
         }
         public List<Pond> GetAll(int memberId)
         {
-            return _pondRepository.GetAll(memberId);    
+            return _pondRepository.GetAll(memberId);
         }
         public Pond GetById(int pondId)
         {

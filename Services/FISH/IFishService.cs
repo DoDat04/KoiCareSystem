@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Services
+namespace Services.FISH
 {
     public interface IFishService
     {
@@ -14,7 +14,7 @@ namespace Services
         public void AddNewFish(Fish fish);
         public void UpdateFish(Fish fish);
         public void DeleteFish(int id);
-        
+
         public int GetFishCount(int memberId);
         double GetAvgFishAge(int argPondId);
         decimal GetAvgFishSize(int argPondId);

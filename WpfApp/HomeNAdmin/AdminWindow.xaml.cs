@@ -1,5 +1,6 @@
 ﻿using BusinessObject;
 using Services;
+using Services.MEMBER;
 using System;
 using System.Windows;
 using System.Windows.Controls;

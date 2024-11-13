@@ -1,6 +1,7 @@
 ﻿using BusinessObject;
 using Services;
-using System.Collections.Generic;
+using Services.PRODUCT;
+using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Controls;
 using WpfApp.HomeNAdmin.Product;
@@ -11,11 +12,14 @@ namespace WpfApp.HomeNAdmin.Products
     public partial class ManageProduct : Page
     {
         private readonly IProductServices _productService;
+        private ObservableCollection<BusinessObject.Product> Products { get; set; }
 
         public ManageProduct()
         {
-            _productService = new ProductServices();
             InitializeComponent();
+            _productService = new ProductServices();
+            Products = new ObservableCollection<BusinessObject.Product>();
+            dgProduct.ItemsSource = Products;
             LoadProductsAsync();
         }
 
@@ -23,21 +27,30 @@ namespace WpfApp.HomeNAdmin.Products
         {
             try
             {
-                IEnumerable<BusinessObject.Product> products = await _productService.GetAllAsync();
+                Products.Clear();
+                var products = await _productService.GetAllAsync();
                 if (products != null)
                 {
-                    dgProduct.ItemsSource = products;
+                    foreach (var product in products)
+                    {
+                        Products.Add(product);
+                    }
                 }
             }
             catch (System.Exception ex)
             {
-                System.Diagnostics.Debug.WriteLine($"Error loading products: {ex.Message}");
+                MessageBox.Show($"Error loading products: {ex.Message}", "Error", 
+                    MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
         private void AddNewProduct(object sender, System.Windows.RoutedEventArgs e)
         {
-            AddProductWindow addNewProduct = new AddProductWindow();
+            var addNewProduct = new AddProductWindow();
+            addNewProduct.ProductAdded += (s, args) =>
+            {
+                LoadProductsAsync();
+            };
             addNewProduct.ShowDialog();
         }
     }

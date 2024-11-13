@@ -19,6 +19,12 @@
     <Compile Update="HomeNAdmin\Categories\ShowCategoryWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="HomeNAdmin\HistoryOrder\History.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="HomeNAdmin\HistoryOrder\Receipt.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="HomeNAdmin\Products\AddProductWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -56,6 +62,12 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="MyPond\ShowPond.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Store\Cart.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Store\HistoryOrder.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Store\ProductDetail.xaml.cs">
@@ -96,6 +108,12 @@
     <Page Update="HomeNAdmin\Categories\ShowCategoryWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="HomeNAdmin\HistoryOrder\History.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="HomeNAdmin\HistoryOrder\Receipt.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="HomeNAdmin\Products\AddProductWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -133,6 +151,12 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MyPond\ShowPond.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Store\Cart.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Store\HistoryOrder.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Store\ProductDetail.xaml">
