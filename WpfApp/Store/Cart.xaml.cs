@@ -32,5 +32,10 @@ namespace WpfApp.Store
             NavigateToPurchase?.Invoke(); // Raise the event
             this.Close(); // Close the Cart window
         }
+
+        private void CloseButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -4,9 +4,20 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp.HomeNAdmin.HistoryOrder"
-        mc:Ignorable="d"
-        Title="Receipt" Height="450" Width="800">
+        mc:Ignorable="d" WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        Title="Receipt" Height="300" Width="400">
     <Grid>
-        
+        <Button
+         Content="✕"
+         Click="CloseButton_Click"
+         Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}"
+         Width="32"
+         Height="32"
+         FontSize="16" HorizontalAlignment="Left" Margin="360,1,0,0" VerticalAlignment="Top"/>
+        <TextBlock Text="User receipt will be displayed here"
+           VerticalAlignment="Center" 
+           HorizontalAlignment="Center" 
+           FontSize="16"/>
     </Grid>
 </Window>

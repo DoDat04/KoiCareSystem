@@ -5,8 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp.Store"
         mc:Ignorable="d"
+        WindowStyle="None"
         Title="Cart" Height="300" Width="300">
     <Grid>
+        <Button 
+         Content="✕"
+         Click="CloseButton_Click"
+         Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}"
+         Width="32"
+         Height="32"
+         FontSize="16" HorizontalAlignment="Left" Margin="260,2,0,0" VerticalAlignment="Top"/>
         <TextBlock Text="Your cart items will be displayed here."
                    VerticalAlignment="Center" 
                    HorizontalAlignment="Center" 

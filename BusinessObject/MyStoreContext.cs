@@ -114,6 +114,35 @@ namespace BusinessObject
                 Description = "Beautiful floating fountain to enhance the aesthetics of your pond.",
                 Category = accessoriesCategory
             });
+
+
+            Orders.Add(new Order(1, 4) // OrderId = 1, MemberId = 4
+            {
+                CartItems = new List<Cart>
+                {
+                    new Cart(1, 1, Products[0], 2), // Koi Food Pellets
+                    new Cart(2, 1, Products[1], 1), // Koi Wheat Germ
+                    new Cart(3, 1, Products[2], 1)  // Pond Water Testing Kit
+                }
+            });
+
+            Orders.Add(new Order(2, 4) // OrderId = 2, MemberId = 4
+            {
+                CartItems = new List<Cart>
+                {
+                    new Cart(4, 1, Products[3], 1), // Pond Vacuum Cleaner
+                    new Cart(5, 1, Products[4], 3)  // Algae Control Solution
+                }
+            });
+
+            Orders.Add(new Order(3, 4) // OrderId = 3, MemberId = 4
+            {
+                CartItems = new List<Cart>
+                {
+                    new Cart(6, 2, Products[5], 2), // Water Conditioner
+                    new Cart(7, 2, Products[6], 1)  // Koi Pond Net
+                }
+            });
         }
     }
 }

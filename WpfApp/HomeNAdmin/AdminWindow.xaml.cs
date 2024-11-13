@@ -36,6 +36,11 @@ namespace WpfApp
             AdminFrame.Navigate(new HomeNAdmin.Categories.ManageCategory());
         }
 
+        private void btnManageHistory_Click(object sender, RoutedEventArgs e)
+        {
+            AdminFrame.Navigate(new HomeNAdmin.HistoryOrder.History());
+        }
+
         private void btnManageProducts_Click(object sender, RoutedEventArgs e)
         {
             AdminFrame.Navigate(new HomeNAdmin.Products.ManageProduct());
