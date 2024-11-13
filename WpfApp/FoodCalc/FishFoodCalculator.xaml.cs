@@ -49,6 +49,7 @@ namespace WpfApp.FoodCalc
                     p.Length,
                     p.Width,
                     p.Depth,
+                    p.ImagePath,
                     TotalFish = _fishService.GetFishByPondId(p.PondId)?.Count() ?? 0,
                     AvgFishAge = _fishService.GetFishByPondId(p.PondId)?.Any() == true ? _fishService.GetAvgFishAge(p.PondId) : 0,
                     AvgFishSize = _fishService.GetFishByPondId(p.PondId)?.Any() == true ? _fishService.GetAvgFishSize(p.PondId) : 0
@@ -64,7 +65,8 @@ namespace WpfApp.FoodCalc
                     Dimensions = $"{pond.Length}×{pond.Width}×{pond.Depth}",
                     TotalFish = pond.TotalFish,
                     AvgFishAge = pond.AvgFishAge,
-                    AvgFishSize = pond.AvgFishSize
+                    AvgFishSize = pond.AvgFishSize,
+                    ImagePath = pond.ImagePath
                 });
             }
         }
@@ -175,5 +177,6 @@ namespace WpfApp.FoodCalc
         public int TotalFish { get; set; }
         public double AvgFishAge { get; set; }
         public decimal AvgFishSize { get; set; }
+        public string? ImagePath { get; set; }
     }
 }

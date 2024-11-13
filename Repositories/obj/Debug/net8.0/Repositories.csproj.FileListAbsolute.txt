@@ -46,3 +46,19 @@ D:\PRN212\PRN212_KoiCare\Repositories\obj\Debug\net8.0\Repositories.dll
 D:\PRN212\PRN212_KoiCare\Repositories\obj\Debug\net8.0\refint\Repositories.dll
 D:\PRN212\PRN212_KoiCare\Repositories\obj\Debug\net8.0\Repositories.pdb
 D:\PRN212\PRN212_KoiCare\Repositories\obj\Debug\net8.0\ref\Repositories.dll
+C:\Users\MSI\OneDrive\Máy tính\PRN212_KoiCare\Repositories\bin\Debug\net8.0\Repositories.deps.json
+C:\Users\MSI\OneDrive\Máy tính\PRN212_KoiCare\Repositories\bin\Debug\net8.0\Repositories.dll
+C:\Users\MSI\OneDrive\Máy tính\PRN212_KoiCare\Repositories\bin\Debug\net8.0\Repositories.pdb
+C:\Users\MSI\OneDrive\Máy tính\PRN212_KoiCare\Repositories\bin\Debug\net8.0\BusinessObject.dll
+C:\Users\MSI\OneDrive\Máy tính\PRN212_KoiCare\Repositories\bin\Debug\net8.0\BusinessObject.pdb
+C:\Users\MSI\OneDrive\Máy tính\PRN212_KoiCare\Repositories\obj\Debug\net8.0\Repositories.csproj.AssemblyReference.cache
+C:\Users\MSI\OneDrive\Máy tính\PRN212_KoiCare\Repositories\obj\Debug\net8.0\Repositories.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MSI\OneDrive\Máy tính\PRN212_KoiCare\Repositories\obj\Debug\net8.0\Repositories.AssemblyInfoInputs.cache
+C:\Users\MSI\OneDrive\Máy tính\PRN212_KoiCare\Repositories\obj\Debug\net8.0\Repositories.AssemblyInfo.cs
+C:\Users\MSI\OneDrive\Máy tính\PRN212_KoiCare\Repositories\obj\Debug\net8.0\Repositories.csproj.CoreCompileInputs.cache
+C:\Users\MSI\OneDrive\Máy tính\PRN212_KoiCare\Repositories\obj\Debug\net8.0\Repositories.sourcelink.json
+C:\Users\MSI\OneDrive\Máy tính\PRN212_KoiCare\Repositories\obj\Debug\net8.0\Reposito.787EC4B2.Up2Date
+C:\Users\MSI\OneDrive\Máy tính\PRN212_KoiCare\Repositories\obj\Debug\net8.0\Repositories.dll
+C:\Users\MSI\OneDrive\Máy tính\PRN212_KoiCare\Repositories\obj\Debug\net8.0\refint\Repositories.dll
+C:\Users\MSI\OneDrive\Máy tính\PRN212_KoiCare\Repositories\obj\Debug\net8.0\Repositories.pdb
+C:\Users\MSI\OneDrive\Máy tính\PRN212_KoiCare\Repositories\obj\Debug\net8.0\ref\Repositories.dll
