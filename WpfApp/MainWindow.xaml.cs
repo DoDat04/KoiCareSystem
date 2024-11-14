@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BusinessObject;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -54,48 +55,71 @@ namespace WpfApp
             UpdateLoginState();
             MainFrame.Navigate(new HomePage());
         }
-
         private void Cart_Click(object sender, RoutedEventArgs e)
         {
-            var cartPopup = new Cart();
+            if (!CartItems.Any())
+            {
+                MessageBox.Show("Your cart is empty!", "Cart", MessageBoxButton.OK, MessageBoxImage.Information);
+                return;
+            }
 
-            // Get the position of the button
+            var cartPopup = new WpfApp.Store.Cart();
+            cartPopup.DataContext = this;
+
             var buttonPosition = (sender as Button).PointToScreen(new Point(0, 0));
 
-            // Set the position of the popup window to be below the button
-            cartPopup.Left = buttonPosition.X; // Align horizontally with the button
-            cartPopup.Top = buttonPosition.Y + ((Button)sender).ActualHeight; // Position below the button
+            cartPopup.Left = buttonPosition.X;
+            cartPopup.Top = buttonPosition.Y + ((Button)sender).ActualHeight;
 
-            // Ensure the popup is within screen bounds
             if (cartPopup.Left < 0)
-                cartPopup.Left = 0; // Prevent going off the left side of the screen
+                cartPopup.Left = 0;
 
             if (cartPopup.Top < 0)
-                cartPopup.Top = 0; // Prevent going off the top of the screen
+                cartPopup.Top = 0;
 
-            // Get the screen width and height
             var screenWidth = SystemParameters.PrimaryScreenWidth;
             var screenHeight = SystemParameters.PrimaryScreenHeight;
 
-            // Adjust if the popup goes beyond the right or bottom of the screen
             if (cartPopup.Left + cartPopup.Width > screenWidth)
                 cartPopup.Left = screenWidth - cartPopup.Width;
 
             if (cartPopup.Top + cartPopup.Height > screenHeight)
                 cartPopup.Top = screenHeight - cartPopup.Height;
 
-            // Set the owner of the popup window
             cartPopup.Owner = this;
-            cartPopup.NavigateToPurchase += CartPopup_NavigateToPurchase; // Subscribe to the event
+            cartPopup.NavigateToPurchase += CartPopup_NavigateToPurchase;
 
-            // Show the popup window
             cartPopup.Show();
         }
+
 
         private void CartPopup_NavigateToPurchase()
         {
             MainFrame.Navigate(new Purchase()); // Navigate to the Purchase page
         }
+
+        public List<BusinessObject.Cart> CartItems { get; set; } = new List<BusinessObject.Cart>();
+
+        public void AddToCart(Product product, short quantity)
+        {
+            var session = UserSession.GetInstance();
+            var existingCartItem = CartItems.FirstOrDefault(c => c.Product.ProductId == product.ProductId);
+            if (existingCartItem != null)
+            {
+                existingCartItem.Quantity += quantity;
+            }
+            else
+            {
+                CartItems.Add(new BusinessObject.Cart(1, session.MemberId, product, quantity));
+            }
+        }
+
+        public void ClearCart()
+        {
+            CartItems.Clear();
+        }
+
+       
 
         private void MainScrollViewer_ScrollChanged(object sender, ScrollChangedEventArgs e)
         {

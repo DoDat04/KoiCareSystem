@@ -27,16 +27,15 @@ namespace WpfApp.Store
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            // Get the quantity entered by the user
+            var session = UserSession.GetInstance();
+
             if (int.TryParse(QuantityTextBox.Text, out int quantity) && quantity > 0)
             {
                 if (quantity <= _product.UnitsInStock)
                 {
-                    // Proceed with purchase logic
-                    _product.UnitsInStock = (short)(_product.UnitsInStock - quantity); // Decrease stock with casting
-
-                    // Optionally, navigate to the Purchase page
-                    //NavigationService.Navigate(new Purchase());
+                    var mainWindow = Application.Current.MainWindow as Home;
+                    mainWindow?.AddToCart(_product, (short)quantity);
+                    MessageBox.Show("Product added to cart.", "Add Product", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
                 else
                 {
@@ -47,6 +46,12 @@ namespace WpfApp.Store
             {
                 MessageBox.Show("Please enter a valid quantity.");
             }
+        }
+
+        private int GetNextOrderId()
+        {
+            var lastOrder = MyStoreContext.Orders.OrderByDescending(o => o.OrderId).FirstOrDefault();
+            return lastOrder != null ? lastOrder.OrderId + 1 : 1;
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)

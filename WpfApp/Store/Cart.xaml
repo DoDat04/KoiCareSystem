@@ -8,27 +8,53 @@
         WindowStyle="None"
         Title="Cart" Height="300" Width="300">
     <Grid>
-        <Button 
-         Content="✕"
-         Click="CloseButton_Click"
-         Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}"
-         Width="32"
-         Height="32"
-         FontSize="16" HorizontalAlignment="Left" Margin="260,2,0,0" VerticalAlignment="Top"/>
-        <TextBlock Text="Your cart items will be displayed here."
-                   VerticalAlignment="Center" 
-                   HorizontalAlignment="Center" 
-                   FontSize="16"/>
-        <Button Content="Place Order" 
-            Click="Button_Click"
-            Height="25"
-            Width="100" Margin="90,231,0,0"
-            Background="DarkOrange"
-            Foreground="White"
-            FontSize="16"
-            FontWeight="SemiBold"
-            HorizontalAlignment="Left" VerticalAlignment="Top" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Added Products" Margin="10,0,0,0" FontWeight="SemiBold"
+                   FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Button Content="✕"
+                Click="CloseButton_Click"
+                Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}"
+                Width="32" Height="32"
+                FontSize="16" 
+                HorizontalAlignment="Right" 
+                Margin="0,2,2,0"/>
 
+        <ListView Grid.Row="1" Background="Transparent" BorderThickness="0"
+                  x:Name="CartItemsListView" 
+                  Margin="10">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="0,5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="{Binding Product.ProductName}" 
+                                 Grid.Column="0" Width="150"/>
+                        <TextBlock Text="{Binding Quantity, StringFormat='x{0}'}" 
+                                 Grid.Column="1" 
+                                 Margin="10,0" Width="50"/>
+                        <TextBlock Text="{Binding TotalPrice, StringFormat='${0:F2}'}" 
+                                 Grid.Column="2"/>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Button Grid.Row="2" 
+                Content="Place Order" 
+                Click="Button_Click"
+                Height="25" Width="100" 
+                Margin="0,0,0,10"
+                Background="DarkOrange"
+                Foreground="White"
+                FontSize="16"
+                FontWeight="SemiBold">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="8"/>
