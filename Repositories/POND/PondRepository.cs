@@ -63,33 +63,28 @@ namespace Repositories.POND
             try
             {
                 using var _dbContext = new KoiCareContext();
-                var existingPond = _dbContext.Ponds.Find(pondId);
+                var existingPond = _dbContext.Ponds
+                    .Include(p => p.Fish)
+                    .FirstOrDefault(p => p.PondId == pondId);
 
                 if (existingPond == null)
                 {
-                    Console.WriteLine("Pond not found for deletion.");
-                    return;
+                    throw new Exception("Pond not found.");
+                }
+
+                // Check if pond has fish and throw a more specific exception
+                if (existingPond.Fish != null && existingPond.Fish.Any())
+                {
+                    throw new Exception($"Cannot delete pond: This pond contains {existingPond.Fish.Count} fish. Please move all fish to another pond first.");
                 }
 
                 _dbContext.Ponds.Remove(existingPond);
-
-                int changes = _dbContext.SaveChanges();
-                if (changes > 0)
-                {
-                    Console.WriteLine("Pond deleted successfully.");
-                }
-                else
-                {
-                    Console.WriteLine("Delete operation did not affect any rows. No changes saved.");
-                }
+                _dbContext.SaveChanges();
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error deleting pond: {ex.Message}");
-                if (ex.InnerException != null)
-                {
-                    Console.WriteLine($"Inner exception: {ex.InnerException.Message}");
-                }
+                // Rethrow the exception to be handled by the calling method
+                throw new Exception(ex.Message);
             }
         }
     }
