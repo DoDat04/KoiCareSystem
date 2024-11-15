@@ -26,18 +26,18 @@ namespace WpfApp.Store
                 var session = UserSession.GetInstance();
                 int memberId = session.MemberId; // Get the member ID from the session
 
-                // Fetch orders for the specific member
+                // Fetch and sort orders for the specific member
                 List<Order> orders = MyStoreContext.Orders
                     .Where(order => order.MemberId == memberId)
+                    .OrderByDescending(order => order.OrderId) // Sort by OrderId descending
                     .ToList(); // Filter orders by MemberId
 
                 // Set the items source for the ItemsControl
                 OrderListView.ItemsSource = orders;
-
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message); 
+                MessageBox.Show(ex.Message);
             }
         }
     }

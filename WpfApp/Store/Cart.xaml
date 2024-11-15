@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WpfApp.Store"
         mc:Ignorable="d"
         WindowStyle="None"
-        Title="Cart" Height="300" Width="300">
+        Title="Cart" Height="300" Width="310">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>

@@ -45,11 +45,34 @@ namespace WpfApp.Store
 
             if (mainWindow?.CartItems.Any() == true)
             {
-                // Create new order
+                // Check for stock availability before placing the order
+                foreach (var cartItem in mainWindow.CartItems)
+                {
+                    var product = MyStoreContext.Products.FirstOrDefault(p => p.ProductId == cartItem.Product.ProductId);
+                    if (product != null && product.UnitsInStock < cartItem.Quantity)
+                    {
+                        // Show a warning message if stock is insufficient
+                        MessageBox.Show($"Not enough stock for {product.ProductName}. Available: {product.UnitsInStock}, Requested: {cartItem.Quantity}",
+                                        "Insufficient Stock", MessageBoxButton.OK, MessageBoxImage.Warning);
+                        return; // Exit the method if stock is insufficient
+                    }
+                }
+
+                // Create new order if all stocks are sufficient
                 var newOrder = new Order(GetNextOrderId(), session.MemberId)
                 {
                     CartItems = mainWindow.CartItems.ToList()
                 };
+
+                // Subtract quantities from stock
+                foreach (var cartItem in mainWindow.CartItems)
+                {
+                    var product = MyStoreContext.Products.FirstOrDefault(p => p.ProductId == cartItem.Product.ProductId);
+                    if (product != null)
+                    {
+                        product.UnitsInStock -= cartItem.Quantity; // Subtract the quantity ordered
+                    }
+                }
 
                 // Add order to context
                 MyStoreContext.Orders.Add(newOrder);

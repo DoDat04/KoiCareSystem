@@ -498,3 +498,11 @@ C:\Users\MSI\OneDrive\Máy tính\PRN212_KoiCare\WpfApp\obj\Debug\net8.0-windows\
 C:\Users\MSI\OneDrive\Máy tính\PRN212_KoiCare\WpfApp\obj\Debug\net8.0-windows\HomeNAdmin\HistoryOrder\History.baml
 C:\Users\MSI\OneDrive\Máy tính\PRN212_KoiCare\WpfApp\obj\Debug\net8.0-windows\HomeNAdmin\HistoryOrder\Receipt.baml
 C:\Users\MSI\OneDrive\Máy tính\PRN212_KoiCare\WpfApp\obj\Debug\net8.0-windows\Store\HistoryOrder.baml
+D:\PRN212\PRN212_KoiCare\WpfApp\obj\Debug\net8.0-windows\HomeNAdmin\HistoryOrder\History.g.cs
+D:\PRN212\PRN212_KoiCare\WpfApp\obj\Debug\net8.0-windows\HomeNAdmin\HistoryOrder\Receipt.g.cs
+D:\PRN212\PRN212_KoiCare\WpfApp\obj\Debug\net8.0-windows\Store\Cart.g.cs
+D:\PRN212\PRN212_KoiCare\WpfApp\obj\Debug\net8.0-windows\Store\HistoryOrder.g.cs
+D:\PRN212\PRN212_KoiCare\WpfApp\obj\Debug\net8.0-windows\HomeNAdmin\HistoryOrder\History.baml
+D:\PRN212\PRN212_KoiCare\WpfApp\obj\Debug\net8.0-windows\HomeNAdmin\HistoryOrder\Receipt.baml
+D:\PRN212\PRN212_KoiCare\WpfApp\obj\Debug\net8.0-windows\Store\Cart.baml
+D:\PRN212\PRN212_KoiCare\WpfApp\obj\Debug\net8.0-windows\Store\HistoryOrder.baml
