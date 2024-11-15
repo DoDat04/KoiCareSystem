@@ -25,10 +25,14 @@ namespace WpfApp.HomeNAdmin.HistoryOrder
 
         private void ViewDetail_Click(object sender, RoutedEventArgs e)
         {
-            var orderPopup = new Receipt();
-            orderPopup.Show();
-        }
+            var button = sender as Button;
+            var order = button.DataContext as Order;
 
-    
+            if (order != null)
+            {
+                var orderPopup = new Receipt(order);
+                orderPopup.Show();
+            }
+        }
     }
 }

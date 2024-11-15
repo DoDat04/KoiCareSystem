@@ -97,8 +97,8 @@
                     </DataGridTextColumn.ElementStyle>
                 </DataGridTextColumn>
                 <DataGridTextColumn Header="Order Date" 
-                                  Binding="{Binding OrderDate}" 
-                                  Width="120">
+                  Binding="{Binding OrderDate, StringFormat='{}{0:dd/MM/yyyy}'}" 
+                  Width="120">
                     <DataGridTextColumn.ElementStyle>
                         <Style TargetType="TextBlock">
                             <Setter Property="HorizontalAlignment" Value="Center"/>

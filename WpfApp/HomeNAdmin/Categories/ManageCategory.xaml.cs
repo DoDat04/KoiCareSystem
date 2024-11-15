@@ -53,5 +53,18 @@ namespace WpfApp.HomeNAdmin.Categories
             };
             addNewCategory.ShowDialog();
         }
+
+        private void ViewDetailsButton_Click(object sender, RoutedEventArgs e)
+        {
+            var button = sender as Button;
+            var category = button.DataContext as Category;
+
+            if (category != null)
+            {
+                ShowCategoryWindow viewDetailsPage = new ShowCategoryWindow(category);
+
+                viewDetailsPage.ShowDialog();
+            }
+        }
     }
 }

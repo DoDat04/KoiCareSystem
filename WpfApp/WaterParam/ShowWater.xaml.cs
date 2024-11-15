@@ -131,7 +131,7 @@ namespace WpfApp.WaterParam
             decimal ammoniaThreshold, nitriteThreshold, nitrateThreshold;
             decimal minTemp, maxTemp;
 
-            if (pondVolume < 10m) // Small pond
+            if (pondVolume < 1000m) // Small pond
             {
                 ammoniaThreshold = 0.25m;
                 nitriteThreshold = 0.5m;
@@ -139,7 +139,7 @@ namespace WpfApp.WaterParam
                 minTemp = 20m;
                 maxTemp = 30m;
             }
-            else if (pondVolume < 100m) // Medium pond
+            else if (pondVolume < 10000m) // Medium pond
             {
                 ammoniaThreshold = 0.5m;
                 nitriteThreshold = 1.0m;
