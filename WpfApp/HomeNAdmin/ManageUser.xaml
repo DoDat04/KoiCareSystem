@@ -68,44 +68,35 @@
             </DataGrid.Resources>
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" 
-                                  Binding="{Binding MemberId}" 
-                                  Width="70">
+                        Binding="{Binding MemberId}" 
+                        Width="70">
                     <DataGridTextColumn.ElementStyle>
                         <Style TargetType="TextBlock">
                             <Setter Property="HorizontalAlignment" Value="Center"/>
                         </Style>
                     </DataGridTextColumn.ElementStyle>
                 </DataGridTextColumn>
-                <DataGridTextColumn Header="First Name" 
-                                  Binding="{Binding FirstName}" 
-                                  Width="170">
+                <DataGridTextColumn Header="Full Name" 
+                        Binding="{Binding FullName}" 
+                        Width="340">
                     <DataGridTextColumn.ElementStyle>
                         <Style TargetType="TextBlock">
-                            <Setter Property="HorizontalAlignment" Value="Center"/>
-                        </Style>
-                    </DataGridTextColumn.ElementStyle>
-                </DataGridTextColumn>
-                <DataGridTextColumn Header="Last Name" 
-                                  Binding="{Binding LastName}" 
-                                  Width="170">
-                    <DataGridTextColumn.ElementStyle>
-                        <Style TargetType="TextBlock">
-                            <Setter Property="HorizontalAlignment" Value="Center"/>
+                            <Setter Property="HorizontalAlignment" Value="Left"/>
                         </Style>
                     </DataGridTextColumn.ElementStyle>
                 </DataGridTextColumn>
                 <DataGridTextColumn Header="Email" 
-                                  Binding="{Binding Email}" 
-                                  Width="*">
+                        Binding="{Binding Email}" 
+                        Width="*">
                     <DataGridTextColumn.ElementStyle>
                         <Style TargetType="TextBlock">
-                            <Setter Property="HorizontalAlignment" Value="Center"/>
+                            <Setter Property="HorizontalAlignment" Value="Left"/>
                         </Style>
                     </DataGridTextColumn.ElementStyle>
                 </DataGridTextColumn>
                 <DataGridTextColumn Header="Phone Number" 
-                                  Binding="{Binding PhoneNumber}" 
-                                  Width="*">
+                        Binding="{Binding PhoneNumber}" 
+                        Width="*">
                     <DataGridTextColumn.ElementStyle>
                         <Style TargetType="TextBlock">
                             <Setter Property="HorizontalAlignment" Value="Center"/>
@@ -116,7 +107,7 @@
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <TextBlock VerticalAlignment="Center" 
-                                     HorizontalAlignment="Center">
+                           HorizontalAlignment="Center">
                                 <TextBlock.Style>
                                     <Style TargetType="TextBlock">
                                         <Setter Property="FontSize" Value="13"/>
@@ -138,14 +129,14 @@
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
-                <DataGridTemplateColumn Header="Action" Width="100">
+                <DataGridTemplateColumn Header="Action" Width="150">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <Button Click="OnToggleStatusClick" 
-                                    Height="30" 
-                                    Width="80"
-                                    HorizontalAlignment="Center"
-                                    Cursor="Hand">
+                        Height="30" 
+                        Width="80"
+                        HorizontalAlignment="Center"
+                        Cursor="Hand">
                                 <Button.Style>
                                     <Style TargetType="Button">
                                         <Setter Property="FontSize" Value="13"/>

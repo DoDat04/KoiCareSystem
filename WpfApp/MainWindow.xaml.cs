@@ -191,7 +191,13 @@ namespace WpfApp
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
             var loginWindow = new LoginSignPopup(true);
-            loginWindow.ShowDialog();
+
+            // Show the login dialog and check if a new session was created
+            if (loginWindow.ShowDialog() == true) // Assuming this dialog returns true on successful login
+            {
+                // Update the login state based on the new session
+                UpdateLoginState();
+            }
         }
 
         private void SignUpButton_Click(object sender, RoutedEventArgs e)

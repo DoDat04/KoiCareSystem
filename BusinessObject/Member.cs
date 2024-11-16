@@ -18,6 +18,8 @@ public partial class Member
     public string Email { get; set; } = null!;
 
     public string PhoneNumber { get; set; } = null!;
+    public string FullName => $"{FirstName} {LastName}";
+
 
     public string? CreateBy { get; set; }
 

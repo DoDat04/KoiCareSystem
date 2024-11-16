@@ -56,7 +56,7 @@ namespace WpfApp.HomeNAdmin.Product
             this.Close();
         }
 
-        private void btnSave_Click(object sender, RoutedEventArgs e)
+        private async void btnSave_Click(object sender, RoutedEventArgs e)
         {
             if (string.IsNullOrWhiteSpace(ProductNameTextBox.Text) ||
         CategoryComboBox.SelectedItem == null ||
@@ -75,15 +75,12 @@ namespace WpfApp.HomeNAdmin.Product
                 UnitPrice = unitPrice
             };
 
-
             try
             {
-                _productServices.CreateAsync(product);
-
+                await _productServices.CreateAsync(product);
                 MessageBox.Show("Product added successfully.", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
                 this.DialogResult = true;
                 ProductAdded?.Invoke(this, EventArgs.Empty);
-
             }
             catch (Exception ex)
             {

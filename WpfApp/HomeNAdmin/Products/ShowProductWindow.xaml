@@ -5,8 +5,110 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp.HomeNAdmin.Products"
         mc:Ignorable="d"
-        Title="ShowProductWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        WindowStyle="None"
+        ResizeMode="NoResize"         WindowStartupLocation="CenterScreen"
+        Background="Transparent"
+        AllowsTransparency="True"
+        Title="ShowProductWindow" Height="400" Width="500">
+    
+        <Border CornerRadius="20" Background="White" BorderBrush="#DDDDDD" BorderThickness="1">
+        <Grid Margin="30">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <!-- Header -->
+            <Grid Grid.Row="0" Margin="0,0,0,10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Product Detail" FontSize="28" 
+                       HorizontalAlignment="Center" FontWeight="SemiBold" VerticalAlignment="Center"/>
+                <Button Grid.Column="1" Content="✕" Click="CloseButton_Click" 
+                    Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" 
+                    Width="32" Height="32" FontSize="16" HorizontalAlignment="Right"/>
+            </Grid>
+
+            <!-- Content -->
+            <StackPanel Grid.Row="1" Margin="10,10">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="140"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <!-- Product Name -->
+                    <TextBlock Text="Product Name" FontSize="16" Grid.Row="0" Grid.Column="0" 
+                           FontWeight="SemiBold" VerticalAlignment="Center" Margin="0,0,20,20"/>
+                    <TextBox x:Name="ProductNameTextBox" Grid.Row="0" Grid.Column="1" Text="{Binding ProductName}"
+                          Height="35" FontSize="16" Padding="10,5" Margin="0,0,0,20"/>
+
+                    <!-- Category -->
+                    <TextBlock Text="Category" FontSize="16" Grid.Row="1" Grid.Column="0" 
+                       FontWeight="SemiBold" VerticalAlignment="Center" Margin="0,0,20,20"/>
+                    <ComboBox x:Name="CategoryComboBox" Grid.Row="1" Grid.Column="1"
+                      Height="35" FontSize="16" Padding="10,5" Margin="0,0,0,20"
+                      DisplayMemberPath="CategoryName"
+                      SelectedValuePath="CategoryId">
+                    </ComboBox>
+
+                    <!-- Units in Stock -->
+                    <TextBlock Text="Units in Stock" FontSize="16" Grid.Row="2" Grid.Column="0" 
+                           FontWeight="SemiBold" VerticalAlignment="Center" Margin="0,0,20,20"/>
+                    <TextBox x:Name="UnitsInStockTextBox" Grid.Row="2" Grid.Column="1" Text="{Binding UnitsInStock}"
+                          Height="35" FontSize="16" Padding="10,5" Margin="0,0,0,20"/>
+
+                    <!-- Unit Price -->
+                    <TextBlock Text="Unit Price" FontSize="16" Grid.Row="3" Grid.Column="0" 
+                           FontWeight="SemiBold" VerticalAlignment="Center" Margin="0,0,20,20"/>
+                    <TextBox x:Name="UnitPriceTextBox" Grid.Row="3" Grid.Column="1" Text="{Binding UnitPrice}"
+                          Height="35" FontSize="16" Padding="10,5" Margin="0,0,0,20"/>
+                </Grid>
+            </StackPanel>
+
+            <!-- Footer -->
+            <StackPanel Grid.Row="2" 
+            Orientation="Horizontal" 
+            HorizontalAlignment="Center">
+                <Button Content="Update" 
+            Click="Update_Click"
+            Height="45" Margin="0,0,20,0"
+            Width="140"
+            Background="Black"
+            Foreground="White"
+            FontSize="20"
+            FontWeight="SemiBold">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="8"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button Content="Delete" 
+            Click="DeleteButton_Click"
+            Height="45"
+            Width="140" Margin="20,0,0,0"
+            Background="Red"
+            Foreground="White"
+            FontSize="20"
+            FontWeight="SemiBold">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="8"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+            </StackPanel>
+        </Grid>
+    </Border>
 </Window>

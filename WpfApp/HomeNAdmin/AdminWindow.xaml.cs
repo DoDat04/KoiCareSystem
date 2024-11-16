@@ -20,12 +20,26 @@ namespace WpfApp
 
         }
 
+       
         private void OnLogoutClick(object sender, RoutedEventArgs e)
-        {
-            Home window = new Home();
-            window.Show();
-            this.Close();
+    {
+            // Reset the user session
+            UserSession.GetInstance().Logout();
+
+            // Create and show the Home window
+            Home homeWindow = new Home();
+            homeWindow.Show();
+
+            // Close all other windows including the current admin window
+            foreach (Window window in Application.Current.Windows)
+            {
+                if (window != homeWindow)
+                {
+                    window.Close();
+                }
+            }
         }
+
         private void btnManageUsers_Click(object sender, RoutedEventArgs e)
         {
             AdminFrame.Navigate(new ManageUser());

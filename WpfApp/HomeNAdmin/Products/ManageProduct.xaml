@@ -117,27 +117,29 @@
                         </Style>
                     </DataGridTextColumn.ElementStyle>
                 </DataGridTextColumn>
-                <DataGridTemplateColumn Header="Action" Width="150">
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <Button 
-                                Height="30" 
-                                Width="80"
-                                HorizontalAlignment="Center"
-                                Cursor="Hand">  
-                                <Button.Style>
-                                    <Style TargetType="Button">
-                                        <Setter Property="FontSize" Value="13"/>
-                                        <Setter Property="FontWeight" Value="SemiBold"/>
-                                        <Setter Property="Content" Value="Update"/>
-                                        <Setter Property="Background" Value="#FFE6E6"/>
-                                        <Setter Property="Foreground" Value="Black"/>
-                                    </Style>
-                                </Button.Style>
-                            </Button>
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
+                <!-- Update only the DataGridTemplateColumn part -->
+<DataGridTemplateColumn Header="Action" Width="150">
+    <DataGridTemplateColumn.CellTemplate>
+        <DataTemplate>
+            <Button 
+                Click="UpdateButton_Click"
+                Height="30" 
+                Width="80"
+                HorizontalAlignment="Center"
+                Cursor="Hand">  
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="FontSize" Value="13"/>
+                        <Setter Property="FontWeight" Value="SemiBold"/>
+                        <Setter Property="Content" Value="Update"/>
+                        <Setter Property="Background" Value="#FFE6E6"/>
+                        <Setter Property="Foreground" Value="Black"/>
+                    </Style>
+                </Button.Style>
+            </Button>
+        </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

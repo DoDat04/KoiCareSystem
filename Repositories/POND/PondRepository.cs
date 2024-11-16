@@ -75,7 +75,7 @@ namespace Repositories.POND
                 // Check if pond has fish and throw a more specific exception
                 if (existingPond.Fish != null && existingPond.Fish.Any())
                 {
-                    throw new Exception($"Cannot delete pond: This pond contains {existingPond.Fish.Count} fish. Please move all fish to another pond first.");
+                    throw new Exception($"This pond contains {existingPond.Fish.Count} fish. Please move all fish to another pond first.");
                 }
 
                 _dbContext.Ponds.Remove(existingPond);

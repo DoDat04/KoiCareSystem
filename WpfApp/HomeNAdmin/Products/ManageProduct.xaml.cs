@@ -53,5 +53,20 @@ namespace WpfApp.HomeNAdmin.Products
             };
             addNewProduct.ShowDialog();
         }
+
+        // Add this new method to the ManageProduct class
+        private void UpdateButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (sender is Button button && button.DataContext is BusinessObject.Product selectedProduct)
+            {
+                var showProductWindow = new ShowProductWindow(selectedProduct.ProductId);
+                bool? result = showProductWindow.ShowDialog();
+                
+                if (result == true)
+                {
+                    LoadProductsAsync(); // Refresh the list after update
+                }
+            }
+        }
     }
 }

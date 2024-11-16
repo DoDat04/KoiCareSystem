@@ -24,34 +24,27 @@ namespace WpfApp.HomeNAdmin.HistoryOrder
             {
                 OrderIDText.Text = _order.OrderId.ToString();
                 OrderDateText.Text = _order.OrderDate.ToString("dd/MM/yyyy");
-                TotalAmountText.Text = _order.TotalAmount.ToString("C");
+                TotalAmountText.Text = _order.TotalAmount.ToString();
 
                 if (_order.MemberId != null)
                 {
-                    MemberIDText.Text = _order.MemberId.ToString();
-                    Console.WriteLine($"Fetching member with ID: {_order.MemberId}");
                     _member = _memberService.GetMemberById(_order.MemberId);
 
                     if (_member != null)
                     {
-                        MemberFirstNameText.Text = _member.FirstName ?? "N/A";
-                        MemberLastNameText.Text = _member.LastName ?? "N/A";
+                        MemberFullNameText.Text = _member.FullName ?? "N/A";
                         MemberPhoneText.Text = _member.PhoneNumber ?? "N/A";
                     }
                     else
                     {
                         MessageBox.Show($"No member found with ID: {_order.MemberId}", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
-                        MemberFirstNameText.Text = "Unknown";
-                        MemberLastNameText.Text = "Unknown";
                         MemberPhoneText.Text = "Unknown";
                     }
                 }
                 else
                 {
                     MessageBox.Show("MemberId is null.", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
-                    MemberIDText.Text = "N/A";
-                    MemberFirstNameText.Text = "N/A";
-                    MemberLastNameText.Text = "N/A";
+                    MemberFullNameText.Text = "N/A";
                     MemberPhoneText.Text = "N/A";
                 }
 

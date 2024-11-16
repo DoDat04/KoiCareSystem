@@ -7,7 +7,7 @@
         mc:Ignorable="d" 
         WindowStartupLocation="CenterScreen"
         WindowStyle="None"
-        Title="Receipt" Height="Auto" Width="600">
+        Title="Receipt" Height="350" Width="500">
     <Grid>
         <Button
             Content="✕"
@@ -16,11 +16,14 @@
             Width="32"
             Height="32"
             FontSize="16"
-            HorizontalAlignment="Left"
-            Margin="560,1,0,0"
+            HorizontalAlignment="Right"
             VerticalAlignment="Top"/>
 
         <Grid Margin="20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
@@ -29,125 +32,102 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
-                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
 
             <!-- Title -->
             <TextBlock Text="Product Details"
-                       FontSize="32"
+                       FontSize="25"  Grid.ColumnSpan="2" 
                        FontWeight="SemiBold"
-                       Margin="0,10,0,10"
                        HorizontalAlignment="Center" 
                        Grid.Row="0" />
-
+            <TextBlock Text="Order" 
+                   FontSize="20" 
+                   FontWeight="SemiBold" 
+                   HorizontalAlignment="Left" 
+                   Grid.Row="1"/>
             <!-- Order ID Label -->
-            <TextBlock Text="Order ID:" 
-                       FontSize="24" 
-                       FontWeight="Bold" 
+            <TextBlock Text="ID:" 
+                       FontSize="16" 
                        HorizontalAlignment="Left" 
-                       Margin="0,10,10,0" 
-                       Grid.Row="1"/>
+                       Grid.Row="2" />
             <!-- Order ID Value -->
             <TextBlock x:Name="OrderIDText" Text="{Binding OrderId}" 
-                       FontSize="24" 
-                       FontWeight="Bold" 
+                       FontSize="16" Margin="0,0,180,5"
                        HorizontalAlignment="Right" 
-                       Margin="10,10,0,0" 
-                       Grid.Row="1"/>
+                       Grid.Row="2"/>
 
             <!-- Order Date Label -->
             <TextBlock Text="Order Date:" 
                        FontSize="16" 
                        HorizontalAlignment="Left" 
-                       Margin="10,10,10,0" 
-                       Grid.Row="2"/>
+                       Grid.Row="2" Grid.Column="1"/>
             <!-- Order Date Value -->
             <TextBlock x:Name="OrderDateText" Text="{Binding OrderDate, StringFormat='{}{0:dd/MM/yyyy}'}"
-                       FontSize="16" 
+                       FontSize="16" Margin="0,0,40,5"
                        HorizontalAlignment="Right" 
-                       Margin="10,10,0,0" 
-                       Grid.Row="2"/>
+                       Grid.Row="2" Grid.Column="1"/>
 
-            <!-- Member ID Label -->
-            <TextBlock Text="Member ID:" 
-                       FontSize="24" 
-                       FontWeight="Bold" 
+            <TextBlock Text="Member" 
+                       FontSize="20" 
+                       FontWeight="SemiBold" 
                        HorizontalAlignment="Left" 
-                       Margin="0,10,10,0" 
                        Grid.Row="3"/>
-            <!-- Member ID Value -->
-            <TextBlock x:Name="MemberIDText" Text="{Binding MemberId}" 
-                       FontSize="24" 
-                       FontWeight="Bold" 
-                       HorizontalAlignment="Right" 
-                       Margin="10,10,0,0" 
-                       Grid.Row="3"/>
-
             <!-- Member Name Label -->
-            <TextBlock Text="Member name:" 
+            <TextBlock Text="Full Name:" 
                         FontSize="16" 
                         HorizontalAlignment="Left" 
-                        Margin="10,10,10,0" 
                         Grid.Row="4"/>
 
             <!-- Member Name Value -->
-            <TextBlock x:Name="MemberFirstNameText" 
-                        FontSize="16" 
-                        HorizontalAlignment="Right" 
-                        Margin="10,10,0,0" 
-                        Grid.Row="4"/>
-            <TextBlock x:Name="MemberLastNameText"
-                        Margin="5,0,0,0"/>
-
-            <!-- Member Phone Label -->
-            <TextBlock Text="Member phone:" 
-                        FontSize="16" 
+            <TextBlock x:Name="MemberFullNameText" 
+                        FontSize="16" Margin="0,0,0,5"
                         HorizontalAlignment="Left" 
-                        Margin="10,10,10,0" 
                         Grid.Row="5"/>
 
+            <!-- Member Phone Label -->
+            <TextBlock Text="Phone Number:" 
+                        FontSize="16" Grid.Column="1"
+                        HorizontalAlignment="Left" 
+                        Grid.Row="4"/>
+
             <!-- Member Phone Value -->
-            <TextBlock x:Name="MemberPhoneText"
-                        FontSize="16" 
-                        HorizontalAlignment="Right" 
-                        Margin="10,10,0,0" 
+            <TextBlock x:Name="MemberPhoneText" Margin="0,0,0,5"
+                        FontSize="16" Grid.Column="1"
+                        HorizontalAlignment="Left" 
                         Grid.Row="5"/>
 
             <!-- Header Row for Products -->
-            <Grid Grid.Row="6" Margin="0,0,0,10">
+            <Grid Grid.Row="6" Margin="0,0,5,0" Grid.ColumnSpan="4">
                 <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="200" />
                     <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="100" />
-                    <ColumnDefinition Width="100" />
-                    <ColumnDefinition Width="100" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
-                <TextBlock Text="Product Name" FontWeight="Bold" FontSize="16" />
-                <TextBlock Text="Unit Price" FontWeight="Bold" FontSize="16" Grid.Column="1"/>
-                <TextBlock Text="Quantity" FontWeight="Bold" FontSize="16" Grid.Column="2"/>
-                <TextBlock Text="SubTotal" FontWeight="Bold" FontSize="16" Grid.Column="3"/>
+                <TextBlock Text="Product Name" FontWeight="SemiBold" FontSize="18" />
+                <TextBlock Text="Unit Price" FontWeight="SemiBold" FontSize="18" Grid.Column="1" HorizontalAlignment="Center"/>
+                <TextBlock Text="Quantity" FontWeight="SemiBold" FontSize="18" Grid.Column="2" HorizontalAlignment="Center"/>
+                <TextBlock Text="Subtotal" FontWeight="SemiBold" FontSize="18" Grid.Column="3" HorizontalAlignment="Center"/>
             </Grid>
 
             <!-- ItemsControl for Products List -->
-            <ItemsControl x:Name="ReceiptItemsListView" Margin="0,0,0,20" Grid.Row="7">
+            <ItemsControl x:Name="ReceiptItemsListView" Grid.Row="7" Grid.ColumnSpan="4">
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
-                        <Border BorderBrush="#FFCCCCCC" BorderThickness="1" Margin="0,0,0,10" Padding="10" CornerRadius="5">
-                            <StackPanel>
-                                <Grid>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*" />
-                                        <ColumnDefinition Width="100" />
-                                        <ColumnDefinition Width="100" />
-                                        <ColumnDefinition Width="100" />
-                                    </Grid.ColumnDefinitions>
-                                    <TextBlock Text="{Binding ProductName}" FontWeight="Bold" FontSize="16" />
-                                    <TextBlock Text="{Binding UnitPrice, StringFormat='${0:F2}'}" Grid.Column="1" FontSize="16"/>
-                                    <TextBlock Text="{Binding Quantity, StringFormat='x {0}'}" Grid.Column="2" FontSize="16"/>
-                                    <TextBlock Text="{Binding SubTotal, StringFormat='${0:F2}'}" Grid.Column="3" FontSize="16"/>
-                                </Grid>
-                            </StackPanel>
-                        </Border>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="200" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="{Binding ProductName}" FontSize="16" />
+                            <TextBlock Text="{Binding UnitPrice, StringFormat='${0:F2}'}" Grid.Column="1" FontSize="16" HorizontalAlignment="Center"/>
+                            <TextBlock Text="{Binding Quantity, StringFormat='x {0}'}" Grid.Column="2" FontSize="16" HorizontalAlignment="Center"/>
+                            <TextBlock Text="{Binding SubTotal, StringFormat='${0:F2}'}" Grid.Column="3" FontSize="16" HorizontalAlignment="Center"/>
+                        </Grid>
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
             </ItemsControl>
@@ -158,14 +138,14 @@
                        FontWeight="Bold" 
                        HorizontalAlignment="Left" 
                        Margin="0,20,0,0" 
-                       Grid.Row="8"/>
+                       Grid.Row="8" Grid.ColumnSpan="2"/>
             <!-- Total Amount Value -->
-            <TextBlock x:Name="TotalAmountText" Text="{Binding TotalAmount, StringFormat='${0:F2}'}" 
+            <TextBlock x:Name="TotalAmountText" Text="{Binding TotalPrice, StringFormat='${0:F2}'}" 
                        FontSize="16" 
                        FontWeight="Bold" 
                        HorizontalAlignment="Right" 
                        Margin="10,20,0,0" 
-                       Grid.Row="8"/>
+                       Grid.Row="8" Grid.Column="1"/>
         </Grid>
     </Grid>
 </Window>

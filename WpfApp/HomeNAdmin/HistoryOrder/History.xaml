@@ -78,9 +78,18 @@
                         </Style>
                     </DataGridTextColumn.ElementStyle>
                 </DataGridTextColumn>
-                <DataGridTextColumn Header="Member ID" 
-                                  Binding="{Binding MemberId}" 
-                                  Width="100">
+                <DataGridTextColumn Header="Full Name" 
+                    Binding="{Binding FullName}"
+                    Width="300">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="HorizontalAlignment" Value="Center"/>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Phone Number" 
+                    Binding="{Binding PhoneNumber}"
+                    Width="200">
                     <DataGridTextColumn.ElementStyle>
                         <Style TargetType="TextBlock">
                             <Setter Property="HorizontalAlignment" Value="Center"/>
@@ -88,8 +97,8 @@
                     </DataGridTextColumn.ElementStyle>
                 </DataGridTextColumn>
                 <DataGridTextColumn Header="Total Amount"
-                                  Binding="{Binding TotalAmount}" 
-                                  Width="120">
+                                  Binding="{Binding TotalAmount, StringFormat='${0:F2}'}"                    
+                                  Width="130">
                     <DataGridTextColumn.ElementStyle>
                         <Style TargetType="TextBlock">
                             <Setter Property="HorizontalAlignment" Value="Center"/>
@@ -98,14 +107,14 @@
                 </DataGridTextColumn>
                 <DataGridTextColumn Header="Order Date" 
                   Binding="{Binding OrderDate, StringFormat='{}{0:dd/MM/yyyy}'}" 
-                  Width="120">
+                  Width="130">
                     <DataGridTextColumn.ElementStyle>
                         <Style TargetType="TextBlock">
                             <Setter Property="HorizontalAlignment" Value="Center"/>
                         </Style>
                     </DataGridTextColumn.ElementStyle>
                 </DataGridTextColumn>
-                <DataGridTemplateColumn Header="Products" Width="100">
+                <DataGridTemplateColumn Header="Products" Width="*">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <Button Click="ViewDetail_Click" 

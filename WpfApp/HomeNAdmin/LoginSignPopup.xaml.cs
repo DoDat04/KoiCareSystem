@@ -79,35 +79,57 @@ namespace WpfApp
                 if (account == null)
                 {
                     MessageBox.Show("No account found with that email.");
+                    return;
                 }
-                else if (!VerifyPassword(password, account.Password)) // VerifyPassword should hash the password and compare
+
+                if (!VerifyPassword(password, account.Password))
                 {
                     MessageBox.Show("Wrong password!");
+                    return;
                 }
-                else if (account.RoleId == 1)
+
+                if (!account.IsActive)
                 {
-                    MessageBox.Show("Login successful!");
-                    AdminWindow adminWindow = new AdminWindow();
+                    MessageBox.Show("We're sorry to inform you that your account has been banned due to a violation of our terms of service. " +
+                        "We appreciate your understanding in this matter.\r\n\r\nThank you for being a part of our community. We wish you all the best and hope you have a great day ahead!",
+                        "Your account is banned", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    return;
+                }
+
+                // Handle admin login
+                if (account.RoleId == 1)
+                {
+                    UserSession.GetInstance().Login(account.MemberId, account.Email, account.RoleId);
+                    MessageBox.Show("Admin login successful!");
+                    
+                    // Create and show admin window
+                    var adminWindow = new AdminWindow();
                     adminWindow.Show();
-                    if (Application.Current.MainWindow is Home homeWindow)
+
+                    // Close all other windows
+                    foreach (Window window in Application.Current.Windows)
                     {
-                        homeWindow.Close();
+                        if (window != adminWindow && window != this)
+                        {
+                            window.Close();
+                        }
                     }
+
                     this.Close();
                 }
-                else if (account.IsActive == false)
-                {
-                    MessageBox.Show("We're sorry to inform you that your account has been banned due to a violation of our terms of service. We appreciate your understanding in this matter.\r\n\r\nThank you for being a part of our community. We wish you all the best and hope you have a great day ahead!"
-                        , "Your account is banned", MessageBoxButton.OK, MessageBoxImage.Warning);
-                }
+                // Handle regular user login
                 else
                 {
                     UserSession.GetInstance().Login(account.MemberId, account.Email, account.RoleId);
                     MessageBox.Show("Login successful!");
+                    
+                    // Update main window if it exists
                     if (Application.Current.MainWindow is Home homeWindow)
                     {
                         homeWindow.UpdateLoginState();
                     }
+                    
+                    this.DialogResult = true;
                     this.Close();
                 }
             }
