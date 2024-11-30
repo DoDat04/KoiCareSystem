@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\PRN212\\PRN212_KoiCare\\WpfApp\\WpfApp.csproj": {}
+    "D:\\SEM5\\PRN212\\KoiCare\\WpfApp\\WpfApp.csproj": {}
   },
   "projects": {
-    "D:\\PRN212\\PRN212_KoiCare\\BusinessObject\\BusinessObject.csproj": {
+    "D:\\SEM5\\PRN212\\KoiCare\\BusinessObject\\BusinessObject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PRN212\\PRN212_KoiCare\\BusinessObject\\BusinessObject.csproj",
+        "projectUniqueName": "D:\\SEM5\\PRN212\\KoiCare\\BusinessObject\\BusinessObject.csproj",
         "projectName": "BusinessObject",
-        "projectPath": "D:\\PRN212\\PRN212_KoiCare\\BusinessObject\\BusinessObject.csproj",
-        "packagesPath": "C:\\Users\\MSI\\.nuget\\packages\\",
-        "outputPath": "D:\\PRN212\\PRN212_KoiCare\\BusinessObject\\obj\\",
+        "projectPath": "D:\\SEM5\\PRN212\\KoiCare\\BusinessObject\\BusinessObject.csproj",
+        "packagesPath": "C:\\Users\\Do Dat\\.nuget\\packages\\",
+        "outputPath": "D:\\SEM5\\PRN212\\KoiCare\\BusinessObject\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\MSI\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Do Dat\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -86,21 +87,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\PRN212\\PRN212_KoiCare\\Repositories\\Repositories.csproj": {
+    "D:\\SEM5\\PRN212\\KoiCare\\Repositories\\Repositories.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PRN212\\PRN212_KoiCare\\Repositories\\Repositories.csproj",
+        "projectUniqueName": "D:\\SEM5\\PRN212\\KoiCare\\Repositories\\Repositories.csproj",
         "projectName": "Repositories",
-        "projectPath": "D:\\PRN212\\PRN212_KoiCare\\Repositories\\Repositories.csproj",
-        "packagesPath": "C:\\Users\\MSI\\.nuget\\packages\\",
-        "outputPath": "D:\\PRN212\\PRN212_KoiCare\\Repositories\\obj\\",
+        "projectPath": "D:\\SEM5\\PRN212\\KoiCare\\Repositories\\Repositories.csproj",
+        "packagesPath": "C:\\Users\\Do Dat\\.nuget\\packages\\",
+        "outputPath": "D:\\SEM5\\PRN212\\KoiCare\\Repositories\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\MSI\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Do Dat\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -108,14 +109,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\PRN212\\PRN212_KoiCare\\BusinessObject\\BusinessObject.csproj": {
-                "projectPath": "D:\\PRN212\\PRN212_KoiCare\\BusinessObject\\BusinessObject.csproj"
+              "D:\\SEM5\\PRN212\\KoiCare\\BusinessObject\\BusinessObject.csproj": {
+                "projectPath": "D:\\SEM5\\PRN212\\KoiCare\\BusinessObject\\BusinessObject.csproj"
               }
             }
           }
@@ -150,21 +152,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\PRN212\\PRN212_KoiCare\\Services\\Services.csproj": {
+    "D:\\SEM5\\PRN212\\KoiCare\\Services\\Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PRN212\\PRN212_KoiCare\\Services\\Services.csproj",
+        "projectUniqueName": "D:\\SEM5\\PRN212\\KoiCare\\Services\\Services.csproj",
         "projectName": "Services",
-        "projectPath": "D:\\PRN212\\PRN212_KoiCare\\Services\\Services.csproj",
-        "packagesPath": "C:\\Users\\MSI\\.nuget\\packages\\",
-        "outputPath": "D:\\PRN212\\PRN212_KoiCare\\Services\\obj\\",
+        "projectPath": "D:\\SEM5\\PRN212\\KoiCare\\Services\\Services.csproj",
+        "packagesPath": "C:\\Users\\Do Dat\\.nuget\\packages\\",
+        "outputPath": "D:\\SEM5\\PRN212\\KoiCare\\Services\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\MSI\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Do Dat\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -172,14 +174,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\PRN212\\PRN212_KoiCare\\Repositories\\Repositories.csproj": {
-                "projectPath": "D:\\PRN212\\PRN212_KoiCare\\Repositories\\Repositories.csproj"
+              "D:\\SEM5\\PRN212\\KoiCare\\Repositories\\Repositories.csproj": {
+                "projectPath": "D:\\SEM5\\PRN212\\KoiCare\\Repositories\\Repositories.csproj"
               }
             }
           }
@@ -214,21 +217,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\PRN212\\PRN212_KoiCare\\WpfApp\\WpfApp.csproj": {
+    "D:\\SEM5\\PRN212\\KoiCare\\WpfApp\\WpfApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PRN212\\PRN212_KoiCare\\WpfApp\\WpfApp.csproj",
+        "projectUniqueName": "D:\\SEM5\\PRN212\\KoiCare\\WpfApp\\WpfApp.csproj",
         "projectName": "WpfApp",
-        "projectPath": "D:\\PRN212\\PRN212_KoiCare\\WpfApp\\WpfApp.csproj",
-        "packagesPath": "C:\\Users\\MSI\\.nuget\\packages\\",
-        "outputPath": "D:\\PRN212\\PRN212_KoiCare\\WpfApp\\obj\\",
+        "projectPath": "D:\\SEM5\\PRN212\\KoiCare\\WpfApp\\WpfApp.csproj",
+        "packagesPath": "C:\\Users\\Do Dat\\.nuget\\packages\\",
+        "outputPath": "D:\\SEM5\\PRN212\\KoiCare\\WpfApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\MSI\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Do Dat\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -236,14 +239,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0-windows7.0": {
             "targetAlias": "net8.0-windows",
             "projectReferences": {
-              "D:\\PRN212\\PRN212_KoiCare\\Services\\Services.csproj": {
-                "projectPath": "D:\\PRN212\\PRN212_KoiCare\\Services\\Services.csproj"
+              "D:\\SEM5\\PRN212\\KoiCare\\Services\\Services.csproj": {
+                "projectPath": "D:\\SEM5\\PRN212\\KoiCare\\Services\\Services.csproj"
               }
             }
           }
@@ -281,7 +285,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

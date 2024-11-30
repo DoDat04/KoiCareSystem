@@ -1,40 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\PRN212\\PRN212_KoiCare\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{35F804EB-2BF1-49A5-A1D3-E522CD75DFEF}|Services\\Services.csproj|d:\\prn212\\prn212_koicare\\services\\category\\categoryservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{35F804EB-2BF1-49A5-A1D3-E522CD75DFEF}|Services\\Services.csproj|solutionrelative:services\\category\\categoryservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{35F804EB-2BF1-49A5-A1D3-E522CD75DFEF}|Services\\Services.csproj|d:\\prn212\\prn212_koicare\\services\\category\\icategoryservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{35F804EB-2BF1-49A5-A1D3-E522CD75DFEF}|Services\\Services.csproj|solutionrelative:services\\category\\icategoryservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3ECE248A-6A49-47B4-A4B5-561EC2DCF4E8}|WpfApp\\WpfApp.csproj|d:\\prn212\\prn212_koicare\\wpfapp\\homenadmin\\products\\manageproduct.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3ECE248A-6A49-47B4-A4B5-561EC2DCF4E8}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\homenadmin\\products\\manageproduct.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3ECE248A-6A49-47B4-A4B5-561EC2DCF4E8}|WpfApp\\WpfApp.csproj|d:\\prn212\\prn212_koicare\\wpfapp\\homenadmin\\products\\manageproduct.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{3ECE248A-6A49-47B4-A4B5-561EC2DCF4E8}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\homenadmin\\products\\manageproduct.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3ECE248A-6A49-47B4-A4B5-561EC2DCF4E8}|WpfApp\\WpfApp.csproj|d:\\prn212\\prn212_koicare\\wpfapp\\homenadmin\\products\\addproductwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3ECE248A-6A49-47B4-A4B5-561EC2DCF4E8}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\homenadmin\\products\\addproductwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3ECE248A-6A49-47B4-A4B5-561EC2DCF4E8}|WpfApp\\WpfApp.csproj|d:\\prn212\\prn212_koicare\\wpfapp\\homenadmin\\products\\addproductwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{3ECE248A-6A49-47B4-A4B5-561EC2DCF4E8}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\homenadmin\\products\\addproductwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3ECE248A-6A49-47B4-A4B5-561EC2DCF4E8}|WpfApp\\WpfApp.csproj|d:\\prn212\\prn212_koicare\\wpfapp\\homenadmin\\products\\showproductwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3ECE248A-6A49-47B4-A4B5-561EC2DCF4E8}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\homenadmin\\products\\showproductwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3ECE248A-6A49-47B4-A4B5-561EC2DCF4E8}|WpfApp\\WpfApp.csproj|d:\\prn212\\prn212_koicare\\wpfapp\\homenadmin\\products\\showproductwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{3ECE248A-6A49-47B4-A4B5-561EC2DCF4E8}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\homenadmin\\products\\showproductwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -42,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -59,107 +26,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ICategoryServices.cs",
-              "DocumentMoniker": "D:\\PRN212\\PRN212_KoiCare\\Services\\CATEGORY\\ICategoryServices.cs",
-              "RelativeDocumentMoniker": "Services\\CATEGORY\\ICategoryServices.cs",
-              "ToolTip": "D:\\PRN212\\PRN212_KoiCare\\Services\\CATEGORY\\ICategoryServices.cs",
-              "RelativeToolTip": "Services\\CATEGORY\\ICategoryServices.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T16:45:55.116Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CategoryServices.cs",
-              "DocumentMoniker": "D:\\PRN212\\PRN212_KoiCare\\Services\\CATEGORY\\CategoryServices.cs",
-              "RelativeDocumentMoniker": "Services\\CATEGORY\\CategoryServices.cs",
-              "ToolTip": "D:\\PRN212\\PRN212_KoiCare\\Services\\CATEGORY\\CategoryServices.cs",
-              "RelativeToolTip": "Services\\CATEGORY\\CategoryServices.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T16:43:24.48Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ManageProduct.xaml.cs",
-              "DocumentMoniker": "D:\\PRN212\\PRN212_KoiCare\\WpfApp\\HomeNAdmin\\Products\\ManageProduct.xaml.cs",
-              "RelativeDocumentMoniker": "WpfApp\\HomeNAdmin\\Products\\ManageProduct.xaml.cs",
-              "ToolTip": "D:\\PRN212\\PRN212_KoiCare\\WpfApp\\HomeNAdmin\\Products\\ManageProduct.xaml.cs",
-              "RelativeToolTip": "WpfApp\\HomeNAdmin\\Products\\ManageProduct.xaml.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAxwA0AAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T16:27:26.733Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ManageProduct.xaml",
-              "DocumentMoniker": "D:\\PRN212\\PRN212_KoiCare\\WpfApp\\HomeNAdmin\\Products\\ManageProduct.xaml",
-              "RelativeDocumentMoniker": "WpfApp\\HomeNAdmin\\Products\\ManageProduct.xaml",
-              "ToolTip": "D:\\PRN212\\PRN212_KoiCare\\WpfApp\\HomeNAdmin\\Products\\ManageProduct.xaml",
-              "RelativeToolTip": "WpfApp\\HomeNAdmin\\Products\\ManageProduct.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-15T16:30:08.275Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ShowProductWindow.xaml.cs",
-              "DocumentMoniker": "D:\\PRN212\\PRN212_KoiCare\\WpfApp\\HomeNAdmin\\Products\\ShowProductWindow.xaml.cs",
-              "RelativeDocumentMoniker": "WpfApp\\HomeNAdmin\\Products\\ShowProductWindow.xaml.cs",
-              "ToolTip": "D:\\PRN212\\PRN212_KoiCare\\WpfApp\\HomeNAdmin\\Products\\ShowProductWindow.xaml.cs",
-              "RelativeToolTip": "WpfApp\\HomeNAdmin\\Products\\ShowProductWindow.xaml.cs",
-              "ViewState": "AgIAADoAAAAAAAAAAAAowEQAAABIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T16:25:15.613Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ShowProductWindow.xaml",
-              "DocumentMoniker": "D:\\PRN212\\PRN212_KoiCare\\WpfApp\\HomeNAdmin\\Products\\ShowProductWindow.xaml",
-              "RelativeDocumentMoniker": "WpfApp\\HomeNAdmin\\Products\\ShowProductWindow.xaml",
-              "ToolTip": "D:\\PRN212\\PRN212_KoiCare\\WpfApp\\HomeNAdmin\\Products\\ShowProductWindow.xaml",
-              "RelativeToolTip": "WpfApp\\HomeNAdmin\\Products\\ShowProductWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-15T16:25:14.618Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AddProductWindow.xaml.cs",
-              "DocumentMoniker": "D:\\PRN212\\PRN212_KoiCare\\WpfApp\\HomeNAdmin\\Products\\AddProductWindow.xaml.cs",
-              "RelativeDocumentMoniker": "WpfApp\\HomeNAdmin\\Products\\AddProductWindow.xaml.cs",
-              "ToolTip": "D:\\PRN212\\PRN212_KoiCare\\WpfApp\\HomeNAdmin\\Products\\AddProductWindow.xaml.cs",
-              "RelativeToolTip": "WpfApp\\HomeNAdmin\\Products\\AddProductWindow.xaml.cs",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAIwEUAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T16:23:40.671Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AddProductWindow.xaml",
-              "DocumentMoniker": "D:\\PRN212\\PRN212_KoiCare\\WpfApp\\HomeNAdmin\\Products\\AddProductWindow.xaml",
-              "RelativeDocumentMoniker": "WpfApp\\HomeNAdmin\\Products\\AddProductWindow.xaml",
-              "ToolTip": "D:\\PRN212\\PRN212_KoiCare\\WpfApp\\HomeNAdmin\\Products\\AddProductWindow.xaml",
-              "RelativeToolTip": "WpfApp\\HomeNAdmin\\Products\\AddProductWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-15T16:23:39.481Z",
-              "EditorCaption": ""
             }
           ]
         }
